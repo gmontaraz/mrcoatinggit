@@ -21,7 +21,7 @@ public class BulletSpawner : MonoBehaviour
     }
     private void Spawn()
     {
-        objectpool.Instance.Spawn("Bullet", transform.position, Quaternion.identity);
+        objectpool.Instance.Spawn("Bullet", transform.position, transform.rotation);
     }
     objectpool objectpool;
     [SerializeField] private float cadence;

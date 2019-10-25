@@ -15,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
     {
         Move();
         isGrounded= Physics2D.OverlapCircle(feetPos.position, 0.5f, ground);
-        Debug.Log(isGrounded);
         ManageJumps();
     }
     private void Move()
@@ -23,13 +22,13 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = Input.GetAxisRaw("Horizontal");
         vector = new Vector2(moveDirection, 0);
        
-        if (rb.velocity.x > 0)
+        if (Input.GetKey(KeyCode.RightArrow))
         {
-            sprite.flipX = false;
+            transform.eulerAngles = new Vector3(0, 0, 0);
         }
-        else if(rb.velocity.x<0)
+        else if(Input.GetKey(KeyCode.LeftArrow))
         {
-            sprite.flipX = true;
+            transform.eulerAngles = new Vector3(0, 180, 0);
         }
        
         rb.AddForce(vector * acceleration);

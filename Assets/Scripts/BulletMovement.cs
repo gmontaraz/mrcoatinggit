@@ -4,22 +4,10 @@ using UnityEngine;
 
 public class BulletMovement : MonoBehaviour
 {
-    private void Start()
+    public void NewSpawn()
     {
-        if (player_sprite.flipX == true)
-        {
-            direction = Vector2.left;
-        }
-        else if (player_sprite.flipX == false)
-        {
-            direction = Vector2.right;
-        }
+        rb.velocity = transform.right * bullet_speed;
         Invoke("Destroy", timelife);
-       
-    }
-    void Update()
-    {
-        this.gameObject.transform.Translate(direction * bullet_speed * Time.deltaTime);
     }
     private void Destroy()
     {
@@ -28,6 +16,6 @@ public class BulletMovement : MonoBehaviour
 
     [SerializeField] private float bullet_speed;
     [SerializeField] private float timelife;
-    public Vector2 direction;
-    public SpriteRenderer player_sprite;
+    [SerializeField] private Rigidbody2D rb;
+    public static BulletMovement instance;
 }

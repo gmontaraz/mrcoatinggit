@@ -47,15 +47,8 @@ public class objectpool : MonoBehaviour
         GameObject objectToSpawn = poolDictionary[tag].Dequeue();
         objectToSpawn.transform.position = position;
         objectToSpawn.transform.rotation = rotation;
-        if (player_sprite.flipX == true)
-        {
-            objectToSpawn.GetComponent<BulletMovement>().direction = Vector2.left;
-        }
-        else if (player_sprite.flipX == false)
-        {
-            objectToSpawn.GetComponent<BulletMovement>().direction = Vector2.right;
-        }
         objectToSpawn.SetActive(true);
+        objectToSpawn.GetComponent<BulletMovement>().NewSpawn();
 
         poolDictionary[tag].Enqueue(objectToSpawn);
     }
