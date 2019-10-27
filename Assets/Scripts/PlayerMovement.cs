@@ -14,7 +14,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Move();
-        isGrounded= Physics2D.OverlapCircle(feetPos.position, 0.5f, ground);
+        isGrounded = Physics2D.OverlapCircle(feetPos.position, 0.1f, ground);
+        touchingHead = Physics2D.OverlapCircle(feetPos.position, 0.1f, ground);
         ManageJumps();
     }
     private void Move()
@@ -80,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
                 isJumping = false;
             }
         }
-        else if (Input.GetKeyUp(KeyCode.Z)){
+        else if (Input.GetKeyUp(KeyCode.Z)||touchingHead){
             timeJump = 0;
             isJumping = false;
 
@@ -109,6 +110,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Bools")]
     private bool isJumping;
+    private bool touchingHead;
     private bool isGrounded;
     [Header("Vectors")]
     private Vector2 vector;
