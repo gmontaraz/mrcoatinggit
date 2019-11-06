@@ -10,9 +10,13 @@ public class SpawnEnemy : MonoBehaviour
     }
     private void Spawn()
     {
+        Debug.Log(array.Length);
+        int i_random = Random.Range(0, array.Length);
+        enemy = array[i_random];
         GameObject new_enemy = Instantiate(enemy, transform.position, transform.rotation);
         new_enemy.SetActive(true);
     }
-    public GameObject enemy;
+    private GameObject enemy;
+    [SerializeField] private GameObject[] array;
 }
 
