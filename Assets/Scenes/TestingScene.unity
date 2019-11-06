@@ -3209,13 +3209,14 @@ GameObject:
   - component: {fileID: 988690018}
   - component: {fileID: 988690011}
   - component: {fileID: 988690019}
+  - component: {fileID: 988690020}
   m_Layer: 0
   m_Name: Fly
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &988690011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3421,6 +3422,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actual_health: 0
   max_health: 1
+--- !u!95 &988690020
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988690010}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fb5ccf26496c3d641a8cb69ff138baa8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1043411751
 GameObject:
   m_ObjectHideFlags: 0
