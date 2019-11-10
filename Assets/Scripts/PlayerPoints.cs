@@ -9,7 +9,7 @@ public class PlayerPoints : MonoBehaviour
     void Start()
     {
         actual_points = min_points;
-        points_text.text = "Points: " + actual_points;
+        points_text.text = actual_points.ToString("D4");
     }
 
     // Update is called once per frame
@@ -18,7 +18,7 @@ public class PlayerPoints : MonoBehaviour
         if (collision.gameObject.tag == "Point")
         {
             actual_points += random_points;
-            points_text.text = "Points: " + actual_points;
+            points_text.text = actual_points.ToString("D4");
         }
     }
     public int min_points;

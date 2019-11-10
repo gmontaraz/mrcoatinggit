@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealth : MonoBehaviour
+public class CoreHealth : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        actual_health = max_health;
-        health_text.text = "Health: " + actual_health;
+        actual_core_health = max_core_health;
     }
 
     // Update is called once per frame 
@@ -17,10 +16,9 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            actual_health--;
+            actual_core_health--;
             HandleBar();
-            health_text.text = "Health: " + actual_health;
-            if (actual_health <= 0)
+            if (actual_core_health <= 0)
             {
                 this.gameObject.SetActive(false);
             }
@@ -28,12 +26,12 @@ public class PlayerHealth : MonoBehaviour
     }
 
     private void HandleBar(){
-        content.fillAmount = actual_health / max_health;
+        content.fillAmount = actual_core_health / max_core_health;
+        Debug.Log(actual_core_health / max_core_health); 
     }
 
-    public float max_health;
-    public float actual_health;
-    [SerializeField] private Text health_text;
+    public float max_core_health;
+    public float actual_core_health;
     [SerializeField] private float fillAmount;
     [SerializeField] private Image content;
 }
