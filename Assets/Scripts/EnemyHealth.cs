@@ -25,6 +25,8 @@ public class EnemyHealth : MonoBehaviour
             {
                 Destroy(this.gameObject);
                 GameObject new_point = Instantiate(point, transform.position, transform.rotation);
+                GameObject blood=Instantiate(particles, transform.position, transform.rotation);
+                blood.SetActive(true);
                 new_point.SetActive(true);
             }
             collision.gameObject.SetActive(false);
@@ -34,5 +36,6 @@ public class EnemyHealth : MonoBehaviour
     public int actual_health;
     public int max_health;
     public GameObject point;
+    public GameObject particles;
     #endregion
 }
