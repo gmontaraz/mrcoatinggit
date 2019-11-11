@@ -13,6 +13,18 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (poison)
+        {
+            sprite.color = new Color(0.5f, 1, 0.5f);
+            playerVelocity = 2;
+            particles.SetActive(true);
+        }
+        else
+        {
+            sprite.color = Color.white;
+            playerVelocity = 5;
+            particles.SetActive(false);
+        }
         Move();
         isGrounded = Physics2D.OverlapCircle(feetPos.position, 0.1f, ground);
         touchingHead = Physics2D.OverlapCircle(feetPos.position, 0.1f, ground);
@@ -112,12 +124,15 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping;
     private bool touchingHead;
     private bool isGrounded;
+    public bool poison;
     [Header("Vectors")]
     private Vector2 vector;
-
+    
     [SerializeField] private SpriteRenderer sprite;
-
+    
     [Header("Layers")]
     [SerializeField] private LayerMask ground;
+
+    public GameObject particles;
     #endregion
 }

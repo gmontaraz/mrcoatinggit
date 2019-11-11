@@ -19,12 +19,26 @@ public class PlayerHealth : MonoBehaviour
         {
             actual_health--;
             HandleBar();
-            health_text.text = "Health: " + actual_health;
             if (actual_health <= 0)
             {
                 this.gameObject.SetActive(false);
             }
         }
+        if (collision.gameObject.CompareTag("Spider"))
+        {
+            actual_health--;
+            HandleBar();
+            player.gameObject.GetComponent<PlayerMovement>().poison = true;
+            if (actual_health <= 0)
+            {
+                this.gameObject.SetActive(false);
+            }
+            Invoke("disablepoison", 5f);
+        }
+    }
+    public void disablepoison()
+    {
+        player.gameObject.GetComponent<PlayerMovement>().poison = false;
     }
 
     private void HandleBar(){
@@ -36,4 +50,5 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private Text health_text;
     [SerializeField] private float fillAmount;
     [SerializeField] private Image content;
+    public GameObject player;
 }

@@ -9,6 +9,7 @@ TagManager:
   - path
   - Point
   - Ground
+  - Spider
   layers:
   - Default
   - TransparentFX

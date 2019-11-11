@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class spider_ai : MonoBehaviour
 {
     private void Start()
     {
         line.positionCount = 2;
+        aipath.enabled = false;
     }
     private void FixedUpdate()
     {
@@ -35,7 +37,25 @@ public class spider_ai : MonoBehaviour
         if (player_ray.collider)
         {
             web.enabled = false;
+            line.enabled = false;
         }
+        if (!web.enabled)
+        {
+            if(Physics2D.OverlapCircle(feetPos.position, 0.1f, ground_layer))
+            {
+                aipath.enabled = true;
+                aipath.maxSpeed = 2.5f;
+            }
+            else
+            {
+                aipath.maxSpeed = 5;
+            }
+            
+        }
+    }
+    private void a_star() 
+    {
+        
     }
 
     public SpringJoint2D web;
@@ -45,4 +65,7 @@ public class spider_ai : MonoBehaviour
     public Transform finalPos;
     private RaycastHit2D player_ray;
     public LayerMask player_layer;
+    public LayerMask ground_layer;
+    public Transform feetPos;
+    public AIPath aipath;
 }
