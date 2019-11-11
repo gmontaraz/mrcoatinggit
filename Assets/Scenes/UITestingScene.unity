@@ -2689,7 +2689,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.7264151, g: 0, b: 0, a: 1}
+      maxColor: {r: 0.1238216, g: 0.3584906, b: 0.0016909974, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -10892,6 +10892,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interface
       objectReference: {fileID: 0}
+    - target: {fileID: 2426845478889960559, guid: 06ffb860f4a5ed8479d40fdac1e72b36,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2426845478183920959, guid: 06ffb860f4a5ed8479d40fdac1e72b36,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10996,11 +11001,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2426845478889960559, guid: 06ffb860f4a5ed8479d40fdac1e72b36,
-        type: 3}
-      propertyPath: m_FillAmount
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06ffb860f4a5ed8479d40fdac1e72b36, type: 3}
