@@ -19,18 +19,22 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            Debug.Log("Colision");
-            actual_health--;
-            if (actual_health <= 0)
-            {
-                Destroy(this.gameObject);
-                GameObject new_point = Instantiate(point, transform.position, transform.rotation);
-                GameObject blood=Instantiate(particles, transform.position, transform.rotation);
-                blood.SetActive(true);
-                new_point.SetActive(true);
-            }
+            attacked();
             collision.gameObject.SetActive(false);
         }
+    }
+    public void attacked()
+    {
+        actual_health-=1;
+        if (actual_health <= 0)
+        {
+            Destroy(this.gameObject);
+            GameObject new_point = Instantiate(point, transform.position, transform.rotation);
+            GameObject blood = Instantiate(particles, transform.position, transform.rotation);
+            blood.SetActive(true);
+            new_point.SetActive(true);
+        }
+        
     }
     #region variables
     public int actual_health;

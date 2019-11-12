@@ -10,6 +10,7 @@ TagManager:
   - Point
   - Ground
   - Spider
+  - FlyKiller
   layers:
   - Default
   - TransparentFX
