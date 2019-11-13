@@ -9174,7 +9174,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.34
+  m_Radius: 0.4
 --- !u!50 &1181909230
 Rigidbody2D:
   serializedVersion: 4
@@ -9673,6 +9673,9 @@ MonoBehaviour:
   fillAmount: 0
   content: {fileID: 1025832348}
   player: {fileID: 1223383709}
+  invincibilityLength: 0
+  playerRenderer: {fileID: 0}
+  flashLength: 0.5
 --- !u!114 &1223383716
 MonoBehaviour:
   m_ObjectHideFlags: 0
