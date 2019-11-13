@@ -82,5 +82,5 @@ public class PlayerHealth : MonoBehaviour
     private float invincibilityCounter;
     public Renderer playerRenderer;
     private float flashCounter;
-    public float flashLength = 0.5f;
+    public float flashLength = 0.1f;
 }
