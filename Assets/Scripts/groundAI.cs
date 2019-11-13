@@ -8,13 +8,13 @@ public class groundAI : MonoBehaviour
 
     private void Update()
     {
-        if (Physics2D.OverlapCircle(feetPos.position, 0.1f, ground_layer))
+        if (Physics2D.OverlapCircle(feetPos.position, 0.2f, ground_layer))
         {
-            aipath.maxSpeed = 3;
+            aipath.maxSpeed = 2.5f;
         }
         else
         {
-            aipath.maxSpeed = 5;
+            aipath.maxSpeed = 4;
         }
     }
 

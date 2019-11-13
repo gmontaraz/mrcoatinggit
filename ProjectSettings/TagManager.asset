@@ -11,6 +11,7 @@ TagManager:
   - Ground
   - Spider
   - FlyKiller
+  - web_start
   layers:
   - Default
   - TransparentFX
@@ -23,8 +24,8 @@ TagManager:
   - Ground
   - ObstaclesAI
   - Player
-  - 
-  - 
+  - Points
+  - Enemies
   - 
   - 
   - 

@@ -9,7 +9,6 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         actual_health = max_health;
-        health_text.text = "Health: " + actual_health;
     }
 
     // Update is called once per frame 

@@ -15,7 +15,7 @@ public class EnemyHealth : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
@@ -41,26 +41,22 @@ public class EnemyHealth : MonoBehaviour
     }
     private void createPoint()
     {
-        random_vector_x = Random.Range(min_random_vector_x, max_random_vector_x);
-        random_vector_y = Random.Range(min_random_vector_y, max_random_vector_y - 0.7f);
-        v_aux = new Vector3(random_vector_x, random_vector_y, 0);
+        random_vector_x = Random.Range(-1f, 1f);
+        random_vector_y = Random.Range(1f, 3f);
+        v_aux = new Vector2(random_vector_x, random_vector_y);
         GameObject new_point = Instantiate(point, transform.position, transform.rotation);
         new_point.SetActive(true);
-        new_point.transform.Translate(v_aux);
+        new_point.GetComponent<Rigidbody2D>().AddForce(v_aux * 80);
     }
     #region variables
     public int actual_health;
     public int max_health;
     public int random_points;
-    public int min_random_points = 3;
-    public int max_random_points = 6;
+    private int min_random_points = 5;
+    private int max_random_points = 10;
     public Vector3 v_aux;
     public float random_vector_x;
     public float random_vector_y;
-    public float min_random_vector_x = -0.05f;
-    public float max_random_vector_x = 0.5f;
-    public float min_random_vector_y = 0f;
-    public float max_random_vector_y = 0.3f;
     public GameObject point;
     public GameObject particles;
     #endregion
