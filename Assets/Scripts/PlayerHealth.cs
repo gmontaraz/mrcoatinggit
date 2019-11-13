@@ -12,27 +12,55 @@ public class PlayerHealth : MonoBehaviour
     }
 
     // Update is called once per frame 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void Update()
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if(invincibilityCounter > 0)
         {
-            actual_health--;
-            HandleBar();
-            if (actual_health <= 0)
+            invincibilityCounter -= Time.deltaTime;
+            flashCounter -= Time.deltaTime;
+            if (flashCounter <= 0)
             {
-                this.gameObject.SetActive(false);
+                playerRenderer.enabled = !playerRenderer.enabled;
+                flashCounter = flashLength;
+            }
+
+            if (invincibilityCounter <= 0)
+            {
+                playerRenderer.enabled = true;
             }
         }
-        if (collision.gameObject.CompareTag("Spider"))
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (invincibilityCounter <= 0)
         {
-            actual_health--;
-            HandleBar();
-            player.gameObject.GetComponent<PlayerMovement>().poison = true;
-            if (actual_health <= 0)
+            if (collision.gameObject.CompareTag("Enemy"))
             {
-                this.gameObject.SetActive(false);
+                actual_health--;
+                HandleBar();
+                if (actual_health <= 0)
+                {
+                    this.gameObject.SetActive(false);
+                }
+                invincibilityCounter = invincibilityLength;
+                playerRenderer.enabled = false;
+                flashCounter = flashLength;
             }
-            Invoke("disablepoison", 5f);
+            if (collision.gameObject.CompareTag("Spider"))
+            {
+                actual_health--;
+                HandleBar();
+                player.gameObject.GetComponent<PlayerMovement>().poison = true;
+                if (actual_health <= 0)
+                {
+                    this.gameObject.SetActive(false);
+                }
+                Invoke("disablepoison", 5f);
+                invincibilityCounter = invincibilityLength;
+                playerRenderer.enabled = false;
+                flashCounter = flashLength;
+            }
         }
     }
     public void disablepoison()
@@ -50,4 +78,9 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float fillAmount;
     [SerializeField] private Image content;
     public GameObject player;
+    public float invincibilityLength;
+    private float invincibilityCounter;
+    public Renderer playerRenderer;
+    private float flashCounter;
+    public float flashLength = 0.5f;
 }
