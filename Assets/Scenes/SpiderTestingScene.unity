@@ -8351,7 +8351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actual_health: 0
-  max_health: 1
+  max_health: 2
   point: {fileID: 1185055445}
   particles: {fileID: 396381052}
 --- !u!95 &988690020
@@ -9758,6 +9758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam_anim: {fileID: 519420030}
+  attack_speed: 0
 --- !u!1 &1332109642
 GameObject:
   m_ObjectHideFlags: 0
@@ -10044,7 +10045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actual_health: 0
-  max_health: 1
+  max_health: 2
   point: {fileID: 1185055445}
   particles: {fileID: 396381052}
 --- !u!114 &1696457889
