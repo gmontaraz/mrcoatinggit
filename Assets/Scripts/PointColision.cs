@@ -7,11 +7,15 @@ public class PointColision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Destruye el punto si lo toca un untagged, sino le atraviesa
-        if (collision.gameObject.tag == "Untagged")
+        if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Colision point ");
             Destroy(this.gameObject);
+        }
+
+        if (collision.gameObject.tag == "Ground")
+        {
+            pointRigidBody = GetComponent<Rigidbody2D>();
+            pointRigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
         }
     }
     // Start is called before the first frame update
@@ -25,4 +29,6 @@ public class PointColision : MonoBehaviour
     {
         
     }
+
+    Rigidbody2D pointRigidBody;
 }

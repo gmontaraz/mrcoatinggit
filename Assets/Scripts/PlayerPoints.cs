@@ -17,12 +17,11 @@ public class PlayerPoints : MonoBehaviour
     {
         if (collision.gameObject.tag == "Point")
         {
-            actual_points += random_points;
+            actual_points++;
             points_text.text = actual_points.ToString("D4");
         }
     }
     public int min_points;
-    public int random_points = 1;
     public int actual_points;
     [SerializeField] private Text points_text;
 }
