@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         actual_health = max_health;
     }
 
@@ -20,13 +21,14 @@ public class PlayerHealth : MonoBehaviour
             flashCounter -= Time.deltaTime;
             if (flashCounter <= 0)
             {
-                playerRenderer.enabled = !playerRenderer.enabled;
+                flash= !flash;
+                playerRenderer.enabled = flash;
                 flashCounter = flashLength;
             }
 
             if (invincibilityCounter <= 0)
             {
-                playerRenderer.enabled = true;
+                playerRenderer.enabled = false;
             }
         }
     }
@@ -44,7 +46,7 @@ public class PlayerHealth : MonoBehaviour
                     this.gameObject.SetActive(false);
                 }
                 invincibilityCounter = invincibilityLength;
-                playerRenderer.enabled = false;
+                flash = false;
                 flashCounter = flashLength;
             }
             if (collision.gameObject.CompareTag("Spider"))
@@ -58,7 +60,8 @@ public class PlayerHealth : MonoBehaviour
                 }
                 Invoke("disablepoison", 5f);
                 invincibilityCounter = invincibilityLength;
-                playerRenderer.enabled = false;
+                flash = false;
+                
                 flashCounter = flashLength;
             }
         }
@@ -80,7 +83,8 @@ public class PlayerHealth : MonoBehaviour
     public GameObject player;
     public float invincibilityLength;
     private float invincibilityCounter;
-    public Renderer playerRenderer;
+    public SpriteRenderer playerRenderer;
     private float flashCounter;
     public float flashLength = 0.1f;
+    private bool flash;
 }

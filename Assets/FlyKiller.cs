@@ -13,9 +13,10 @@ public class FlyKiller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RaycastHit2D[] enemies_inside = Physics2D.CircleCastAll(transform.position, 0.75f,Vector2.zero);
+        RaycastHit2D[] enemies_inside = Physics2D.CircleCastAll(transform.position, 0.5f,Vector2.zero);
         if (Input.GetKeyDown(KeyCode.X) && attack_speed<=0)
         {
+            player_animator.SetTrigger("attack");
             Debug.Log("lol");
             int i;
             attack_speed = 0.3f;
@@ -28,7 +29,7 @@ public class FlyKiller : MonoBehaviour
                     Vector2 angle = enemies_inside[i].collider.gameObject.transform.position - transform.position;
                     angle=angle.normalized;
                     Debug.Log(angle);
-                    enemies_inside[i].collider.gameObject.transform.Translate(angle );
+                    //enemies_inside[i].collider.gameObject.transform.Translate(angle );
                     cam_anim.SetTrigger("Shake");
                 }
             }
@@ -40,5 +41,6 @@ public class FlyKiller : MonoBehaviour
         
     }
     public Animator cam_anim;
+    public Animator player_animator;
     [SerializeField] private float attack_speed;
 }

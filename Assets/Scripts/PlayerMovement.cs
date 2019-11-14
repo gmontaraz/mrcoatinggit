@@ -13,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animator.SetFloat("player_velocity", rb.velocity.magnitude);
+        animator.SetFloat("y_velocity", rb.velocity.y);
+        animator.SetBool("grounded", isGrounded);
         if (poison)
         {
             sprite.color = new Color(0.5f, 1, 0.5f);
@@ -70,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Z))
         {
+            animator.SetTrigger("jump");
             rememberjump = remembertime;
         }
         
@@ -132,7 +136,7 @@ public class PlayerMovement : MonoBehaviour
     
     [Header("Layers")]
     [SerializeField] private LayerMask ground;
-
+    public Animator animator;
     public GameObject particles;
     #endregion
 }
