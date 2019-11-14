@@ -22,14 +22,22 @@ public class PlayerHealth : MonoBehaviour
             if (flashCounter <= 0)
             {
                 flash= !flash;
-                playerRenderer.enabled = flash;
+                //playerRenderer.enabled = flash;
                 flashCounter = flashLength;
             }
 
             if (invincibilityCounter <= 0)
             {
-                playerRenderer.enabled = false;
+                flash = false;
+                //playerRenderer.enabled = false;
             }
+        }
+        if (flash)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, -15);
+        }
+        else if(!flash){
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
         }
     }
 

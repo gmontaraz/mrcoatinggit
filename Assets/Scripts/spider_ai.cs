@@ -8,8 +8,25 @@ public class spider_ai : MonoBehaviour
     private void Start()
     {
         search_web = true;
+        bool found=false;
+        foreach(GameObject swing_point in swing_points)
+        {
+            if (!swing_point.GetComponent<swing_manager>().occupied && !found)
+            {
+                web_start = swing_point;
+                web.connectedBody = swing_point.transform.parent.GetComponent<Rigidbody2D>();
+                finalPos = swing_point.transform.parent;
+                found = true;
+                swing_point.GetComponent<swing_manager>().occupied = true;
+            }
+        }
+        if (!found)
+        {
+            Destroy(this.gameObject);
+        }
+        
+        destination.target = web_start.transform;
         aipath.enabled = true;
-        destination.target = web_start;
         line.positionCount = 2;
         
         web.enabled = false;
@@ -19,27 +36,11 @@ public class spider_ai : MonoBehaviour
     {
         line.SetPosition(0, startPos.position);
         line.SetPosition(1, finalPos.position);
-        /*
-        if (goup)
-        { 
-            web.distance -= Time.deltaTime * 1;
-            if (web.distance < 0.5)
-            {
-                goup = false;
-            }
-        }
-        else if(!goup)
-        {
-            web.distance += Time.deltaTime * 2;
-            if (web.distance > 1f)
-            {
-                goup = true;
-            }
-        }
-        */
+
     }
     private void Update()
     {
+
         if (!search_web) { 
             player_ray = Physics2D.Raycast(this.transform.position, Vector2.down, 3f, player_layer);
             if (player_ray.collider)
@@ -69,7 +70,7 @@ public class spider_ai : MonoBehaviour
         {
             search_web = true;
             aipath.maxSpeed = 4f;
-            destination.target = web_start;
+            destination.target = web_start.transform;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -96,7 +97,9 @@ public class spider_ai : MonoBehaviour
     public Transform feetPos;
     public AIPath aipath;
     public AIDestinationSetter destination;
-    public Transform web_start;
+    public GameObject web_start;
     public Transform player;
     private bool search_web;
+
+    public GameObject[] swing_points;
 }

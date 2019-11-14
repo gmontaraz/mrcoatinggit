@@ -19,23 +19,28 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            attacked();
+            attacked(1);
             collision.gameObject.SetActive(false);
         }
     }
-    public void attacked()
+    public void attacked(int daño)
     {
-        actual_health--;
+        actual_health-=daño;
+        GameObject blood = Instantiate(particles, transform.position, transform.rotation);
+        blood.SetActive(true);
         if (actual_health <= 0)
         {
+            if (gameObject.CompareTag("Spider"))
+            {
+                    gameObject.GetComponent<spider_ai>().web_start.GetComponent<swing_manager>().occupied = false;
+            }
             Destroy(this.gameObject);
             random_points = Random.Range(min_random_points, max_random_points + 1);
             for (float i = 0; i < random_points; i++)
             {
                 createPoint();
             }
-            GameObject blood = Instantiate(particles, transform.position, transform.rotation);
-            blood.SetActive(true);
+            
         }
 
     }
