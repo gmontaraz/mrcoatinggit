@@ -52,6 +52,7 @@ public class PlayerHealth : MonoBehaviour
                 if (actual_health <= 0)
                 {
                     this.gameObject.SetActive(false);
+                    restart_game();
                 }
                 invincibilityCounter = invincibilityLength;
                 flash = false;
@@ -65,6 +66,7 @@ public class PlayerHealth : MonoBehaviour
                 if (actual_health <= 0)
                 {
                     this.gameObject.SetActive(false);
+                    restart_game();
                 }
                 Invoke("disablepoison", 5f);
                 invincibilityCounter = invincibilityLength;
@@ -81,6 +83,10 @@ public class PlayerHealth : MonoBehaviour
 
     private void HandleBar(){
         content.fillAmount = actual_health / max_health;
+    }
+    void restart_game()
+    {
+        Application.LoadLevel(0);
     }
 
     public float max_health;

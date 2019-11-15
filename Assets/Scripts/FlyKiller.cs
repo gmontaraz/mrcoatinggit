@@ -30,10 +30,20 @@ public class FlyKiller : MonoBehaviour
                     angle = angle.normalized;
                     enemies_inside[i].collider.gameObject.GetComponent<AIPath>().enabled = false;
                     enemies_inside[i].collider.gameObject.GetComponent<Rigidbody2D>().AddForce(angle * 500);
-                    StartCoroutine(MyFunction(enemies_inside[i].collider.gameObject, 0.1f));
+                    if (enemies_inside[i].collider.CompareTag("Spider"))
+                    {
+                        if (!enemies_inside[i].collider.gameObject.GetComponent<spider_ai>().web.enabled)
+                        {
+                            StartCoroutine(MyFunction(enemies_inside[i].collider.gameObject, 0.1f));
+                        }
+                    }
+                    else
+                    {
+                        StartCoroutine(MyFunction(enemies_inside[i].collider.gameObject, 0.1f));
+                    }
                     enemies_inside[i].collider.gameObject.GetComponent<EnemyHealth>().attacked(1);
-                    
                 }
+
             }
         }
         IEnumerator MyFunction(GameObject enemy, float delayTime)
