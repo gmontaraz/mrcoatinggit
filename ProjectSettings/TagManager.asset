@@ -12,6 +12,7 @@ TagManager:
   - Spider
   - FlyKiller
   - web_start
+  - core
   layers:
   - Default
   - TransparentFX
@@ -26,8 +27,6 @@ TagManager:
   - Player
   - Points
   - Enemies
-  - 
-  - 
   - 
   - 
   - 
