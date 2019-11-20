@@ -14,7 +14,7 @@ public class FlyKiller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RaycastHit2D[] enemies_inside = Physics2D.CircleCastAll(transform.position, 1.5f,Vector2.zero);
+        RaycastHit2D[] enemies_inside = Physics2D.CircleCastAll(transform.position, 1f,Vector2.zero);
         if (Input.GetKeyDown(KeyCode.X) && attack_speed<=0)
         {
             player_animator.SetTrigger("attack");
