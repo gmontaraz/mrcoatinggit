@@ -5,33 +5,36 @@ using UnityEngine.UI;
 
 public class CoreHealth : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         actual_core_health = max_core_health;
+        HandleBar();
+        InvokeRepeating("Hole", 10f, 10f);
+    }
+    public void Core_Attacked()
+    {
+        actual_core_health--;
+        efficiency.Resta_Efficiency();
+        HandleBar();
     }
 
-    // Update is called once per frame 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void HandleBar()
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        contentH.fillAmount = actual_core_health / max_core_health;
+    }
+    public void Hole()
+    {
+        if (spawnSpawners.num_spawns >= 0)
         {
             actual_core_health--;
+            efficiency.Resta_Efficiency();
             HandleBar();
-            if (actual_core_health <= 0)
-            {
-                this.gameObject.SetActive(false);
-            }
         }
     }
 
-    private void HandleBar(){
-        content.fillAmount = actual_core_health / max_core_health;
-        Debug.Log(actual_core_health / max_core_health); 
-    }
-
+    public SpawnSpawners spawnSpawners;
+    public Efficiency efficiency;
     public float max_core_health;
     public float actual_core_health;
-    [SerializeField] private float fillAmount;
-    [SerializeField] private Image content;
+    [SerializeField] private Image contentH;
 }
