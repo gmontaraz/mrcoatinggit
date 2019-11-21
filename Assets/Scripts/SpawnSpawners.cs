@@ -12,9 +12,19 @@ public class SpawnSpawners : MonoBehaviour
     {
         if (num_spawns < 4)
         {
-            random_vector_x = Random.Range((-7.2f * 0.2f), (7.7f * 0.2f));
-            random_vector_y = Random.Range((-4.2f * 0.2f), (3.7f * 0.2f));
-            v_aux = new Vector2((random_vector_x / 0.2f), (random_vector_y / 0.2f));
+            random_vector_x = Random.Range((-7.7f), (7.7f));
+            System.Math.Round(random_vector_x, 1);
+            random_vector_y = Random.Range((-4.2f), (3.7f));
+            System.Math.Round(random_vector_y, 1);
+            if (random_vector_x < 2.5 && random_vector_x > -2.5 && random_vector_y < -1.5)
+            {
+                Debug.Log("PELIGRO");
+                random_vector_x = Random.Range((-7.7f), (7.7f));
+                System.Math.Round(random_vector_x, 1);
+                random_vector_y = Random.Range((-4.2f), (3.7f));
+                System.Math.Round(random_vector_y, 1);
+            }
+            v_aux = new Vector2((random_vector_x), (random_vector_y));
             Debug.Log(v_aux);
             GameObject new_spawn = Instantiate(spawn, v_aux, transform.rotation);
             new_spawn.SetActive(true);
