@@ -14107,7 +14107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnSpawners: {fileID: 774375663}
   efficiency: {fileID: 1223383717}
-  max_core_health: 12
+  max_core_health: 10
   actual_core_health: 0
   contentH: {fileID: 1653168589}
 --- !u!1 &976760897
@@ -15793,8 +15793,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 184b5e2f36f460744b457077dbd1b161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_efficiency: 60
-  start_efficiency: 20
+  max_efficiency: 40
+  start_efficiency: 15
   actual_efficiency: 0
   contentP: {fileID: 1865240724}
 --- !u!1 &1230256870
@@ -22536,17 +22536,32 @@ PrefabInstance:
     - target: {fileID: 2426845478837968179, guid: 06ffb860f4a5ed8479d40fdac1e72b36,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -269
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2426845478837968179, guid: 06ffb860f4a5ed8479d40fdac1e72b36,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 140
+      value: 155
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426845478837968179, guid: 06ffb860f4a5ed8479d40fdac1e72b36,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.40625206
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426845478837968179, guid: 06ffb860f4a5ed8479d40fdac1e72b36,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.21716613
       objectReference: {fileID: 0}
     - target: {fileID: 2426845478837968178, guid: 06ffb860f4a5ed8479d40fdac1e72b36,
         type: 3}
       propertyPath: m_Name
       value: EfficiencyHouseBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426845477719154793, guid: 06ffb860f4a5ed8479d40fdac1e72b36,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06ffb860f4a5ed8479d40fdac1e72b36, type: 3}

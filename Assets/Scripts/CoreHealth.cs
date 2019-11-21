@@ -13,9 +13,12 @@ public class CoreHealth : MonoBehaviour
     }
     public void Core_Attacked()
     {
-        actual_core_health--;
-        efficiency.Resta_Efficiency();
-        HandleBar();
+        if (actual_core_health > 0)
+        {
+            actual_core_health--;
+            efficiency.Resta_Efficiency();
+            HandleBar();
+        }
     }
 
     public void HandleBar()
@@ -24,11 +27,14 @@ public class CoreHealth : MonoBehaviour
     }
     public void Hole()
     {
-        if (spawnSpawners.num_spawns >= 0)
+        if (actual_core_health > 0)
         {
-            actual_core_health--;
-            efficiency.Resta_Efficiency();
-            HandleBar();
+            if (spawnSpawners.num_spawns >= 0)
+            {
+                actual_core_health--;
+                efficiency.Resta_Efficiency();
+                HandleBar();
+            }
         }
     }
 
