@@ -9,6 +9,7 @@ public class cockroach_ai : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         speed = 1f;
+        Vector3 characterScale = transform.localScale;
     }
 
     // Update is called once per frame
@@ -18,14 +19,21 @@ public class cockroach_ai : MonoBehaviour
 
         if (player.position.x > transform.position.x) // x de personaje > x de cucaracha
         {
-            transform.eulerAngles = new Vector3(0, 0, 0);
+            //transform.eulerAngles = new Vector3(0, 0, 0);
+            Vector3 characterScale = transform.localScale;
+            characterScale.x = 1;
             speed = 1f;
+            transform.localScale = characterScale;
         }
         else // x de personaje < x de cucaracha
         {
-            transform.eulerAngles = new Vector3(0, -180, 0);
-            speed = 1f;
+            //transform.eulerAngles = new Vector3(0, -180, 0);
+            Vector3 characterScale = transform.localScale;
+            characterScale.x = -1;
+            speed = -1f;
+            transform.localScale = characterScale;
         }
+        //transform.localScale = characterScale;
     }
 
     // Variables

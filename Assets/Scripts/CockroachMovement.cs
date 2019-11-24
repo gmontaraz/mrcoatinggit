@@ -13,7 +13,7 @@ public class CockroachMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (System.Math.Abs(player.position.x - transform.position.x) < 1 && System.Math.Abs(player.position.y - transform.position.y) < 1)
+        if (System.Math.Abs(player.position.x - transform.position.x) > 1 && System.Math.Abs(player.position.y - transform.position.y) > 1)
         {
             followPlayer.enabled = false;
             jumping.enabled = false;
