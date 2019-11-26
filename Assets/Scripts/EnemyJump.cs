@@ -28,15 +28,12 @@ public class EnemyJump : MonoBehaviour
         {
             transform.eulerAngles = new Vector3(0, -180, 0);
             forceX = 300f;
-            //speed = 1f;
         }
         else // x de personaje < x de cucaracha
         {
-            forceX = -300f;
             transform.eulerAngles = new Vector3(0, 0, 0);
-            //speed = -1f;
+            forceX = -300f;
         }
-        //transform.localScale = characterScale;
     }
 
     void Awake()
@@ -48,7 +45,6 @@ public class EnemyJump : MonoBehaviour
     public float forceX = 300f;
     public float forceY = 600f;
     private Rigidbody2D rb;
-    //public float speed;
     private Transform player;
     //private Animator myAnimator;
 }

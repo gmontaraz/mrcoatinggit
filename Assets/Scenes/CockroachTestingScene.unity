@@ -520,7 +520,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 335919555}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
   m_Name: 
@@ -664,11 +664,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 335919555}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbc3627257ac6fa48a07d1f17af5c162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cucaracha: {fileID: 335919555}
 --- !u!114 &335919566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10995,12 +10996,12 @@ PrefabInstance:
     - target: {fileID: 9144658339785088323, guid: 3562f9af6417a734dbeff641c3053613,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.97748727
+      value: 0.9774872
       objectReference: {fileID: 0}
     - target: {fileID: 9144658339785088323, guid: 3562f9af6417a734dbeff641c3053613,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.21099459
+      value: 0.21099468
       objectReference: {fileID: 0}
     - target: {fileID: 9144658339785088323, guid: 3562f9af6417a734dbeff641c3053613,
         type: 3}
@@ -11030,12 +11031,12 @@ PrefabInstance:
     - target: {fileID: 9144658340415486581, guid: 3562f9af6417a734dbeff641c3053613,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.5182774
+      value: 0.5182777
       objectReference: {fileID: 0}
     - target: {fileID: 9144658340415486581, guid: 3562f9af6417a734dbeff641c3053613,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8552126
+      value: 0.8552124
       objectReference: {fileID: 0}
     - target: {fileID: 9144658340415486581, guid: 3562f9af6417a734dbeff641c3053613,
         type: 3}
