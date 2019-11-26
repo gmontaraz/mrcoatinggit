@@ -8,20 +8,14 @@ public class EnemyJump : MonoBehaviour
     void Start()
     {
         StartCoroutine(Jump());
-        //forceX = -forceX;
         forceX = 300f;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        //speed = 1f;
-        Vector3 characterScale = transform.localScale;
     }
 
     IEnumerator Jump()
     {
-        yield return new WaitForSeconds(2f);
-        //rb.AddForce(new Vector2(0, forceY));
+        yield return new WaitForSeconds(1.5f);
         rb.AddForce(new Vector2(forceX, forceY));
-        //myAnimator.SetBool("cucaSalto", true);
-        //myAnimator.SetBool("cucaSalto", false);
         StartCoroutine(Jump());
     }
 
@@ -32,21 +26,15 @@ public class EnemyJump : MonoBehaviour
 
         if (player.position.x > transform.position.x) // x de personaje > x de cucaracha
         {
-            //transform.eulerAngles = new Vector3(0, 0, 0);
+            transform.eulerAngles = new Vector3(0, -180, 0);
             forceX = 300f;
-            Vector3 characterScale = transform.localScale;
-            characterScale.x = 1;
             //speed = 1f;
-            transform.localScale = characterScale;
         }
         else // x de personaje < x de cucaracha
         {
             forceX = -300f;
-            //transform.eulerAngles = new Vector3(0, -180, 0);
-            Vector3 characterScale = transform.localScale;
-            characterScale.x = -1;
+            transform.eulerAngles = new Vector3(0, 0, 0);
             //speed = -1f;
-            transform.localScale = characterScale;
         }
         //transform.localScale = characterScale;
     }

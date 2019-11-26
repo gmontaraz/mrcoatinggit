@@ -7,20 +7,30 @@ public class CockroachMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (System.Math.Abs(player.position.x - transform.position.x) > 1 && System.Math.Abs(player.position.y - transform.position.y) > 1)
-        {
-            followPlayer.enabled = false;
-            jumping.enabled = false;
-        }
+
     }
 
-    private cockroach_ai followPlayer;
-    private EnemyJump jumping;
-    private Transform player;
+    //private void OnCollisionEnter2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("palo"))
+    //    {
+    //        golpeado = true;
+    //    }
+
+    //    if (golpeado && cucaracha.GetComponent<AIPath>().enabled)
+    //    {
+    //        cucaracha.GetComponent<AIPath>().enabled = false;
+    //        golpeado = false;
+    //    }
+    //}
+
+    //private bool golpeado = false;
+    //public GameObject cucaracha;
+    ////public AIPath aipath;
 }
