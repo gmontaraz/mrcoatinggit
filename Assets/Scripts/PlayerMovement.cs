@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -56,6 +56,21 @@ public class PlayerMovement : MonoBehaviour
         }
         rb.velocity = clampedvelocity;
         
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("door"))
+        {
+            
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                Debug.Log("door");
+                
+                SceneManager.LoadScene("EfficiencyTestingScene");
+                Debug.Log(weapons.Length);
+                weapons[Random.Range(0, weapons.Length)].SetActive(true);
+            }
+        }
     }
     private void ManageJumps()
     {
@@ -138,5 +153,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask ground;
     public Animator animator;
     public GameObject particles;
+    public GameObject[] weapons;
     #endregion
 }

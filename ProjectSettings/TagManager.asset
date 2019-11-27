@@ -13,6 +13,7 @@ TagManager:
   - FlyKiller
   - web_start
   - core
+  - door
   layers:
   - Default
   - TransparentFX

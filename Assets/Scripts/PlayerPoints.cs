@@ -21,8 +21,8 @@ public class PlayerPoints : MonoBehaviour
     {
         actual_points += Mathf.RoundToInt(efficiency.actual_efficiency);
         points_text.text = actual_points.ToString("D4");
-        efficiency.HandleBar();
-        coreHealth.HandleBar();
+        //efficiency.HandleBar();
+        //coreHealth.HandleBar();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
