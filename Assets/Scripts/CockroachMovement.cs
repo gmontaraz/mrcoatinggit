@@ -9,45 +9,45 @@ public class CockroachMovement : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        core = GameObject.FindGameObjectWithTag("core").GetComponent<Transform>();
+        touchingCore = false;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     //Update is called once per frame
     void Update()
     {
-        if (System.Math.Abs(player.position.x - transform.position.x) < 5 && System.Math.Abs(player.position.y - transform.position.y) < 5)
-        {
-            Invoke("WaitSeconds", 1f);
-            cucaracha.GetComponent<EnemyJump>().enabled = true;
-            cucaracha.GetComponent<AIPath>().enabled = false;
-        }
-        else
-        {
-            Invoke("WaitSeconds", 1f);
-            cucaracha.GetComponent<EnemyJump>().enabled = false;
-            cucaracha.GetComponent<AIPath>().enabled = true;
-        }
+        animator.SetFloat("SpeedY", rb.velocity.y);
 
-        if (player.position.x > transform.position.x)
-        {
-            transform.eulerAngles = new Vector3(0, -180, 0);
-        }
-        else
+        if (System.Math.Abs(player.position.x - transform.position.x) < 4 && System.Math.Abs(player.position.y - transform.position.y) < 4 && touchingCore)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
+            cucaracha.GetComponent<AIPath>().enabled = false;
+            cucaracha.GetComponent<EnemyJump>().enabled = true;
+            if (player.position.x > transform.position.x)
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+            }
+            else
+            {
+                transform.eulerAngles = new Vector3(0, -180, 0);
+            }
+        }
+        else
+        {
+            touchingCore = false;
+            cucaracha.GetComponent<EnemyJump>().enabled = false;
+            cucaracha.GetComponent<AIPath>().enabled = true;
+            if (transform.position.x <= core.position.x + 0.5 && transform.position.x >= core.position.x - 0.5 && transform.position.y <= core.position.y + 0.5 && transform.position.y >= core.position.y - 0.5)
+            {
+                touchingCore = true;
+            }
         }
     }
-
-    void WaitSeconds()
-    {
-        // espera los segundos especificados en el Invoke
-        // esto es para arreglar un problema del cambio de movimiento de la cucaracha
-    }
-
-    //private bool golpeado = false;
     public GameObject cucaracha;
-    //public AIPath aipath;
-    //public GameObject player;
     private Transform player;
-
-    //gameObject.GetComponent<NaveMeshAgent>().enabled = false;
+    private Transform core;
+    private bool touchingCore;
+    public Animator animator;
+    private Rigidbody2D rb;
 }

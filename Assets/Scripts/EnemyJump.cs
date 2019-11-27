@@ -22,16 +22,14 @@ public class EnemyJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.Translate(Vector2.right * speed * Time.deltaTime);
-
         if (player.position.x > transform.position.x) // x de personaje > x de cucaracha
         {
-            transform.eulerAngles = new Vector3(0, -180, 0);
+            transform.eulerAngles = new Vector3(0, 0, 0);
             forceX = 300f;
         }
         else // x de personaje < x de cucaracha
         {
-            transform.eulerAngles = new Vector3(0, 0, 0);
+            transform.eulerAngles = new Vector3(0, -180, 0);
             forceX = -300f;
         }
     }
@@ -39,12 +37,10 @@ public class EnemyJump : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        //myAnimator = GetComponent<Animator>();
     }
 
     public float forceX = 300f;
     public float forceY = 600f;
     private Rigidbody2D rb;
     private Transform player;
-    //private Animator myAnimator;
 }
