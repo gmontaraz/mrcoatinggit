@@ -70964,6 +70964,11 @@ PrefabInstance:
       propertyPath: content
       value: 
       objectReference: {fileID: 249141348}
+    - target: {fileID: 2341093627587886990, guid: 6380a8b16cba2924f97d1b619cd957ec,
+        type: 3}
+      propertyPath: max_health
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2341093627587886984, guid: 6380a8b16cba2924f97d1b619cd957ec,
         type: 3}
       propertyPath: contentP

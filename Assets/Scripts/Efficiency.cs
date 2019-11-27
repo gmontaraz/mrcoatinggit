@@ -15,13 +15,12 @@ public class Efficiency : MonoBehaviour
     {
         actual_efficiency--;
         HandleBar();
-    }
-    
+    }    
     public void HandleBar()
     {
         contentP.fillAmount = actual_efficiency / max_efficiency;
     }
-    
+
     public float max_efficiency;
     public float start_efficiency;
     public float actual_efficiency;
