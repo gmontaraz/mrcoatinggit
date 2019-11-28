@@ -25,7 +25,7 @@ public class BulletSpawner : MonoBehaviour
             cam_anim = GameObject.Find("Main Camera").GetComponent<Animator>();
             cam_anim.SetTrigger("Shake");
             Spawn();
-            cadence = 0.5f;
+            cadence = 0.1f;
         }
         if (cadence > 0)
         {
