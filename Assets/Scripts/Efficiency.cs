@@ -9,6 +9,7 @@ public class Efficiency : MonoBehaviour
     {
         actual_efficiency = start_efficiency;
         HandleBar();
+        //InvokeRepeating("HandleBar", 2f, 2f);
     }
     
     public void Resta_Efficiency(int i)
@@ -16,7 +17,7 @@ public class Efficiency : MonoBehaviour
         actual_efficiency -= i;
         HandleBar();
     }
-    public void Suma_Efficiency(int i)
+    public void Suma_Efficiency(float i)
     {
         actual_efficiency += i;
         if (actual_efficiency > max_efficiency)

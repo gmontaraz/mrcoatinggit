@@ -6,7 +6,7 @@ public class SpawnEnemy : MonoBehaviour
 {
     private void Start()
     {
-        InvokeRepeating("Spawn", 1f, 5f);
+        InvokeRepeating("Spawn", 1f, 8f);
     }
     void Update()
     {
@@ -15,8 +15,11 @@ public class SpawnEnemy : MonoBehaviour
             spawnSpawners.spawns_activated[num_spawn] = false;
             spawnSpawners.num_spawns--;
             spawnSpawners.num_spawns_aux -= 2;
+            if(spawnSpawners.num_spawns_aux < 0)
+            {
+                spawnSpawners.num_spawns_aux = 0;
+            }
             coreHealth.Core_Healed(2);
-            efficiency.Suma_Efficiency(2);
             Destroy(this.gameObject);
         }
     }
@@ -40,7 +43,6 @@ public class SpawnEnemy : MonoBehaviour
     }
     private void Spawn()
     {
-        //time_spawn = (5f * spawnSpawners.num_spawns);
         Debug.Log(array.Length);
         int i_random = Random.Range(0, array.Length);
         enemy = array[i_random];
@@ -52,7 +54,6 @@ public class SpawnEnemy : MonoBehaviour
     public TextMesh text;
     public CoreHealth coreHealth;
     public Efficiency efficiency;
-    //public float time_spawn = 4f;
     public bool delete = false;
     public string text_s;
     public int num_spawn;

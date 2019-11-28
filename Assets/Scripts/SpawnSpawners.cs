@@ -28,7 +28,7 @@ public class SpawnSpawners : MonoBehaviour
                     GameObject new_spawn = Instantiate(spawn, spawns[random_spawn], transform.rotation);
                     new_spawn.SetActive(true);
                     num_spawns++;
-                    num_spawns_aux += (2*num_spawns);
+                    num_spawns_aux += (num_spawns);
                     time_spawn = (10f + (num_spawns * 4));
                 }
 
@@ -37,6 +37,10 @@ public class SpawnSpawners : MonoBehaviour
         else
         {
             num_spawns_aux--;
+            if(num_spawns_aux < 0)
+            {
+                num_spawns_aux = 0;
+            }
         }
     }
 

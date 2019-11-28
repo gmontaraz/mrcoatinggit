@@ -35,8 +35,6 @@ public class PlayerPoints : MonoBehaviour
         }
     }
 
-
-    public CoreHealth coreHealth;
     public Efficiency efficiency;
     public bool in_level;
     public int min_points;

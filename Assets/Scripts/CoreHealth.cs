@@ -24,7 +24,9 @@ public class CoreHealth : MonoBehaviour
     public void Core_Healed(int i)
     {
         actual_core_health += i;
-        if(actual_core_health > max_core_health)
+        FindObjectOfType<Efficiency>().Suma_Efficiency(1.5f);
+        FindObjectOfType<Efficiency>().HandleBar();
+        if (actual_core_health > max_core_health)
         {
             actual_core_health = max_core_health;
         }
