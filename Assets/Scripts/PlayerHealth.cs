@@ -50,7 +50,7 @@ public class PlayerHealth : MonoBehaviour
                 actual_health--;
                 HandleBar();
                 if (actual_health <= 0)
-                {
+                {                    
                     this.gameObject.SetActive(false);
                     restart_game();
                 }

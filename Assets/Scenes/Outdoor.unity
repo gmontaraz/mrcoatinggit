@@ -70959,6 +70959,11 @@ PrefabInstance:
       propertyPath: weapons.Array.data[1]
       value: 
       objectReference: {fileID: 1494599717}
+    - target: {fileID: 2341093627587887026, guid: 6380a8b16cba2924f97d1b619cd957ec,
+        type: 3}
+      propertyPath: playerPoints
+      value: 
+      objectReference: {fileID: 1345796831}
     - target: {fileID: 2341093627587886990, guid: 6380a8b16cba2924f97d1b619cd957ec,
         type: 3}
       propertyPath: content
@@ -76211,8 +76216,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 111.5, y: -56.7}
-  m_SizeDelta: {x: 36.28, y: 13.78}
+  m_AnchoredPosition: {x: 106.95, y: -56.17}
+  m_SizeDelta: {x: 39.3, y: 15.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &958428437
 MonoBehaviour:
@@ -76237,9 +76242,9 @@ MonoBehaviour:
     m_FontSize: 14
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -77286,6 +77291,18 @@ Transform:
   m_Father: {fileID: 1764350197}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1345796831 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2341093627587886985, guid: 6380a8b16cba2924f97d1b619cd957ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 716753064}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d255323433e72ce498b7fa6c9cfa13b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1398702957
 GameObject:
   m_ObjectHideFlags: 0

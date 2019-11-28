@@ -19,10 +19,11 @@ public class PlayerPoints : MonoBehaviour
 
     public void Efficiency_Points()
     {
-        actual_points += Mathf.RoundToInt(efficiency.actual_efficiency);
-        points_text.text = actual_points.ToString("D4");
-        //efficiency.HandleBar();
-        //coreHealth.HandleBar();
+        if (in_level)
+        {
+            actual_points += Mathf.RoundToInt(efficiency.actual_efficiency);
+            points_text.text = actual_points.ToString("D4");
+        }        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,6 +38,7 @@ public class PlayerPoints : MonoBehaviour
 
     public CoreHealth coreHealth;
     public Efficiency efficiency;
+    public bool in_level;
     public int min_points;
     public int actual_points;
     public float actual_efficiency_aux;

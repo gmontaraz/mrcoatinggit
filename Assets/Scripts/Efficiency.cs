@@ -11,11 +11,19 @@ public class Efficiency : MonoBehaviour
         HandleBar();
     }
     
-    public void Resta_Efficiency()
+    public void Resta_Efficiency(int i)
     {
-        actual_efficiency--;
+        actual_efficiency -= i;
         HandleBar();
-    }    
+    }
+    public void Suma_Efficiency(int i)
+    {
+        actual_efficiency += i;
+        if (actual_efficiency > max_efficiency)
+        {
+            actual_efficiency = max_efficiency;
+        }
+    }
     public void HandleBar()
     {
         contentP.fillAmount = actual_efficiency / max_efficiency;

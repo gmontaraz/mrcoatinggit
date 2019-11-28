@@ -64,6 +64,8 @@ public class PlayerMovement : MonoBehaviour
             
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
+
+                playerPoints.in_level = true;
                 Debug.Log("door");
                 
                 SceneManager.LoadScene("EfficiencyTestingScene");
@@ -134,7 +136,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float acceleration;
     [SerializeField] private float jumpForce;
     private float attackCoolDown;
-
+    public PlayerPoints playerPoints;
     [Header("Transforms")]
     [SerializeField] private Transform feetPos;
     [SerializeField] private Transform weapon;

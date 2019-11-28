@@ -14376,6 +14376,7 @@ MonoBehaviour:
   - {x: -3.5, y: 2.7}
   - {x: 7, y: -3.5}
   spawns_activated: 000000000000
+  time_spawn: 10
   num_spawns: 0
   random_spawn: 0
 --- !u!4 &774375664
@@ -16487,6 +16488,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnSpawners: {fileID: 774375663}
   text: {fileID: 488684259}
+  coreHealth: {fileID: 955368026}
+  efficiency: {fileID: 2341093627587886984, guid: 6380a8b16cba2924f97d1b619cd957ec,
+    type: 3}
+  time_spawn: 4
   delete: 0
   text_s: 
   num_spawn: 0
