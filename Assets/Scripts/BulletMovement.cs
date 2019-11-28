@@ -6,7 +6,8 @@ public class BulletMovement : MonoBehaviour
 {
     public void NewSpawn()
     {
-        rb.velocity = transform.right * bullet_speed;
+        rb.velocity = new Vector2(transform.right.x, 0.15f) * bullet_speed;
+        
         Invoke("Destroy", timelife);
     }
     private void Destroy()

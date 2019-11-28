@@ -20,11 +20,16 @@ public class BulletSpawner : MonoBehaviour
     private void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.X)&&activated)
+        if (Input.GetKeyDown(KeyCode.X)&&activated &&cadence<=0)
         {
             cam_anim = GameObject.Find("Main Camera").GetComponent<Animator>();
             cam_anim.SetTrigger("Shake");
             Spawn();
+            cadence = 0.5f;
+        }
+        if (cadence > 0)
+        {
+            cadence -= Time.deltaTime;
         }
     }
     private void Spawn()

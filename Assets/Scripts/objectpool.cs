@@ -45,6 +45,7 @@ public class objectpool : MonoBehaviour
     public void Spawn(string tag, Vector2 position, Quaternion rotation)
     {
         GameObject objectToSpawn = poolDictionary[tag].Dequeue();
+        objectToSpawn.GetComponent<TrailRenderer>().Clear();
         objectToSpawn.transform.position = position;
         objectToSpawn.transform.rotation = rotation;
         objectToSpawn.SetActive(true);

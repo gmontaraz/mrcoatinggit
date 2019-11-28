@@ -12,7 +12,7 @@ public class SpawnSpawners : MonoBehaviour
     {
         if (num_spawns < 4)
         {
-            random_spawn = Random.Range(0, 12);
+            random_spawn = Random.Range(0, 6);
             Debug.Log("_-_-_" + random_spawn + "_-_-_");
             if (spawns_activated[random_spawn])
             {

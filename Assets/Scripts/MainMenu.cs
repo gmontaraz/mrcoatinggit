@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("SpiderTestingScene");
+        SceneManager.LoadScene("Outdoor");
     }
 
     public void QuitGame()
