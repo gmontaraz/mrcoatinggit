@@ -21,6 +21,7 @@ public class SpawnEnemy : MonoBehaviour
             }
             coreHealth.Core_Healed(2);
             Destroy(this.gameObject);
+            FindObjectOfType<round_manager>().tap_hole();
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

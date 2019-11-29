@@ -67,8 +67,14 @@ public class PlayerMovement : MonoBehaviour
 
                 playerPoints.in_level = true;
                 Debug.Log("door");
+                s_x = this.gameObject.transform.position.x;
+                s_y = this.gameObject.transform.position.y;
+                
                 
                 SceneManager.LoadScene("EfficiencyTestingScene");
+                FindObjectOfType<checkpoint>().house = true;
+                FindObjectOfType<checkpoint>().Spawn();
+
                 Debug.Log(weapons.Length);
                 weapons[Random.Range(0, weapons.Length)].SetActive(true);
             }
@@ -122,6 +128,8 @@ public class PlayerMovement : MonoBehaviour
     }
 
     #region variables
+    public float s_x;
+    public float s_y;
     private Rigidbody2D rb;
     [Header("Floats")]
     [SerializeField] private float playerVelocity;
