@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Pathfinding;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
     {
         
         actual_health = max_health;
+        golpeado = false;
     }
 
     // Update is called once per frame 
@@ -38,6 +40,12 @@ public class PlayerHealth : MonoBehaviour
         }
         else if(!flash){
             transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        }
+
+        if (System.Math.Abs(transform.position.x - cucaracha.position.x) <= 1.15 && System.Math.Abs(transform.position.y - cucaracha.position.y) <= 1.15 && !golpeado)
+        {
+            golpeCucaracha();
+            golpeado = true;
         }
     }
 
@@ -89,6 +97,27 @@ public class PlayerHealth : MonoBehaviour
         Application.LoadLevel(0);
     }
 
+    void golpeCucaracha()
+    {
+        objetoCucaracha.GetComponent<AIPath>().enabled = false;
+        objetoCucaracha.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        actual_health = actual_health - max_health / 3;
+        HandleBar();
+        Invoke("activatePathfinding", 2f);
+        Invoke("golpeCucarachaCargado", 5f);
+    }
+
+    void activatePathfinding()
+    {
+        objetoCucaracha.GetComponent<AIPath>().enabled = true;
+        objetoCucaracha.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+    }
+
+    void golpeCucarachaCargado()
+    {
+        golpeado = false;
+    }
+
     public float max_health;
     public float actual_health;
     [SerializeField] private Text health_text;
@@ -101,4 +130,7 @@ public class PlayerHealth : MonoBehaviour
     private float flashCounter;
     public float flashLength = 0.1f;
     private bool flash;
+    public Transform cucaracha;
+    public GameObject objetoCucaracha;
+    private bool golpeado;
 }
