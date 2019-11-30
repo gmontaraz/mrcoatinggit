@@ -6,17 +6,24 @@ using Pathfinding;
 public class FlyKiller : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        ActivateWeapon();
+    }
+    public void ActivateWeapon()
+    {
+        cam_anim = GameObject.Find("Main Camera").GetComponent<Animator>();
+        activated = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+
         RaycastHit2D[] enemies_inside = Physics2D.CircleCastAll(transform.position, 1f,Vector2.zero);
-        if (Input.GetKeyDown(KeyCode.X) && attack_speed<=0)
+        if (Input.GetKeyDown(KeyCode.X) && attack_speed<=0 &&activated)
         {
+            cam_anim = GameObject.Find("Main Camera").GetComponent<Animator>();
             player_animator.SetTrigger("attack");
 
             int i;
@@ -49,7 +56,11 @@ public class FlyKiller : MonoBehaviour
         IEnumerator MyFunction(GameObject enemy, float delayTime)
         {
             yield return new WaitForSeconds(delayTime);
-            enemy.GetComponent<AIPath>().enabled = true;
+            if (enemy != null)
+            {
+                enemy.GetComponent<AIPath>().enabled = true;
+            }
+            
         }
         if (attack_speed > 0)
         {
@@ -57,7 +68,9 @@ public class FlyKiller : MonoBehaviour
         }
         
     }
-    public Animator cam_anim;
+    private Animator cam_anim;
+    private bool activated = false;
+
     public Animator player_animator;
     [SerializeField] private float attack_speed;
 }

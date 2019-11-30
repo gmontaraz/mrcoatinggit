@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SpiderTestingScene.unity
     guid: 7288c8d5008f8d94faeb7549964c0df2
+  - enabled: 1
+    path: Assets/Scenes/Outdoor.unity
+    guid: 2c651388ceaa6224da2d3079f8710c36
+  - enabled: 1
+    path: Assets/Scenes/EfficiencyTestingScene.unity
+    guid: 94bbee4792927b445ad760c5ceff41f3
   m_configObjects: {}

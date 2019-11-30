@@ -7,6 +7,7 @@ public class spider_ai : MonoBehaviour
 {
     private void Start()
     {
+        player = GameObject.Find("Player").transform;
         search_web = true;
         bool found=false;
         foreach(GameObject swing_point in swing_points)
@@ -98,7 +99,7 @@ public class spider_ai : MonoBehaviour
     public AIPath aipath;
     public AIDestinationSetter destination;
     public GameObject web_start;
-    public Transform player;
+    private Transform player;
     private bool search_web;
 
     public GameObject[] swing_points;

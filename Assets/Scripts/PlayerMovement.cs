@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -57,6 +57,29 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = clampedvelocity;
         
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("door"))
+        {
+            
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+
+                playerPoints.in_level = true;
+                Debug.Log("door");
+                s_x = this.gameObject.transform.position.x;
+                s_y = this.gameObject.transform.position.y;
+                
+                
+                SceneManager.LoadScene("EfficiencyTestingScene");
+                FindObjectOfType<checkpoint>().house = true;
+                FindObjectOfType<checkpoint>().Spawn();
+
+                Debug.Log(weapons.Length);
+                weapons[Random.Range(0, weapons.Length)].SetActive(true);
+            }
+        }
+    }
     private void ManageJumps()
     {
         if (rememberjump > 0)
@@ -105,6 +128,8 @@ public class PlayerMovement : MonoBehaviour
     }
 
     #region variables
+    public float s_x;
+    public float s_y;
     private Rigidbody2D rb;
     [Header("Floats")]
     [SerializeField] private float playerVelocity;
@@ -119,7 +144,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float acceleration;
     [SerializeField] private float jumpForce;
     private float attackCoolDown;
-
+    public PlayerPoints playerPoints;
     [Header("Transforms")]
     [SerializeField] private Transform feetPos;
     [SerializeField] private Transform weapon;
@@ -138,5 +163,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask ground;
     public Animator animator;
     public GameObject particles;
+    public GameObject[] weapons;
     #endregion
 }

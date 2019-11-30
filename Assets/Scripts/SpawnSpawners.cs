@@ -6,37 +6,50 @@ public class SpawnSpawners : MonoBehaviour
 {
     void Start()
     {
-        InvokeRepeating("Spawn", 2f, 10f);
+        InvokeRepeating("Spawn", 2f, 5f);
     }
     private void Spawn()
     {
-        if (num_spawns < 4)
+        if(num_spawns_aux<=0)
         {
-            random_vector_x = Random.Range((-7.7f), (7.7f));
-            System.Math.Round(random_vector_x, 1);
-            random_vector_y = Random.Range((-4.2f), (3.7f));
-            System.Math.Round(random_vector_y, 1);
-            if (random_vector_x < 2.5 && random_vector_x > -2.5 && random_vector_y < -1.5)
+            if (num_spawns < 4)
             {
-                Debug.Log("PELIGRO");
-                random_vector_x = Random.Range((-7.7f), (7.7f));
-                System.Math.Round(random_vector_x, 1);
-                random_vector_y = Random.Range((-4.2f), (3.7f));
-                System.Math.Round(random_vector_y, 1);
+                random_spawn = Random.Range(0, 6);
+                Debug.Log("_-_-_" + random_spawn + "_-_-_");
+                if (spawns_activated[random_spawn])
+                {
+                    Debug.Log("o0o0o" + spawns_activated[random_spawn] + "o0o0o");
+                    Spawn();
+                }
+                else
+                {
+                    spawns_activated[random_spawn] = true;
+                    spawnEnemy.num_spawn = random_spawn;
+                    GameObject new_spawn = Instantiate(spawn, spawns[random_spawn], transform.rotation);
+                    new_spawn.SetActive(true);
+                    num_spawns++;
+                    num_spawns_aux += (num_spawns);
+                    time_spawn = (10f + (num_spawns * 4));
+                }
+
             }
-            v_aux = new Vector2((random_vector_x), (random_vector_y));
-            Debug.Log(v_aux);
-            GameObject new_spawn = Instantiate(spawn, v_aux, transform.rotation);
-            new_spawn.SetActive(true);
-            num_spawns++;
         }
-
-
+        else
+        {
+            num_spawns_aux--;
+            if(num_spawns_aux < 0)
+            {
+                num_spawns_aux = 0;
+            }
+        }
     }
 
     public GameObject spawn;
-    public Vector2 v_aux;
+    public SpawnEnemy spawnEnemy;
+    public Vector2[] spawns = new Vector2[12];
+    public bool[] spawns_activated = new bool[12];
+    public float time_spawn = 10f;
+    public int num_spawns_aux;
     public int num_spawns;
-    public float random_vector_x;
-    public float random_vector_y;
+    public int random_spawn;
 }

@@ -16,11 +16,22 @@ public class CoreHealth : MonoBehaviour
         if (actual_core_health > 0)
         {
             actual_core_health--;
-            efficiency.Resta_Efficiency();
+            FindObjectOfType<Efficiency>().Resta_Efficiency(1);
             HandleBar();
         }
     }
 
+    public void Core_Healed(int i)
+    {
+        actual_core_health += i;
+        FindObjectOfType<Efficiency>().Suma_Efficiency(1.5f);
+        FindObjectOfType<Efficiency>().HandleBar();
+        if (actual_core_health > max_core_health)
+        {
+            actual_core_health = max_core_health;
+        }
+        HandleBar();
+    }
     public void HandleBar()
     {
         contentH.fillAmount = actual_core_health / max_core_health;
@@ -32,14 +43,13 @@ public class CoreHealth : MonoBehaviour
             if (spawnSpawners.num_spawns >= 0)
             {
                 actual_core_health--;
-                efficiency.Resta_Efficiency();
+                FindObjectOfType<Efficiency>().Resta_Efficiency(spawnSpawners.num_spawns);
                 HandleBar();
             }
         }
     }
 
     public SpawnSpawners spawnSpawners;
-    public Efficiency efficiency;
     public float max_core_health;
     public float actual_core_health;
     [SerializeField] private Image contentH;

@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.1, y: -170.7}
+  m_AnchoredPosition: {x: 0, y: -170.7}
   m_SizeDelta: {x: 1455, y: 133}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2426845477356443946
@@ -108,7 +108,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.0900126, y: -170.74747}
+  m_AnchoredPosition: {x: 0, y: -170.74747}
   m_SizeDelta: {x: 1605, y: 171}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2426845477719154804
@@ -431,7 +431,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.51026, y: 148}
+  m_AnchoredPosition: {x: 0, y: 143.3}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2426845478889960545
@@ -468,7 +468,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.099998, y: -171.2}
+  m_AnchoredPosition: {x: 14.1, y: -171.2}
   m_SizeDelta: {x: 1455, y: 133}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2426845478889960556
@@ -518,7 +518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2426845478907017938}
   m_Layer: 5
-  m_Name: CharacterLiefabar
+  m_Name: CharacterLifebar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

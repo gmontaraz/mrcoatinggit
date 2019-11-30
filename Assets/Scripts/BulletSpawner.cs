@@ -6,17 +6,30 @@ public class BulletSpawner : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public Animator cam_anim;
+    private Animator cam_anim;
     private void Start()
     {
+        ActivateWeapon();
+    }
+    public void ActivateWeapon()
+    {
         objectpool = objectpool.Instance;
+        
+        activated = true;
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X))
+        
+        if (Input.GetKeyDown(KeyCode.X)&&activated &&cadence<=0)
         {
+            cam_anim = GameObject.Find("Main Camera").GetComponent<Animator>();
             cam_anim.SetTrigger("Shake");
             Spawn();
+            cadence = 0.1f;
+        }
+        if (cadence > 0)
+        {
+            cadence -= Time.deltaTime;
         }
     }
     private void Spawn()
@@ -24,5 +37,6 @@ public class BulletSpawner : MonoBehaviour
         objectpool.Instance.Spawn("Bullet", transform.position, transform.rotation);
     }
     objectpool objectpool;
+    private bool activated = false;
     [SerializeField] private float cadence;
 }

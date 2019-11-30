@@ -13,7 +13,11 @@ TagManager:
   - FlyKiller
   - web_start
   - core
+<<<<<<< HEAD
   - palo
+=======
+  - door
+>>>>>>> master
   layers:
   - Default
   - TransparentFX
