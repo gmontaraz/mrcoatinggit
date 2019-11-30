@@ -4,20 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
-  - Bullet
-  - path
   - Point
-  - Ground
-  - Spider
-  - FlyKiller
-  - web_start
-  - core
-<<<<<<< HEAD
-  - palo
-=======
-  - door
->>>>>>> master
   layers:
   - Default
   - TransparentFX
@@ -27,11 +14,11 @@ TagManager:
   - UI
   - 
   - 
-  - Ground
-  - ObstaclesAI
-  - Player
-  - Points
-  - Enemies
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
