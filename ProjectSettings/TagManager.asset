@@ -5,6 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Point
+  - Ground
+  - door
+  - path
+  - web_start
+  - core
+  - Enemy
+  - Bullet
+  - Spider
+  - medkit
   layers:
   - Default
   - TransparentFX

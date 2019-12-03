@@ -12,7 +12,7 @@ public class Efficiency : MonoBehaviour
         //InvokeRepeating("HandleBar", 2f, 2f);
     }
     
-    public void Resta_Efficiency(int i)
+    public void Resta_Efficiency(float i)
     {
         actual_efficiency -= i;
         HandleBar();

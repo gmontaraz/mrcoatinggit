@@ -16,7 +16,7 @@ public class CoreHealth : MonoBehaviour
         if (actual_core_health > 0)
         {
             actual_core_health--;
-            FindObjectOfType<Efficiency>().Resta_Efficiency(1);
+            FindObjectOfType<Efficiency>().Resta_Efficiency(0.5f);
             HandleBar();
         }
     }

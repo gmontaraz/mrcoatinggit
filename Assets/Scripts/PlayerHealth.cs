@@ -83,6 +83,28 @@ public class PlayerHealth : MonoBehaviour
                 flashCounter = flashLength;
             }
         }
+        if (collision.collider.CompareTag("medkit"))
+        {
+            medkit = collision.gameObject;
+            medkit.SetActive(false);
+            Invoke("RespawnMedkit", Random.Range(5, 20));
+            if (actual_health + 4 <= 10)
+            {
+                actual_health += 4;
+                HandleBar();
+            }
+            else
+            {
+                actual_health += 10 - actual_health;
+                HandleBar();
+            }
+            
+        }
+    }
+    public void RespawnMedkit()
+    {
+        medkit.SetActive(true);
+        medkit.GetComponent<medkit>().Spawn();
     }
     public void disablepoison()
     {
@@ -133,4 +155,5 @@ public class PlayerHealth : MonoBehaviour
     public Transform cucaracha;
     public GameObject objetoCucaracha;
     private bool golpeado;
+    public GameObject medkit;
 }
