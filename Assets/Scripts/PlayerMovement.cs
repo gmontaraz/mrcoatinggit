@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("door"))
+        if (collision.gameObject.CompareTag("stone_door"))
         {
             
             if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
                 s_y = this.gameObject.transform.position.y;
                 
                 
-                SceneManager.LoadScene("EfficiencyTestingScene");
+                SceneManager.LoadScene("StoneHouse");
                 FindObjectOfType<checkpoint>().house = true;
                 FindObjectOfType<checkpoint>().Spawn();
 

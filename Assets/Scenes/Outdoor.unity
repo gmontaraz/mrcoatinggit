@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 90561330}
   - component: {fileID: 90561329}
   - component: {fileID: 90561328}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: fardo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -465,7 +465,7 @@ Transform:
   m_LocalScale: {x: 1.3787593, y: 1.3787593, z: 1.3787593}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &93824202
 GameObject:
@@ -721,7 +721,7 @@ GameObject:
   - component: {fileID: 139459151}
   - component: {fileID: 139459150}
   - component: {fileID: 139459149}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51277,7 +51277,7 @@ GameObject:
   - component: {fileID: 226388407}
   - component: {fileID: 226388406}
   - component: {fileID: 226388405}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: pozo
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -51371,7 +51371,7 @@ Transform:
   m_LocalScale: {x: 1.04, y: 1.04, z: 1.04}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &232469118
 GameObject:
@@ -56353,7 +56353,7 @@ Transform:
   m_LocalScale: {x: -0.02, y: 0.46, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &259888409
 GameObject:
@@ -56366,7 +56366,7 @@ GameObject:
   - component: {fileID: 259888412}
   - component: {fileID: 259888411}
   - component: {fileID: 259888410}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: banco
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -56460,7 +56460,7 @@ Transform:
   m_LocalScale: {x: 0.7624805, y: 0.7624805, z: 0.7624805}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &262421092
 GameObject:
@@ -56540,7 +56540,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 10.85}
 --- !u!1 &265952547
 GameObject:
@@ -56678,7 +56678,7 @@ GameObject:
   - component: {fileID: 311122453}
   - component: {fileID: 311122455}
   - component: {fileID: 311122454}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Background (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70424,7 +70424,7 @@ Transform:
   m_Children:
   - {fileID: 1979799234}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &498457155
 GameObject:
@@ -70837,7 +70837,7 @@ GameObject:
   - component: {fileID: 584489137}
   - component: {fileID: 584489136}
   - component: {fileID: 584489138}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: EdificioMadera
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -70905,7 +70905,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &584489138
 BoxCollider2D:
@@ -70920,7 +70920,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.026461124, y: 1.6273861}
+  m_Offset: {x: -0.03383255, y: 1.8500469}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -70931,7 +70931,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.3618956, y: 0.3549614}
+  m_Size: {x: 4.2095556, y: 0.12212515}
   m_EdgeRadius: 0
 --- !u!1 &641690539
 GameObject:
@@ -71241,7 +71241,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &696772599
 BoxCollider2D:
@@ -71366,36 +71366,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 2341093627587887026, guid: 6380a8b16cba2924f97d1b619cd957ec,
-        type: 3}
-      propertyPath: weapons.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2341093627587887026, guid: 6380a8b16cba2924f97d1b619cd957ec,
-        type: 3}
-      propertyPath: weapons.Array.data[0]
-      value: 
-      objectReference: {fileID: 1576810547}
-    - target: {fileID: 2341093627587887026, guid: 6380a8b16cba2924f97d1b619cd957ec,
-        type: 3}
-      propertyPath: weapons.Array.data[1]
-      value: 
-      objectReference: {fileID: 1494599717}
-    - target: {fileID: 2341093627587887026, guid: 6380a8b16cba2924f97d1b619cd957ec,
-        type: 3}
-      propertyPath: playerPoints
-      value: 
-      objectReference: {fileID: 1345796831}
     - target: {fileID: 2341093627587886990, guid: 6380a8b16cba2924f97d1b619cd957ec,
         type: 3}
       propertyPath: content
       value: 
       objectReference: {fileID: 249141348}
-    - target: {fileID: 2341093627587886990, guid: 6380a8b16cba2924f97d1b619cd957ec,
-        type: 3}
-      propertyPath: max_health
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 2341093627587886984, guid: 6380a8b16cba2924f97d1b619cd957ec,
         type: 3}
       propertyPath: contentP
@@ -71406,16 +71381,6 @@ PrefabInstance:
       propertyPath: points_text
       value: 
       objectReference: {fileID: 958428437}
-    - target: {fileID: 2341093627644010527, guid: 6380a8b16cba2924f97d1b619cd957ec,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2341093628311998458, guid: 6380a8b16cba2924f97d1b619cd957ec,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6380a8b16cba2924f97d1b619cd957ec, type: 3}
 --- !u!4 &716753065 stripped
@@ -71435,7 +71400,7 @@ GameObject:
   - component: {fileID: 746336359}
   - component: {fileID: 746336358}
   - component: {fileID: 746336357}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Casa Abandonada
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -71529,7 +71494,7 @@ Transform:
   m_LocalScale: {x: 0.91, y: 0.91, z: 0.91}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &820545029
 GameObject:
@@ -71801,7 +71766,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &905207814
 ParticleSystemRenderer:
@@ -77072,7 +77037,7 @@ Transform:
   - {fileID: 249141346}
   - {fileID: 1723482277}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1182701478
 GameObject:
@@ -81895,7 +81860,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1269848255
 GameObject:
@@ -82068,8 +82033,8 @@ GameObject:
   - component: {fileID: 1277875964}
   - component: {fileID: 1277875963}
   - component: {fileID: 1277875962}
-  m_Layer: 8
-  m_Name: EdificioMadera (1)
+  m_Layer: 9
+  m_Name: 'EdificioMadera '
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82166,7 +82131,7 @@ Transform:
   - {fileID: 2065119126}
   - {fileID: 315187104}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1293284821
 GameObject:
@@ -82180,9 +82145,9 @@ GameObject:
   - component: {fileID: 1293284823}
   - component: {fileID: 1293284822}
   - component: {fileID: 1293284825}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EdificioCastillo2
-  m_TagString: door
+  m_TagString: stone_door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82277,7 +82242,7 @@ Transform:
   - {fileID: 1182701479}
   - {fileID: 406293369}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1293284825
 BoxCollider2D:
@@ -82384,7 +82349,7 @@ Transform:
   m_Children:
   - {fileID: 1954458541}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1324339137
 GameObject:
@@ -82467,18 +82432,6 @@ Transform:
   m_Father: {fileID: 1764350197}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1345796831 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2341093627587886985, guid: 6380a8b16cba2924f97d1b619cd957ec,
-    type: 3}
-  m_PrefabInstance: {fileID: 716753064}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d255323433e72ce498b7fa6c9cfa13b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1390437575
 GameObject:
   m_ObjectHideFlags: 0
@@ -87230,7 +87183,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1398702957
 GameObject:
@@ -87348,14 +87301,8 @@ Transform:
   - {fileID: 192943787}
   - {fileID: 658890306}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1494599717 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2341093628311998458, guid: 6380a8b16cba2924f97d1b619cd957ec,
-    type: 3}
-  m_PrefabInstance: {fileID: 716753064}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1534155101
 GameObject:
   m_ObjectHideFlags: 0
@@ -87407,7 +87354,7 @@ Transform:
   - {fileID: 510979859}
   - {fileID: 46131269}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1534857832
 GameObject:
@@ -87570,7 +87517,7 @@ GameObject:
   - component: {fileID: 1555594864}
   - component: {fileID: 1555594863}
   - component: {fileID: 1555594862}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Casa Abandonada (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -87664,7 +87611,7 @@ Transform:
   m_LocalScale: {x: 0.91, y: 0.91, z: 0.91}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1560387544
 GameObject:
@@ -92499,12 +92446,6 @@ Transform:
   m_Father: {fileID: 1324339139}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!1 &1576810547 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2341093627644010527, guid: 6380a8b16cba2924f97d1b619cd957ec,
-    type: 3}
-  m_PrefabInstance: {fileID: 716753064}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1597377711
 GameObject:
   m_ObjectHideFlags: 0
@@ -92744,7 +92685,7 @@ Transform:
   m_Children:
   - {fileID: 668460992}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1623125760
 GameObject:
@@ -92894,7 +92835,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1634983186
 GameObject:
@@ -93205,7 +93146,7 @@ Transform:
   m_Children:
   - {fileID: 1082117158}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1696745018
 GameObject:
@@ -93410,7 +93351,7 @@ Transform:
   m_Children:
   - {fileID: 1756550022}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1756550021
 GameObject:
@@ -93550,7 +93491,7 @@ Transform:
   - {fileID: 1880641679}
   - {fileID: 1077974763}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1762835228
 MonoBehaviour:
@@ -93593,8 +93534,8 @@ GameObject:
   - component: {fileID: 1764350197}
   - component: {fileID: 1764350196}
   - component: {fileID: 1764350195}
-  m_Layer: 8
-  m_Name: EdificioLadrillo (4)
+  m_Layer: 9
+  m_Name: 'EdificioLadrillo '
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93690,7 +93631,7 @@ Transform:
   - {fileID: 1534857833}
   - {fileID: 1324339139}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1779748398
 GameObject:
@@ -98998,7 +98939,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1950402768
 GameObject:
@@ -99428,7 +99369,7 @@ Transform:
   - {fileID: 542135067}
   - {fileID: 1597377712}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2010869075
 GameObject:
@@ -104493,5 +104434,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}

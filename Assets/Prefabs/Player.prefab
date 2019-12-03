@@ -4916,6 +4916,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dfc8bac7abbf64448652cfcaf1f55aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s_x: 0
+  s_y: 0
   playerVelocity: 5
   attackSpeed: 0
   remembertime: 0.15
@@ -4923,15 +4925,19 @@ MonoBehaviour:
   realtimeJump: 0.2
   acceleration: 35
   jumpForce: 11
+  playerPoints: {fileID: 2341093627587886985}
   feetPos: {fileID: 2341093628807488414}
   weapon: {fileID: 2341093628311998453}
   poison: 0
   sprite: {fileID: 2341093627587886989}
   ground:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   animator: {fileID: 589009067564912860}
   particles: {fileID: 2341093627283355758}
+  weapons:
+  - {fileID: 2341093627644010527}
+  - {fileID: 2341093628311998458}
 --- !u!50 &2341093627587887027
 Rigidbody2D:
   serializedVersion: 4
@@ -4965,7 +4971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 798f052e32af1074289146c7da3e83d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_health: 5
+  max_health: 10
   actual_health: 0
   health_text: {fileID: 0}
   fillAmount: 0
@@ -4974,6 +4980,9 @@ MonoBehaviour:
   invincibilityLength: 2
   playerRenderer: {fileID: 2341093627587886989}
   flashLength: 0.1
+  cucaracha: {fileID: 0}
+  objetoCucaracha: {fileID: 0}
+  medkit: {fileID: 0}
 --- !u!114 &2341093627587886984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5002,8 +5011,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d255323433e72ce498b7fa6c9cfa13b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coreHealth: {fileID: 0}
   efficiency: {fileID: 2341093627587886984}
+  in_level: 0
   min_points: 0
   actual_points: 0
   actual_efficiency_aux: 0
@@ -5110,7 +5119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2341093627644010526
 Transform:
   m_ObjectHideFlags: 0

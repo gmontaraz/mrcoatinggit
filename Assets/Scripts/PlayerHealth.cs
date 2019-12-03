@@ -42,11 +42,14 @@ public class PlayerHealth : MonoBehaviour
             transform.position = new Vector3(transform.position.x, transform.position.y, 0);
         }
 
+        //TE COMENTO ESTO PORQUE DA FALLO HASTA QUE NO LO RESUELVAS, NECESITAS REFERENCIAR LA CUCARACHA DE LA FORMA QUE TE DIJE
+        /*
         if (System.Math.Abs(transform.position.x - cucaracha.position.x) <= 1.15 && System.Math.Abs(transform.position.y - cucaracha.position.y) <= 1.15 && !golpeado)
         {
             golpeCucaracha();
             golpeado = true;
         }
+        */
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
