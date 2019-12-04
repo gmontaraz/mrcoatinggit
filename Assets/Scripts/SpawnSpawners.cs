@@ -12,7 +12,9 @@ public class SpawnSpawners : MonoBehaviour
     {
         if(!FindObjectOfType<round_manager>().round_finished)
         {
-            if (num_spawns < 4)
+            random_spawn = Random.Range(0, 6);
+            Debug.Log("_-_-_" + random_spawn + "_-_-_");
+            if (spawns_activated[random_spawn])
             {
                 random_spawn = Random.Range(0, 6);
                 if (spawns_activated[random_spawn])
@@ -36,10 +38,8 @@ public class SpawnSpawners : MonoBehaviour
 
     public GameObject spawn;
     public SpawnEnemy spawnEnemy;
-    public Vector2[] spawns = new Vector2[12];
-    public bool[] spawns_activated = new bool[12];
-    public float time_spawn = 10f;
-    public int num_spawns_aux;
+    public Vector2[] spawns = new Vector2[6];
+    public bool[] spawns_activated = new bool[6];
     public int num_spawns;
     public int spider_count=0;
     public int random_spawn;
