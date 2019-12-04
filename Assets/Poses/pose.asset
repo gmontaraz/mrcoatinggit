@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0543fe805424df99fe08ce744cbe49, type: 3}
+  m_Name: pose
+  m_EditorClassIdentifier: 
+  m_PoseEntries:
+  - path: Bones/cuerpoBajo
+    localPosition: {x: -0.0034516454, y: -3.0728512, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.7056984, w: 0.7085124}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/cuerpoBajo/cuerpoAlto
+    localPosition: {x: 1.13, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.000000052747477, w: 1}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/cuerpoBajo/pataIZQ1
+    localPosition: {x: -0.0074278917, y: -0.34809753, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.8884335, w: 0.45900542}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/cuerpoBajo/pataIZQ1/pataIZQ2
+    localPosition: {x: 0.32000023, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.5891069, w: 0.8080551}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/cuerpoBajo/pataIZQ1/pataIZQ2/pataIZQ3
+    localPosition: {x: 0.55000013, y: -0.00000014901161, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.8630272, w: 0.5051574}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/cuerpoBajo/pataDER1
+    localPosition: {x: -0.01275885, y: 0.3144716, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.88246185, w: 0.47038406}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/cuerpoBajo/pataDER1/pataDER2
+    localPosition: {x: 0.32000014, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.5349201, w: 0.84490263}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/cuerpoBajo/pataDER1/pataDER2/pataDER3
+    localPosition: {x: 0.5500005, y: 0.00000014901161, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.8558117, w: 0.5172875}
+    localScale: {x: 1, y: 1, z: 1}

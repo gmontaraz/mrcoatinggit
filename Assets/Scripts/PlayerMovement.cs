@@ -79,6 +79,26 @@ public class PlayerMovement : MonoBehaviour
                 weapons[Random.Range(0, weapons.Length)].SetActive(true);
             }
         }
+        else if (collision.gameObject.CompareTag("brick_door"))
+        {
+
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+
+                playerPoints.in_level = true;
+                Debug.Log("door");
+                s_x = this.gameObject.transform.position.x;
+                s_y = this.gameObject.transform.position.y;
+
+
+                SceneManager.LoadScene("BrickHouse");
+                FindObjectOfType<checkpoint>().house = true;
+                FindObjectOfType<checkpoint>().Spawn();
+
+                Debug.Log(weapons.Length);
+                weapons[Random.Range(0, weapons.Length)].SetActive(true);
+            }
+        }
     }
     private void ManageJumps()
     {

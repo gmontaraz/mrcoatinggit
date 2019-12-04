@@ -6,7 +6,7 @@ public class SpawnEnemy : MonoBehaviour
 {
     private void Start()
     {
-        InvokeRepeating("Spawn", 1f, 8f);
+        InvokeRepeating("Spawn", 0f, 6f);
     }
     void Update()
     {
@@ -14,11 +14,6 @@ public class SpawnEnemy : MonoBehaviour
         {
             spawnSpawners.spawns_activated[num_spawn] = false;
             spawnSpawners.num_spawns--;
-            spawnSpawners.num_spawns_aux -= 2;
-            if(spawnSpawners.num_spawns_aux < 0)
-            {
-                spawnSpawners.num_spawns_aux = 0;
-            }
             coreHealth.Core_Healed(2);
             Destroy(this.gameObject);
             FindObjectOfType<round_manager>().tap_hole();

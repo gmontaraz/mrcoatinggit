@@ -9,7 +9,7 @@ public class round_manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        holes_total = 5;
+        holes_total = 15;
         holes_actual = 0;
     }
     public void tap_hole()
@@ -21,6 +21,7 @@ public class round_manager : MonoBehaviour
             
             
             SceneManager.LoadScene("Outdoor");
+            FindObjectOfType<PlayerPoints>().in_level = false;
             FindObjectOfType<checkpoint>().house = false;
             FindObjectOfType<checkpoint>().Spawn();
 

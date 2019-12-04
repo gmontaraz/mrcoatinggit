@@ -15,6 +15,7 @@ TagManager:
   - Spider
   - medkit
   - stone_door
+  - brick_door
   layers:
   - Default
   - TransparentFX
