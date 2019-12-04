@@ -32,7 +32,8 @@ public class EnemyHealth : MonoBehaviour
         {
             if (gameObject.CompareTag("Spider"))
             {
-                    gameObject.GetComponent<spider_ai>().web_start.GetComponent<swing_manager>().occupied = false;
+                gameObject.GetComponent<spider_ai>().web_start.GetComponent<swing_manager>().occupied = false;
+                FindObjectOfType<SpawnSpawners>().spider_count -= 1;
             }
             Destroy(this.gameObject);
             random_points = Random.Range(min_random_points, max_random_points + 1);

@@ -7,16 +7,16 @@ public class CoreHealth : MonoBehaviour
 {
     void Start()
     {
-        actual_core_health = max_core_health;
+        actual_core_health = actual_core_health = FindObjectOfType<Efficiency>().actual_efficiency;
         HandleBar();
-        InvokeRepeating("Hole", 10f, 10f);
+        InvokeRepeating("Hole", 0.1f, 0.1f);
     }
     public void Core_Attacked()
     {
         if (actual_core_health > 0)
         {
             actual_core_health--;
-            FindObjectOfType<Efficiency>().Resta_Efficiency(0.5f);
+            FindObjectOfType<Efficiency>().Resta_Efficiency(5f);
             HandleBar();
         }
     }
@@ -40,12 +40,11 @@ public class CoreHealth : MonoBehaviour
     {
         if (actual_core_health > 0)
         {
-            if (spawnSpawners.num_spawns >= 0)
-            {
-                actual_core_health--;
-                FindObjectOfType<Efficiency>().Resta_Efficiency(spawnSpawners.num_spawns);
-                HandleBar();
-            }
+            
+            FindObjectOfType<Efficiency>().Resta_Efficiency((spawnSpawners.num_spawns / 20f));
+            actual_core_health = FindObjectOfType<Efficiency>().actual_efficiency;
+            HandleBar();
+    
         }
     }
 

@@ -41,14 +41,34 @@ public class SpawnEnemy : MonoBehaviour
             text.text = text_s;
             delete = false;
         }
+
     }
     private void Spawn()
     {
         Debug.Log(array.Length);
         int i_random = Random.Range(0, array.Length);
         enemy = array[i_random];
-        GameObject new_enemy = Instantiate(enemy, transform.position, transform.rotation);
-        new_enemy.SetActive(true);
+        if (enemy.CompareTag("Spider"))
+        {
+            if (FindObjectOfType<SpawnSpawners>().spider_count>=4)
+            {
+                Spawn();
+            }
+            else
+            {
+                FindObjectOfType<SpawnSpawners>().spider_count += 1;
+                GameObject new_enemy = Instantiate(enemy, transform.position, transform.rotation);
+                new_enemy.SetActive(true);
+            }
+            
+        }
+        else
+        {
+            GameObject new_enemy = Instantiate(enemy, transform.position, transform.rotation);
+            new_enemy.SetActive(true);
+        }
+        
+       
     }
     private GameObject enemy;
     public SpawnSpawners spawnSpawners;

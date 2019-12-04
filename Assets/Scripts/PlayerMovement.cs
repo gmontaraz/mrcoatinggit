@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+ 
+
     }
 
     // Update is called once per frame
@@ -77,6 +79,24 @@ public class PlayerMovement : MonoBehaviour
 
                 Debug.Log(weapons.Length);
                 weapons[Random.Range(0, weapons.Length)].SetActive(true);
+            }
+        }
+        if (collision.gameObject.CompareTag("door"))
+        {
+
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+
+                FindObjectOfType<checkpoint>().gameObject.transform.position = new Vector2(FindObjectOfType<PlayerMovement>().s_x, FindObjectOfType<PlayerMovement>().s_y);
+
+                foreach (GameObject weapon in FindObjectOfType<PlayerMovement>().weapons)
+                {
+                    weapon.SetActive(false);
+                }
+                round += 1;
+                SceneManager.LoadScene("Outdoor");
+                FindObjectOfType<checkpoint>().house = false;
+                FindObjectOfType<checkpoint>().Spawn();
             }
         }
     }
@@ -164,5 +184,6 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public GameObject particles;
     public GameObject[] weapons;
+    public int round=1;
     #endregion
 }

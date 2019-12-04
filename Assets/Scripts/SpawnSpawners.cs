@@ -6,19 +6,17 @@ public class SpawnSpawners : MonoBehaviour
 {
     void Start()
     {
-        InvokeRepeating("Spawn", 2f, 5f);
+        InvokeRepeating("Spawn", 2f, 4f);
     }
     private void Spawn()
     {
-        if(num_spawns_aux<=0)
+        if(!FindObjectOfType<round_manager>().round_finished)
         {
             if (num_spawns < 4)
             {
                 random_spawn = Random.Range(0, 6);
-                Debug.Log("_-_-_" + random_spawn + "_-_-_");
                 if (spawns_activated[random_spawn])
                 {
-                    Debug.Log("o0o0o" + spawns_activated[random_spawn] + "o0o0o");
                     Spawn();
                 }
                 else
@@ -34,14 +32,6 @@ public class SpawnSpawners : MonoBehaviour
 
             }
         }
-        else
-        {
-            num_spawns_aux--;
-            if(num_spawns_aux < 0)
-            {
-                num_spawns_aux = 0;
-            }
-        }
     }
 
     public GameObject spawn;
@@ -51,5 +41,6 @@ public class SpawnSpawners : MonoBehaviour
     public float time_spawn = 10f;
     public int num_spawns_aux;
     public int num_spawns;
+    public int spider_count=0;
     public int random_spawn;
 }

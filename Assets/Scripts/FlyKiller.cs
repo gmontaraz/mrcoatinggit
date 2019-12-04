@@ -27,7 +27,7 @@ public class FlyKiller : MonoBehaviour
             player_animator.SetTrigger("attack");
 
             int i;
-            attack_speed = 0.3f;
+            attack_speed = 0.2f;
             for (i = 0; i < enemies_inside.Length; i++)
             {
                 if (enemies_inside[i].collider.CompareTag("Enemy") || enemies_inside[i].collider.CompareTag("Spider"))

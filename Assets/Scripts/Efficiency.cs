@@ -9,7 +9,6 @@ public class Efficiency : MonoBehaviour
     {
         actual_efficiency = start_efficiency;
         HandleBar();
-        //InvokeRepeating("HandleBar", 2f, 2f);
     }
     
     public void Resta_Efficiency(float i)
@@ -23,6 +22,13 @@ public class Efficiency : MonoBehaviour
         if (actual_efficiency > max_efficiency)
         {
             actual_efficiency = max_efficiency;
+        }
+    }
+    private void Update()
+    {
+        if (actual_efficiency <= 0)
+        {
+            FindObjectOfType<PlayerHealth>().restart_game();
         }
     }
     public void HandleBar()

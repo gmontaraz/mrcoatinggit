@@ -45,12 +45,21 @@ public class spider_ai : MonoBehaviour
     private void Update()
     {
 
-        if (!search_web) { 
-            player_ray = Physics2D.Raycast(this.transform.position, Vector2.down, 3f);
-            if (player_ray.collider.gameObject==player.gameObject)
+        if (!search_web) {
+            
+            player_ray = Physics2D.Raycast(this.transform.position, Vector2.down, 3f,player_layer);
+            Debug.Log(player_ray);
+            Debug.DrawRay(this.transform.position, Vector2.down * 3f);
+            if (player_ray)
             {
-                web.enabled = false;
-                line.enabled = false;
+                Debug.Log("Spider looking for player");
+                if (player_ray.collider.CompareTag("Player"))
+                {
+                    Debug.Log("visto");
+                    web.enabled = false;
+                    line.enabled = false;
+                }
+               
             }
             if (!web.enabled)
             {
@@ -97,12 +106,13 @@ public class spider_ai : MonoBehaviour
     public Transform finalPos;
     private RaycastHit2D player_ray;
     public LayerMask ground_layer;
+    public LayerMask player_layer;
     public LayerMask background_layer;
     public Transform feetPos;
     public AIPath aipath;
     public AIDestinationSetter destination;
     public GameObject web_start;
-    private Transform player;
+    public Transform player;
     private bool search_web;
     private GameObject swing_point;
 

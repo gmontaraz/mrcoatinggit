@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Pathfinding;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -33,6 +34,14 @@ public class PlayerHealth : MonoBehaviour
                 flash = false;
                 //playerRenderer.enabled = false;
             }
+        }
+        if (actual_health < 4)
+        {
+            low_life_sfx.SetActive(true);
+        }
+        else
+        {
+            low_life_sfx.SetActive(false);
         }
         if (flash)
         {
@@ -117,9 +126,10 @@ public class PlayerHealth : MonoBehaviour
     private void HandleBar(){
         content.fillAmount = actual_health / max_health;
     }
-    void restart_game()
+    public void restart_game()
     {
-        Application.LoadLevel(0);
+        Destroy(FindObjectOfType<singleton>().gameObject);
+        SceneManager.LoadScene("MainMenu");
     }
 
     void golpeCucaracha()
@@ -159,4 +169,5 @@ public class PlayerHealth : MonoBehaviour
     public GameObject objetoCucaracha;
     private bool golpeado;
     public GameObject medkit;
+    public GameObject low_life_sfx;
 }
