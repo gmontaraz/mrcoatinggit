@@ -9,7 +9,7 @@ public class PlayerPoints : MonoBehaviour
     {
         actual_points = min_points;
         points_text.text = actual_points.ToString("D4");
-        InvokeRepeating("Efficiency_Points", 1f, 1f);
+        InvokeRepeating("Efficiency_Points", 1f, 10f);
     }
 
     private void Update()
