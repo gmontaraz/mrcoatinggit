@@ -25,7 +25,7 @@ public class CoreHealth : MonoBehaviour
     {
         actual_core_health += i;
         HealthAnimation();
-        FindObjectOfType<Efficiency>().Suma_Efficiency();
+        FindObjectOfType<Efficiency>().Suma_Efficiency(5f);
         FindObjectOfType<Efficiency>().HandleBar();
         if (actual_core_health > max_core_health)
         {

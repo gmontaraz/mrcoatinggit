@@ -1834,7 +1834,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holes_total: 0
   holes_actual: 0
+  round_finished: 0
   holes_text: {fileID: 27240942}
+  door: {fileID: 0}
 --- !u!1 &383431323
 GameObject:
   m_ObjectHideFlags: 0
@@ -16463,6 +16465,9 @@ MonoBehaviour:
   - {x: 0.5, y: -2}
   spawns_activated: 000000000000
   num_spawns: 0
+  num_spawns_aux: 0
+  time_spawn: 0
+  spider_count: 0
   random_spawn: 0
 --- !u!4 &774375664
 Transform:
@@ -18666,6 +18671,9 @@ MonoBehaviour:
   ground_layer:
     serializedVersion: 2
     m_Bits: 512
+  player_layer:
+    serializedVersion: 2
+    m_Bits: 0
   background_layer:
     serializedVersion: 2
     m_Bits: 256
@@ -18673,6 +18681,7 @@ MonoBehaviour:
   aipath: {fileID: 1181909233}
   destination: {fileID: 1181909235}
   web_start: {fileID: 1084522996}
+  player: {fileID: 0}
   swing_points:
   - {fileID: 1084522995}
   - {fileID: 828847385}
@@ -19463,7 +19472,7 @@ MonoBehaviour:
   - {fileID: 1696457886}
   - {fileID: 1174727523}
   - {fileID: 988690010}
-  - {fileID: 1696457886}
+  - {fileID: 1181909225}
 --- !u!4 &1332109644
 Transform:
   m_ObjectHideFlags: 0

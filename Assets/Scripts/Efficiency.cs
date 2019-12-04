@@ -11,14 +11,14 @@ public class Efficiency : MonoBehaviour
         HandleBar();
     }
     
-    public void Resta_Efficiency()
+    public void Resta_Efficiency(float i)
     {
-        actual_efficiency--;
+        actual_efficiency-=i;
         HandleBar();
     }
-    public void Suma_Efficiency()
+    public void Suma_Efficiency(float i)
     {
-        actual_efficiency++;
+        actual_efficiency+=1;
         if (actual_efficiency > max_efficiency)
         {
             actual_efficiency = max_efficiency;
