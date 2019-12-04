@@ -1,0 +1,319 @@
+fileFormatVersion: 2
+guid: af7c48b7a5cda2946951c54da447507d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6492867352375935094
+    second: termita desmembrada 3_0
+  - first:
+      213: 2148305349284450870
+    second: termita desmembrada 3_1
+  - first:
+      213: 6486252874803981771
+    second: termita desmembrada 3_2
+  - first:
+      213: -7325190692364565091
+    second: termita desmembrada 3_3
+  - first:
+      213: -297546069114801746
+    second: termita desmembrada 3_4
+  - first:
+      213: -995393353666291283
+    second: termita desmembrada 3_5
+  - first:
+      213: -995066970428242569
+    second: termita desmembrada 3_6
+  - first:
+      213: -4921696902811534741
+    second: termita desmembrada 3_7
+  - first:
+      213: -2426639557029849724
+    second: termita desmembrada 3_8
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: termita desmembrada 3_0
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 207.16443
+        width: 58
+        height: 60.60266
+      alignment: 9
+      pivot: {x: 0.56114143, y: 0.5368252}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b49d6e4be5085334a95dfd3ae8bd5702
+      internalID: 6492867352375935094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termita desmembrada 3_1
+      rect:
+        serializedVersion: 2
+        x: 171.19688
+        y: 207.44916
+        width: 38.5354
+        height: 70.55081
+      alignment: 9
+      pivot: {x: 0.62311876, y: 0.5111549}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dfb89c1ab361ee4583a8382790f6375
+      internalID: 2148305349284450870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termita desmembrada 3_2
+      rect:
+        serializedVersion: 2
+        x: 304.44278
+        y: 209.48093
+        width: 62.874023
+        height: 58.519073
+      alignment: 9
+      pivot: {x: 0.38651896, y: 0.56503415}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09bce00427faf8b4fa2c645f22125771
+      internalID: 6486252874803981771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termita desmembrada 3_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 98
+        width: 159.36961
+        height: 91.27449
+      alignment: 9
+      pivot: {x: 0.58682454, y: 0.5556927}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: accffea7999dc414baa41c012af4f02f
+      internalID: -7325190692364565091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termita desmembrada 3_4
+      rect:
+        serializedVersion: 2
+        x: 163.60168
+        y: 135.53986
+        width: 69.20604
+        height: 39.306488
+      alignment: 9
+      pivot: {x: 0.5042669, y: 0.5078079}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74812ab5121faa4b9cffac2a5103d12
+      internalID: -297546069114801746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termita desmembrada 3_5
+      rect:
+        serializedVersion: 2
+        x: 230.86812
+        y: 109.31746
+        width: 155.59706
+        height: 91.94997
+      alignment: 9
+      pivot: {x: 0.50214237, y: 0.49681953}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 663d7492afd12bc4b881d8df172c2727
+      internalID: -995393353666291283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termita desmembrada 3_6
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 20.73753
+        width: 59.016632
+        height: 65.27911
+      alignment: 9
+      pivot: {x: 0.6703737, y: 0.45001626}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a02cc7d21ce325d4c95f34b63ae888ac
+      internalID: -995066970428242569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termita desmembrada 3_7
+      rect:
+        serializedVersion: 2
+        x: 170.10696
+        y: 13.468643
+        width: 41.794037
+        height: 87.53136
+      alignment: 9
+      pivot: {x: 0.37837994, y: 0.4939113}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692107c8ea0b8be4ba3644f63060fa76
+      internalID: -4921696902811534741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: termita desmembrada 3_8
+      rect:
+        serializedVersion: 2
+        x: 300.70355
+        y: 13.296459
+        width: 51.743317
+        height: 73.11063
+      alignment: 9
+      pivot: {x: 0.3112735, y: 0.4708591}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c036e50a206dc488f001516f12124e
+      internalID: -2426639557029849724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 637087652984026888
+  assetBundleName: 
+  assetBundleVariant: 

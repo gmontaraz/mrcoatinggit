@@ -1,0 +1,1314 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!43 &-8426663856363969445
+Mesh:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: termita desmembrada 3_4
+  serializedVersion: 10
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 90
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 32
+    localAABB:
+      m_Center: {x: -0.002952963, y: -0.003069006, z: 0}
+      m_Extent: {x: 0.2960302, y: 0.14653245, z: 0}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose:
+  - e00: -0.99969935
+    e01: -0.024523797
+    e02: 0
+    e03: 0.20358026
+    e10: 0.024523797
+    e11: -0.99969935
+    e12: 0
+    e13: -0.005246217
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: -0.97509193
+    e01: -0.22180176
+    e02: 0
+    e03: -0.23294269
+    e10: 0.22180176
+    e11: -0.97509193
+    e12: 0
+    e13: 0.04165831
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: -0.9952478
+    e01: 0.09737582
+    e02: 0
+    e03: -1.12619
+    e10: -0.09737582
+    e11: -0.9952478
+    e12: 0
+    e13: -0.33079487
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: -0.8492133
+    e01: -0.5280503
+    e02: 0
+    e03: -1.3418924
+    e10: 0.5280503
+    e11: -0.8492133
+    e12: 0
+    e13: 0.61150765
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: -0.6419754
+    e01: -0.76672536
+    e02: 0
+    e03: -0.9093642
+    e10: 0.76672536
+    e11: -0.6419754
+    e12: 0
+    e13: 0.7436101
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: -0.996322
+    e01: -0.08569083
+    e02: 0
+    e03: -1.3420601
+    e10: 0.08569083
+    e11: -0.996322
+    e12: 0
+    e13: -0.2945736
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.9998845
+    e01: -0.015226016
+    e02: 0
+    e03: -0.2032277
+    e10: 0.015226016
+    e11: 0.9998845
+    e12: 0
+    e13: -0.002572485
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: -0.13365853
+    e01: 0.99102765
+    e02: 0
+    e03: -0.0926994
+    e10: -0.99102765
+    e11: -0.13365853
+    e12: 0
+    e13: -0.111121535
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: -0.8788287
+    e01: 0.47713807
+    e02: 0
+    e03: -0.30564103
+    e10: -0.47713807
+    e11: -0.8788287
+    e12: 0
+    e13: 0.22967567
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.08044127
+    e01: 0.9967595
+    e02: 0
+    e03: -0.067122504
+    e10: -0.9967595
+    e11: 0.08044127
+    e12: 0
+    e13: 0.009849003
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: -0.37001708
+    e01: 0.9290251
+    e02: 0
+    e03: -0.34855428
+    e10: -0.9290251
+    e11: -0.37001708
+    e12: 0
+    e13: 0.18348682
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.3707053
+    e01: 0.92875093
+    e02: 0
+    e03: -0.113420434
+    e10: -0.92875093
+    e11: 0.3707053
+    e12: 0
+    e13: 0.115466334
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.92421013
+    e01: 0.3818851
+    e02: 0
+    e03: -0.38617823
+    e10: -0.3818851
+    e11: 0.92421013
+    e12: 0
+    e13: -0.2313877
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.21605383
+    e01: -0.9763816
+    e02: 0
+    e03: -0.10748726
+    e10: 0.9763816
+    e11: 0.21605383
+    e12: 0
+    e13: -0.13544866
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.8120544
+    e01: -0.5835819
+    e02: 0
+    e03: -0.41587576
+    e10: 0.5835819
+    e11: 0.8120544
+    e12: 0
+    e13: 0.1903442
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: -0.066730976
+    e01: -0.9977712
+    e02: 0
+    e03: -0.072826296
+    e10: 0.9977712
+    e11: -0.066730976
+    e12: 0
+    e13: -0.026243469
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.30536506
+    e01: -0.9522355
+    e02: 0
+    e03: -0.45974803
+    e10: 0.9522355
+    e11: 0.30536506
+    e12: 0
+    e13: 0.15385938
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: -0.20667352
+    e01: -0.97841007
+    e02: 0
+    e03: -0.09559237
+    e10: 0.97841007
+    e11: -0.20667352
+    e12: 0
+    e13: 0.11416156
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: -0.83252305
+    e01: -0.5539905
+    e02: 0
+    e03: -0.3627676
+    e10: 0.5539905
+    e11: -0.83252305
+    e12: 0
+    e13: -0.19576773
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB:
+  - m_Min: {x: -0.08862692, y: -0.14430869, z: 0}
+    m_Max: {x: 0.5021848, y: 0.14801982, z: 0}
+  - m_Min: {x: -0.4146371, y: -0.1286788, z: 0}
+    m_Max: {x: 0.063697174, y: 0.18460463, z: 0}
+  - m_Min: {x: Infinity, y: Infinity, z: Infinity}
+    m_Max: {x: -Infinity, y: -Infinity, z: -Infinity}
+  - m_Min: {x: Infinity, y: Infinity, z: Infinity}
+    m_Max: {x: -Infinity, y: -Infinity, z: -Infinity}
+  - m_Min: {x: Infinity, y: Infinity, z: Infinity}
+    m_Max: {x: -Infinity, y: -Infinity, z: -Infinity}
+  - m_Min: {x: Infinity, y: Infinity, z: Infinity}
+    m_Max: {x: -Infinity, y: -Infinity, z: -Infinity}
+  - m_Min: {x: -0.18309334, y: -0.14904095, z: 0}
+    m_Max: {x: 0.09105697, y: 0.14121424, z: 0}
+  - m_Min: {x: -0.25596163, y: -0.28283185, z: 0}
+    m_Max: {x: 0.06433038, y: 0.1866653, z: 0}
+  - m_Min: {x: Infinity, y: Infinity, z: Infinity}
+    m_Max: {x: -Infinity, y: -Infinity, z: -Infinity}
+  - m_Min: {x: 0.05836913, y: -0.22543259, z: 0}
+    m_Max: {x: 0.08598082, y: 0.14611572, z: 0}
+  - m_Min: {x: Infinity, y: Infinity, z: Infinity}
+    m_Max: {x: -Infinity, y: -Infinity, z: -Infinity}
+  - m_Min: {x: -0.019910313, y: -0.16235474, z: 0}
+    m_Max: {x: 0.085815676, y: 0.14791805, z: 0}
+  - m_Min: {x: Infinity, y: Infinity, z: Infinity}
+    m_Max: {x: -Infinity, y: -Infinity, z: -Infinity}
+  - m_Min: {x: -0.115089804, y: -0.12778579, z: 0}
+    m_Max: {x: 0.089344665, y: 0.15280747, z: 0}
+  - m_Min: {x: Infinity, y: Infinity, z: Infinity}
+    m_Max: {x: -Infinity, y: -Infinity, z: -Infinity}
+  - m_Min: {x: -0.01104112, y: -0.29955724, z: 0}
+    m_Max: {x: 0.07407497, y: 0.27162072, z: 0}
+  - m_Min: {x: Infinity, y: Infinity, z: Infinity}
+    m_Max: {x: -Infinity, y: -Infinity, z: -Infinity}
+  - m_Min: {x: -0.22541079, y: -0.18770072, z: 0}
+    m_Max: {x: 0.077085964, y: 0.1437592, z: 0}
+  - m_Min: {x: Infinity, y: Infinity, z: Infinity}
+    m_Max: {x: -Infinity, y: -Infinity, z: -Infinity}
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 1a001c001b00190018001a001c001a0013001d001c0013001d0012001e0011001f001e001f001100100014001700150017001600150017001a001800170014001a00140013001a001d0013001200120011001e00100000001f00030002000f00090004000300020001000f000700060005000500080007000900050004000800050009000d000c000e0003000f000e000f00010010000a000e000b000b000e000c000a0003000e00090003000a00000010000100
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 32
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 1
+      offset: 0
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 2
+      offset: 0
+      format: 0
+      dimension: 4
+    - stream: 2
+      offset: 16
+      format: 10
+      dimension: 4
+    m_DataSize: 2560
+    _typelessdata: 7b1445ba8f4a16be000000000000000000000000000080bf0000803f446e723500000000000080bfec0d273dec6a18be000000000000000000000000000080bf0000803f7412633300000000000080bf1f03a73d1fd816be000000000000000000000000000080bf0000803fa4a5e7b400000000000080bfa459043e1fd816be000000000000000000000000000080bf0000803fe8f7cd3400000000000080bfaebc2b3e0ace18be000000000000000000000000000080bf0000803fe70cd53400000000000080bf9a8a513e1f3119be000000000000000000000000000080bf0000803f930982b500000000000080bfae487b3ecdd316be000000000000000000000000000080bf0000803f5bca953500000000000080bf9a708a3e5272fabd000000000000000000000000000080bf0000803f7209a4b400000000000080bf380e963e29f6a6bd000000000000000000000000000080bf0000803f27df9eb500000000000080bf9adb953e7b3c84bc000000000000000000000000000080bf0000803f3b6d84b300000000000080bfb847943e0008d03c000000000000000000000000000080bf0000803fe3acf63400000000000080bf8f678c3eb8388c3d000000000000000000000000000080bf0000803f6d530ab600000000000080bf0a7c7a3eae69d93d000000000000000000000000000080bf0000803f04da063600000000000080bf7bf34f3ea4aa083e000000000000000000000000000080bf0000803f9c6aa7b500000000000080bfd7ed1d3ecd8a103e000000000000000000000000000080bf0000803f3e61053500000000000080bf3d5ea93d00f80e3e000000000000000000000000000080bf0000803f2c0bf5b400000000000080bf33dbb63c14e8123e000000000000000000000000000080bf0000803f1aae2bb400000000000080bf488d49bdd782123e000000000000000000000000000080bf0000803fb697a8b400000000000080bfd74d00becdcf103e000000000000000000000000000080bf0000803fbe9688b500000000000080bfc38d33bec3090a3e000000000000000000000000000080bf0000803f417becb400000000000080bf48a15cbe3d24fd3d000000000000000000000000000080bf0000803f6d35be3400000000000080bfc3dc83be66e0da3d000000000000000000000000000080bf0000803fcb59d1b400000000000080bf522897be71e3803d000000000000000000000000000080bf0000803f9c0e993600000000000080bf521499be7be4403c000000000000000000000000000080bf0000803f45fd183500000000000080bff60f97bea43025bd000000000000000000000000000080bf0000803f5f6cb63600000000000080bf76f38ebe3397a1bd000000000000000000000000000080bf0000803ff7655c3400000000000080bf3d897fbe0ac1dbbd000000000000000000000000000080bf0000803f849e3eb500000000000080bfec455fbecd2703be000000000000000000000000000080bf0000803ff01ada3400000000000080bf664a2bbec38a10be000000000000000000000000000080bf0000803f546361b500000000000080bff6e8f4bdb8920ebe000000000000000000000000000080bf0000803fb5300d3500000000000080bfcd6ca1bdf6f70ebe000000000000000000000000000080bf0000803f75df1bb500000000000080bf7b2c22bdb8920ebe000000000000000000000000000080bf0000803f05af4eb500000000000080bf2de7ff3e81c6fe3e44a1023f5366fe3e3142053f7eadfe3e9a55083f7eadfe3e8ed00a3fd054fe3eff310d3f4f43fe3eecd20f3f41aefe3e8d6f113f299a013f10e6123f294a053fb0df123f40340b3fd2ac123f23f60e3fe5ae113f9cdb123f09c60f3f7144163f5c180d3fc2bc183ff5f1093fdd6e193f2f55053f484b193f7a70013f55a4193f66a7f93e649b193f3ed7ef3ef574193fdc62e93ec6db183f7d36e43e71d8173f09c9de3efe54163fd0ecd93e765b123fe270d93eb4ba0d3ff3f2d93e2104093ffffddb3ee486053f0dd1df3e36f5023f44e1e33e0114013f476dea3e8acaff3ed493f03ecc11003faed5f53eda08003fcee4fa3ecc11003f30b36d3f8d36923da7c2bf38000000800f0000001100000001000000120000000ec5613f8dd7f13dd908b82c000000000f0000000d0000000700000012000000fa8e153f0ce2d43ee990892d000000800f0000000d0000000700000012000000d5e34d3fab70483e313bc12d000000800d0000000f000000070000001200000016217f3f43ea5e3b00000080000000800d0000000f00000012000000110000005110673f787dc73d00000000000000000d000000060000001200000011000000d8084d3f5144453e4243d23b2595c6370d00000006000000000000000f000000b3fa303fdd308e3ee37dfd3cfda36f370d00000006000000000000000f00000091c9023f22adcf3ecbfbaa3dae09c8360d00000006000000000000000f0000005819133f046b533e25cd343ed4892d3d060000000d000000000000000b000000faa7163fc6623e3e3668293e7354763d06000000000000000b0000000d0000007870f23efa75c63e7c030c3e1ae80b3b060000000b000000000000000d0000009f572c3fb242883e3097763db9a3ec390b000000060000000000000009000000c3f86e3f8abb7f3d14c2853b000000800b00000006000000000000001200000014e0723fa21b4e3df6a7783abfb6f9340b00000009000000070000000100000023c9093f84dae93e88059c3bb5818c39090000000b00000007000000060000001ba37f3ff242b93a161672365feae834090000000b00000006000000010000008ce50d3f0a19e43e61d85e396f32d83309000000070000000100000011000000ca5c7c3f84cd683c000000800000000007000000090000001200000011000000d7c5583f33c1bc3d08037a3d72e2e83707000000000000000100000011000000cbd91c3ffe48673ed63c253e7af4973807000000000000000100000011000000ffbec93e8ff6a23e8838933ea1500f3907000000000000000100000011000000d81fe63e6b09b43e148d4b3e4f990139010000000000000007000000110000004df6133fea3bb43ee8568c3d91c2c13a01000000000000000700000011000000f1d8173f2b5fad3ecf76893d193e913a010000000000000011000000070000007555ee3ec5d6a83e235a513e7fd09a390100000000000000110000000f0000008bf5d63ee204993e6fb58f3eb548203a1100000001000000000000000f000000f2fd283f851c373eb391233e1600ad3a1100000000000000010000000f000000015e723f0f8df03ccab2c33c9b7d3b2a1100000000000000010000000700000074c16f3f63f4813d0000008000000080110000000f00000012000000100000007dbb263ffe2eaf3e812ac13b7cbd2a3a110000000f0000000000000001000000d8e62b3fc932a33ed5641a3c6a83b1390f000000110000000000000001000000
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: -0.002952963, y: -0.003069006, z: 0}
+    m_Extent: {x: 0.2960302, y: 0.14653245, z: 0}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c10c0be6d28fe4d539c4a39822fe301c, type: 3}
+  m_Name: termita_cuerpo
+  m_EditorClassIdentifier: 
+  m_ApiVersion: 4
+  m_Sprite: {fileID: -297546069114801746, guid: af7c48b7a5cda2946951c54da447507d,
+    type: 3}
+  m_SharedMesh: {fileID: -8426663856363969445}
+  m_SharedMaterials: []
+--- !u!114 &8190158549956167922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e715ea371f114f4a8d2584ad476634d, type: 3}
+  m_Name: termita desmembrada 3_4_Data
+  m_EditorClassIdentifier: 
+  m_PivotPoint: {x: 198.5, y: 155.5}
+  m_Vertices:
+  - {x: 198.42482, y: 140.82312}
+  - {x: 202.57848, y: 140.61546}
+  - {x: 206.65489, y: 140.76912}
+  - {x: 211.42482, y: 140.76912}
+  - {x: 215.2712, y: 140.57765}
+  - {x: 218.96303, y: 140.53986}
+  - {x: 223.03944, y: 140.77077}
+  - {x: 225.53903, y: 143.27116}
+  - {x: 227.80772, y: 147.34758}
+  - {x: 227.7691, y: 153.88579}
+  - {x: 227.46097, y: 158.03944}
+  - {x: 225.92276, y: 162.34676}
+  - {x: 222.96138, y: 166.11586}
+  - {x: 218.80772, y: 168.84634}
+  - {x: 213.92276, y: 169.61545}
+  - {x: 206.76993, y: 169.46179}
+  - {x: 200.73213, y: 169.84634}
+  - {x: 193.5793, y: 169.80772}
+  - {x: 185.9703, y: 169.64177}
+  - {x: 180.96545, y: 168.98029}
+  - {x: 176.9541, y: 167.86043}
+  - {x: 172.74564, y: 166.18733}
+  - {x: 168.97705, y: 161.79338}
+  - {x: 168.60168, y: 156.67732}
+  - {x: 168.99564, y: 151.46704}
+  - {x: 170.57988, y: 147.60983}
+  - {x: 173.5453, y: 144.76982}
+  - {x: 176.69598, y: 142.69185}
+  - {x: 181.7724, y: 141.38457}
+  - {x: 186.5415, y: 141.57684}
+  - {x: 190.61792, y: 141.53822}
+  - {x: 194.54068, y: 141.57684}
+  m_BoneWeights:
+  - weight0: 0.92851543
+    weight1: 0.07139311
+    weight2: 0.000091438465
+    weight3: -0
+    boneIndex0: 15
+    boneIndex1: 17
+    boneIndex2: 1
+    boneIndex3: 18
+  - weight0: 0.88191307
+    weight1: 0.11808691
+    weight2: 5.230577e-12
+    weight3: 0
+    boneIndex0: 15
+    boneIndex1: 13
+    boneIndex2: 7
+    boneIndex3: 18
+  - weight0: 0.5842129
+    weight1: 0.4157871
+    weight2: 1.563945e-11
+    weight3: -0
+    boneIndex0: 15
+    boneIndex1: 13
+    boneIndex2: 7
+    boneIndex3: 18
+  - weight0: 0.8042577
+    weight1: 0.1957423
+    weight2: 2.1967846e-11
+    weight3: -0
+    boneIndex0: 13
+    boneIndex1: 15
+    boneIndex2: 7
+    boneIndex3: 18
+  - weight0: 0.9965986
+    weight1: 0.0034014143
+    weight2: -0
+    weight3: -0
+    boneIndex0: 13
+    boneIndex1: 15
+    boneIndex2: 18
+    boneIndex3: 17
+  - weight0: 0.9025927
+    weight1: 0.09740728
+    weight2: 0
+    weight3: 0
+    boneIndex0: 13
+    boneIndex1: 6
+    boneIndex2: 18
+    boneIndex3: 17
+  - weight0: 0.8009162
+    weight1: 0.19264342
+    weight2: 0.006416709
+    weight3: 0.00002367289
+    boneIndex0: 13
+    boneIndex1: 6
+    boneIndex2: 0
+    boneIndex3: 15
+  - weight0: 0.69132537
+    weight1: 0.27771655
+    weight2: 0.030943817
+    weight3: 0.000014283692
+    boneIndex0: 13
+    boneIndex1: 6
+    boneIndex2: 0
+    boneIndex3: 15
+  - weight0: 0.51088816
+    weight1: 0.40561777
+    weight2: 0.08348807
+    weight3: 0.0000059615913
+    boneIndex0: 13
+    boneIndex1: 6
+    boneIndex2: 0
+    boneIndex3: 15
+  - weight0: 0.57460546
+    weight1: 0.20646292
+    weight2: 0.17656381
+    weight3: 0.04236777
+    boneIndex0: 6
+    boneIndex1: 13
+    boneIndex2: 0
+    boneIndex3: 11
+  - weight0: 0.5885006
+    weight1: 0.18592367
+    weight2: 0.1654366
+    weight3: 0.06013913
+    boneIndex0: 6
+    boneIndex1: 0
+    boneIndex2: 11
+    boneIndex3: 13
+  - weight0: 0.47351432
+    weight1: 0.38761884
+    weight2: 0.13673204
+    weight3: 0.002134806
+    boneIndex0: 6
+    boneIndex1: 11
+    boneIndex2: 0
+    boneIndex3: 13
+  - weight0: 0.673212
+    weight1: 0.26613384
+    weight2: 0.060202777
+    weight3: 0.0004513541
+    boneIndex0: 11
+    boneIndex1: 6
+    boneIndex2: 0
+    boneIndex3: 9
+  - weight0: 0.9334833
+    weight1: 0.06243471
+    weight2: 0.004081974
+    weight3: -0
+    boneIndex0: 11
+    boneIndex1: 6
+    boneIndex2: 0
+    boneIndex3: 18
+  - weight0: 0.94873166
+    weight1: 0.05031932
+    weight2: 0.00094854773
+    weight3: 0.0000004651283
+    boneIndex0: 11
+    boneIndex1: 9
+    boneIndex2: 7
+    boneIndex3: 1
+  - weight0: 0.53822535
+    weight1: 0.45674527
+    weight2: 0.0047614016
+    weight3: 0.0002679952
+    boneIndex0: 9
+    boneIndex1: 11
+    boneIndex2: 7
+    boneIndex3: 6
+  - weight0: 0.99858254
+    weight1: 0.0014134331
+    weight2: 0.0000036073666
+    weight3: 0.00000043383895
+    boneIndex0: 9
+    boneIndex1: 11
+    boneIndex2: 6
+    boneIndex3: 1
+  - weight0: 0.55428386
+    weight1: 0.44550353
+    weight2: 0.00021252177
+    weight3: 0.000000100674576
+    boneIndex0: 9
+    boneIndex1: 7
+    boneIndex2: 1
+    boneIndex3: 17
+  - weight0: 0.98579085
+    weight1: 0.014209155
+    weight2: -0
+    weight3: 0
+    boneIndex0: 7
+    boneIndex1: 9
+    boneIndex2: 18
+    boneIndex3: 17
+  - weight0: 0.8467688
+    weight1: 0.09216537
+    weight2: 0.061038047
+    weight3: 0.000027762002
+    boneIndex0: 7
+    boneIndex1: 0
+    boneIndex2: 1
+    boneIndex3: 17
+  - weight0: 0.61269826
+    weight1: 0.22586438
+    weight2: 0.16136488
+    weight3: 0.000072457784
+    boneIndex0: 7
+    boneIndex1: 0
+    boneIndex2: 1
+    boneIndex3: 17
+  - weight0: 0.3940353
+    weight1: 0.31828734
+    weight2: 0.28754067
+    weight3: 0.0001366758
+    boneIndex0: 7
+    boneIndex1: 0
+    boneIndex2: 1
+    boneIndex3: 17
+  - weight0: 0.4494617
+    weight1: 0.35163435
+    weight2: 0.19878036
+    weight3: 0.0001235951
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 7
+    boneIndex3: 17
+  - weight0: 0.577977
+    weight1: 0.3520196
+    weight2: 0.068525136
+    weight3: 0.0014782717
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 7
+    boneIndex3: 17
+  - weight0: 0.593154
+    weight1: 0.3386167
+    weight2: 0.06712114
+    weight3: 0.0011081129
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 17
+    boneIndex3: 7
+  - weight0: 0.46549574
+    weight1: 0.32976356
+    weight2: 0.2044454
+    weight3: 0.0002952851
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 17
+    boneIndex3: 15
+  - weight0: 0.4198421
+    weight1: 0.29886538
+    weight2: 0.2806811
+    weight3: 0.000611435
+    boneIndex0: 17
+    boneIndex1: 1
+    boneIndex2: 0
+    boneIndex3: 15
+  - weight0: 0.6601249
+    weight1: 0.17881973
+    weight2: 0.15973549
+    weight3: 0.0013198878
+    boneIndex0: 17
+    boneIndex1: 0
+    boneIndex2: 1
+    boneIndex3: 15
+  - weight0: 0.9467469
+    weight1: 0.029364137
+    weight2: 0.023888964
+    weight3: 1.6652515e-13
+    boneIndex0: 17
+    boneIndex1: 0
+    boneIndex2: 1
+    boneIndex3: 7
+  - weight0: 0.9365456
+    weight1: 0.06345441
+    weight2: -0
+    weight3: -0
+    boneIndex0: 17
+    boneIndex1: 15
+    boneIndex2: 18
+    boneIndex3: 16
+  - weight0: 0.65129834
+    weight1: 0.3421554
+    weight2: 0.0058949594
+    weight3: 0.0006513221
+    boneIndex0: 17
+    boneIndex1: 15
+    boneIndex2: 0
+    boneIndex3: 1
+  - weight0: 0.67149115
+    weight1: 0.31874683
+    weight2: 0.009423454
+    weight3: 0.00033857982
+    boneIndex0: 15
+    boneIndex1: 17
+    boneIndex2: 0
+    boneIndex3: 1
+  m_Edges:
+  - index1: 0
+    index2: 1
+  - index1: 1
+    index2: 2
+  - index1: 2
+    index2: 3
+  - index1: 3
+    index2: 4
+  - index1: 4
+    index2: 5
+  - index1: 5
+    index2: 6
+  - index1: 6
+    index2: 7
+  - index1: 7
+    index2: 8
+  - index1: 8
+    index2: 9
+  - index1: 9
+    index2: 10
+  - index1: 10
+    index2: 11
+  - index1: 11
+    index2: 12
+  - index1: 12
+    index2: 13
+  - index1: 13
+    index2: 14
+  - index1: 14
+    index2: 15
+  - index1: 15
+    index2: 16
+  - index1: 16
+    index2: 17
+  - index1: 17
+    index2: 18
+  - index1: 18
+    index2: 19
+  - index1: 19
+    index2: 20
+  - index1: 20
+    index2: 21
+  - index1: 21
+    index2: 22
+  - index1: 22
+    index2: 23
+  - index1: 23
+    index2: 24
+  - index1: 24
+    index2: 25
+  - index1: 25
+    index2: 26
+  - index1: 26
+    index2: 27
+  - index1: 27
+    index2: 28
+  - index1: 28
+    index2: 29
+  - index1: 29
+    index2: 30
+  - index1: 30
+    index2: 31
+  - index1: 31
+    index2: 0
+  m_Holes: []
+  m_Indices: 1a0000001c0000001b00000019000000180000001a0000001c0000001a000000130000001d0000001c000000130000001d000000120000001e000000110000001f0000001e0000001f0000001100000010000000140000001700000015000000170000001600000015000000170000001a0000001800000017000000140000001a00000014000000130000001a0000001d000000130000001200000012000000110000001e00000010000000000000001f00000003000000020000000f00000009000000040000000300000002000000010000000f0000000700000006000000050000000500000008000000070000000900000005000000040000000800000005000000090000000d0000000c0000000e000000030000000f0000000e0000000f00000001000000100000000a0000000e0000000b0000000b0000000e0000000c0000000a000000030000000e00000009000000030000000a000000000000001000000001000000
+  m_BindPoses:
+  - bindPose:
+      e00: -0.99969935
+      e01: -0.024523797
+      e02: 0
+      e03: 0.20358026
+      e10: 0.024523797
+      e11: -0.99969935
+      e12: 0
+      e13: -0.005246217
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    boneLength: 0.44016036
+    path: 
+    name: Hueso_Termita_Cuerpo
+    color: {r: 1, g: 0, b: 0, a: 1}
+    zOrder: 0
+  - bindPose:
+      e00: -0.97509193
+      e01: -0.22180176
+      e02: 0
+      e03: -0.23294269
+      e10: 0.22180176
+      e11: -0.97509193
+      e12: 0
+      e13: 0.04165831
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    boneLength: 0.940085
+    path: Hueso_Termita_Cabeza
+    name: Hueso_Termita_Cabeza
+    color: {r: 1, g: 0.75, b: 0, a: 1}
+    zOrder: 0
+  - bindPose:
+      e00: -0.9952478
+      e01: 0.09737582
+      e02: 0
+      e03: -1.12619
+      e10: -0.09737582
+      e11: -0.9952478
+      e12: 0
+      e13: -0.33079487
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    boneLength: 0.3108877
+    path: Hueso_Termita_Cabeza/Hueso_Termita_Pinza_Superior
+    name: Hueso_Termita_Pinza_Superior
+    color: {r: 0.5, g: 1, b: 0, a: 1}
+    zOrder: 0
+  - bindPose:
+      e00: -0.8492133
+      e01: -0.5280503
+      e02: 0
+      e03: -1.3418924
+      e10: 0.5280503
+      e11: -0.8492133
+      e12: 0
+      e13: 0.61150765
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    boneLength: 0.24
+    path: Hueso_Termita_Cabeza/Hueso_Termita_Pinza_Superior/Hueso_Termita_Pinza_Superior_Exterior
+    name: Hueso_Termita_Pinza_Superior_Exterior
+    color: {r: 0, g: 1, b: 0.25, a: 1}
+    zOrder: 0
+  - bindPose:
+      e00: -0.6419754
+      e01: -0.76672536
+      e02: 0
+      e03: -0.9093642
+      e10: 0.76672536
+      e11: -0.6419754
+      e12: 0
+      e13: 0.7436101
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    boneLength: 0.24603267
+    path: Hueso_Termita_Cabeza/Hueso_Termita_Pinza_Inferior
+    name: Hueso_Termita_Pinza_Inferior
+    color: {r: 0, g: 1, b: 1, a: 1}
+    zOrder: 0
+  - bindPose:
+      e00: -0.996322
+      e01: -0.08569083
+      e02: 0
+      e03: -1.3420601
+      e10: 0.08569083
+      e11: -0.996322
+      e12: 0
+      e13: -0.2945736
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    boneLength: 0.33
+    path: Hueso_Termita_Cabeza/Hueso_Termita_Pinza_Inferior/Hueso_Termita_Pinza_Inferior_Exterior
+    name: Hueso_Termita_Pinza_Inferior_Exterior
+    color: {r: 0, g: 0.25, b: 1, a: 1}
+    zOrder: 0
+  - bindPose:
+      e00: 0.9998845
+      e01: -0.015226016
+      e02: 0
+      e03: -0.2032277
+      e10: 0.015226016
+      e11: 0.9998845
+      e12: 0
+      e13: -0.002572485
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    boneLength: 1.33
+    path: Hueso_Termita_Cola
+    name: Hueso_Termita_Cola
+    color: {r: 0.5, g: 0, b: 1, a: 1}
+    zOrder: 0
+  - bindPose:
+      e00: -0.13365853
+      e01: 0.99102765
+      e02: 0
+      e03: -0.0926994
+      e10: -0.99102765
+      e11: -0.13365853
+      e12: 0
+      e13: -0.111121535
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    boneLength: 0.27311376
+    path: Hueso_Termita_Pata_1
+    name: Hueso_Termita_Pata_1
+    color: {r: 1, g: 0, b: 0.75, a: 1}
+    zOrder: 0
+  - bindPose:
+      e00: -0.8788287
+      e01: 0.47713807
+      e02: 0
+      e03: -0.30564103
+      e10: -0.47713807
+      e11: -0.8788287
+      e12: 0
+      e13: 0.22967567
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    boneLength: 0.34
+    path: Hueso_Termita_Pata_1/Hueso_Termita_Pata_1_Exterior
+    name: Hueso_Termita_Pata_1_Exterior
+    color: {r: 1, g: 0.33333334, b: 0, a: 1}
+    zOrder: 0
+  - bindPose:
+      e00: 0.08044127
+      e01: 0.9967595
+      e02: 0
+      e03: -0.067122504
+      e10: -0.9967595
+      e11: 0.08044127
+      e12: 0
+      e13: 0.009849003
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    boneLength: 0.32665443
+    path: Hueso_Termita_Pata_2
+    name: Hueso_Termita_Pata_2
+    color: {r: 0.91666675, g: 1, b: 0, a: 1}
+    zOrder: 0
+  - bindPose:
+      e00: -0.37001708
+      e01: 0.9290251
+      e02: 0
+      e03: -0.34855428
+      e10: -0.9290251
+      e11: -0.37001708
+      e12: 0
+      e13: 0.18348682
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    boneLength: 0.28
+    path: Hueso_Termita_Pata_2/Hueso_Termita_Pata_2_Exterior
+    name: Hueso_Termita_Pata_2_Exterior
+    color: {r: 0.16666675, g: 1, b: 0, a: 1}
+    zOrder: 0
+  - bindPose:
+      e00: 0.3707053
+      e01: 0.92875093
+      e02: 0
+      e03: -0.113420434
+      e10: -0.92875093
+      e11: 0.3707053
+      e12: 0
+      e13: 0.115466334
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    boneLength: 0.32171354
+    path: Hueso_Termita_Pata_3
+    name: Hueso_Termita_Pata_3
+    color: {r: 0, g: 1, b: 0.58333325, a: 1}
+    zOrder: 0
+  - bindPose:
+      e00: 0.92421013
+      e01: 0.3818851
+      e02: 0
+      e03: -0.38617823
+      e10: -0.3818851
+      e11: 0.92421013
+      e12: 0
+      e13: -0.2313877
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    boneLength: 0.34
+    path: Hueso_Termita_Pata_3/Hueso_Termita_Pata_3_Exterior
+    name: Hueso_Termita_Pata_3_Exterior
+    color: {r: 0, g: 0.6666665, b: 1, a: 1}
+    zOrder: 0
+  - bindPose:
+      e00: 0.21605383
+      e01: -0.9763816
+      e02: 0
+      e03: -0.10748726
+      e10: 0.9763816
+      e11: 0.21605383
+      e12: 0
+      e13: -0.13544866
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    boneLength: 0.3293619
+    path: Hueso_Termita_Pata_4
+    name: Hueso_Termita_Pata_4
+    color: {r: 0.08333349, g: 0, b: 1, a: 1}
+    zOrder: 0
+  - bindPose:
+      e00: 0.8120544
+      e01: -0.5835819
+      e02: 0
+      e03: -0.41587576
+      e10: 0.5835819
+      e11: 0.8120544
+      e12: 0
+      e13: 0.1903442
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    boneLength: 0.34
+    path: Hueso_Termita_Pata_4/Hueso_Termita_Pata_4_Exterior
+    name: Hueso_Termita_Pata_4_Exterior
+    color: {r: 0.8333335, g: 0, b: 1, a: 1}
+    zOrder: 0
+  - bindPose:
+      e00: -0.066730976
+      e01: -0.9977712
+      e02: 0
+      e03: -0.072826296
+      e10: 0.9977712
+      e11: -0.066730976
+      e12: 0
+      e13: -0.026243469
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    boneLength: 0.41127357
+    path: Hueso_Termita_Pata_5
+    name: Hueso_Termita_Pata_5
+    color: {r: 1, g: 0, b: 0.4166665, a: 1}
+    zOrder: 0
+  - bindPose:
+      e00: 0.30536506
+      e01: -0.9522355
+      e02: 0
+      e03: -0.45974803
+      e10: 0.9522355
+      e11: 0.30536506
+      e12: 0
+      e13: 0.15385938
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    boneLength: 0.34
+    path: Hueso_Termita_Pata_5/Hueso_Termita_Pata_5_Exterior
+    name: Hueso_Termita_Pata_5_Exterior
+    color: {r: 1, g: 0.6666667, b: 0, a: 1}
+    zOrder: 0
+  - bindPose:
+      e00: -0.20667352
+      e01: -0.97841007
+      e02: 0
+      e03: -0.09559237
+      e10: 0.97841007
+      e11: -0.20667352
+      e12: 0
+      e13: 0.11416156
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    boneLength: 0.3005038
+    path: Hueso_Termita_Pata_6
+    name: Hueso_Termita_Pata_6
+    color: {r: 0.5833334, g: 1, b: 0, a: 1}
+    zOrder: 0
+  - bindPose:
+      e00: -0.83252305
+      e01: -0.5539905
+      e02: 0
+      e03: -0.3627676
+      e10: 0.5539905
+      e11: -0.83252305
+      e12: 0
+      e13: -0.19576773
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    boneLength: 0.34
+    path: Hueso_Termita_Pata_6/Hueso_Termita_Pata_6_Exterior
+    name: Hueso_Termita_Pata_6_Exterior
+    color: {r: 0, g: 1, b: 0.16666651, a: 1}
+    zOrder: 0
+  m_Blendshapes: []
