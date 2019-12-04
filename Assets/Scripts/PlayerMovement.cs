@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
- 
 
     }
 
@@ -30,10 +29,19 @@ public class PlayerMovement : MonoBehaviour
             playerVelocity = 5;
             particles.SetActive(false);
         }
-        Move();
+        if(dialog)
+        {
+            rb.velocity = Vector2.zero;
+        }
+        else
+        {
+            Move();
+            ManageJumps();
+        }
+        
         isGrounded = Physics2D.OverlapCircle(feetPos.position, 0.1f, ground);
         touchingHead = Physics2D.OverlapCircle(feetPos.position, 0.1f, ground);
-        ManageJumps();
+        
     }
     private void Move()
     {
@@ -98,6 +106,12 @@ public class PlayerMovement : MonoBehaviour
                 FindObjectOfType<checkpoint>().house = false;
                 FindObjectOfType<checkpoint>().Spawn();
             }
+        }
+        if (collision.gameObject.CompareTag("npc")&&dialog==false && Input.GetKeyDown(KeyCode.C))
+        {
+            dialog = true;
+            dialog_manager.SetActive(true);
+
         }
     }
     private void ManageJumps()
@@ -185,5 +199,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject particles;
     public GameObject[] weapons;
     public int round=1;
+    public bool dialog = false;
+    public GameObject dialog_manager;
     #endregion
 }

@@ -14,8 +14,7 @@ public class SpawnSpawners : MonoBehaviour
         if (!FindObjectOfType<round_manager>().round_finished)
         {
             Debug.Log(FindObjectOfType<round_manager>().round_finished);
-            random_spawn = Random.Range(0, 6);
-            if (spawns_activated[random_spawn])
+            if (num_spawns<4)
             {
                 random_spawn = Random.Range(0, 6);
                 if (spawns_activated[random_spawn])

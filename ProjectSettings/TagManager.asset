@@ -16,6 +16,7 @@ TagManager:
   - medkit
   - stone_door
   - brick_door
+  - npc
   layers:
   - Default
   - TransparentFX

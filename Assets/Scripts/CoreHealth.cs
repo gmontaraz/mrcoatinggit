@@ -8,7 +8,7 @@ public class CoreHealth : MonoBehaviour
     void Start()
     {
         actual_core_health = actual_core_health = FindObjectOfType<Efficiency>().actual_efficiency;
-        HandleBar();
+
         InvokeRepeating("Hole", 0.01f, 0.01f);
     }
     public void Core_Attacked()
@@ -17,41 +17,36 @@ public class CoreHealth : MonoBehaviour
         {
             actual_core_health--;
             FindObjectOfType<Efficiency>().Resta_Efficiency(5f);
-            HandleBar();
+
         }
     }
 
     public void Core_Healed(int i)
     {
         actual_core_health += i;
-        HealthAnimation();
+        
         FindObjectOfType<Efficiency>().Suma_Efficiency(5f);
         FindObjectOfType<Efficiency>().HandleBar();
         if (actual_core_health > max_core_health)
         {
             actual_core_health = max_core_health;
         }
-        HandleBar();
-    }
-    public void HandleBar()
-    {
-        contentH.fillAmount = actual_core_health / max_core_health;
+
     }
     public void Hole()
     {
         if (actual_core_health > 0)
         {
             
-            FindObjectOfType<Efficiency>().Resta_Efficiency((spawnSpawners.num_spawns / 100f));
+            FindObjectOfType<Efficiency>().Resta_Efficiency((spawnSpawners.num_spawns / 150f));
             actual_core_health = FindObjectOfType<Efficiency>().actual_efficiency;
-            HandleBar();
     
         }
     }
     public void HealthAnimation()
     {
 
-        if (actual_core_health >= ((2 * max_core_health) / 3))
+        if (actual_core_health >60)
         {
             if (Nucleo_Verde_actual == false)
             {
@@ -64,10 +59,11 @@ public class CoreHealth : MonoBehaviour
             }
         }
 
-        else if (actual_core_health >= (max_core_health / 3))
+        else if (actual_core_health <60 && actual_core_health > 20)
         {
             if (Nucleo_Naranja_actual == false)
             {
+                humo.startSpeed = 5;
                 Nucleo_Verde.SetActive(false);
                 Nucleo_Naranja.SetActive(true);
                 Nucleo_Rojo.SetActive(false);
@@ -76,10 +72,11 @@ public class CoreHealth : MonoBehaviour
                 Nucleo_Rojo_actual = false;
             }
         }
-        else
+        else if(actual_core_health < 20)
         {
             if (Nucleo_Rojo_actual == false)
             {
+                humo.startSpeed = 10;
                 Nucleo_Verde.SetActive(false);
                 Nucleo_Naranja.SetActive(false);
                 Nucleo_Rojo.SetActive(true);
@@ -88,6 +85,10 @@ public class CoreHealth : MonoBehaviour
                 Nucleo_Rojo_actual = true;
             }
         }
+    }
+    private void Update()
+    {
+        HealthAnimation();
     }
 
     public SpawnSpawners spawnSpawners;
@@ -99,5 +100,5 @@ public class CoreHealth : MonoBehaviour
     public bool Nucleo_Naranja_actual;
     public GameObject Nucleo_Rojo;
     public bool Nucleo_Rojo_actual;
-    [SerializeField] private Image contentH;
+    public ParticleSystem humo;
 }
