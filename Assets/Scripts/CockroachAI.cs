@@ -50,7 +50,7 @@ public class CockroachAI : MonoBehaviour
     {
         golpeado = false;
     }
-
+    public Animator cam_anim;
     public GameObject cucaracha;
     public GameObject player;
     private bool golpeado;
