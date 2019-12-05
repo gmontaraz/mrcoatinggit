@@ -9,9 +9,11 @@ public class dialog : MonoBehaviour
     public string[] sentences;
     public float typingSpeed;
     public int end;
+    public float timer;
 
-    void Start()
+    public void Start()
     {
+        timer = 0;
         text.text = "Ignatius: ";
         StartCoroutine(Type());
     }
@@ -45,5 +47,22 @@ public class dialog : MonoBehaviour
         {
             NextSentence();
         }
+        
+        if (Input.GetKey(KeyCode.X))
+        {
+            timer += Time.deltaTime;
+            if (timer > 0.5f)
+            {
+                timer = 0;
+                text.text = "";
+                FindObjectOfType<PlayerMovement>().dialog = false;
+                this.gameObject.SetActive(false);
+            }
+            if (Input.GetKeyUp(KeyCode.X))
+            {
+                timer = 0;
+            }
+        }
+        
     }
 }

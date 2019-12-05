@@ -116,18 +116,20 @@ public class PlayerMovement : MonoBehaviour
             {
                 dialog_manager.GetComponent<dialog>().i = 0;
                 dialog_manager.GetComponent<dialog>().end= 18;
-            }
-            else if (round % 4 == 0)
-            {
-                dialog_manager.GetComponent<dialog>().i = 0;
-            }
-            else
-            {
-                dialog_manager.GetComponent<dialog>().i = 19;
-                dialog_manager.GetComponent<dialog>().end = 21;
+                dialog_manager.SetActive(true);
             }
 
-            dialog_manager.SetActive(true);
+            else
+            {
+
+                dialog_manager.GetComponent<dialog>().i = 19;
+                dialog_manager.GetComponent<dialog>().end = 21;
+                dialog_manager.SetActive(true);
+                dialog_manager.GetComponent<dialog>().Start();
+            }
+
+            
+           
         }
     }
     private void ManageJumps()
@@ -202,7 +204,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Bools")]
     private bool isJumping;
     private bool touchingHead;
-    private bool isGrounded;
+    public bool isGrounded;
     public bool poison;
     [Header("Vectors")]
     private Vector2 vector;
