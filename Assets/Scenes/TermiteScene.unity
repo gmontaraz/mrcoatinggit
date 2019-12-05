@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1218,7 +1218,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &220607246
@@ -1834,7 +1834,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holes_total: 0
   holes_actual: 0
+  round_finished: 0
   holes_text: {fileID: 27240942}
+  door: {fileID: 0}
 --- !u!1 &383431323
 GameObject:
   m_ObjectHideFlags: 0
@@ -16431,6 +16433,9 @@ MonoBehaviour:
   - {x: 7, y: -3.5}
   spawns_activated: 000000000000
   num_spawns: 0
+  num_spawns_aux: 0
+  time_spawn: 0
+  spider_count: 0
   random_spawn: 0
 --- !u!4 &774375664
 Transform:
@@ -16527,7 +16532,6 @@ GameObject:
   m_Component:
   - component: {fileID: 797721209}
   - component: {fileID: 797721208}
-  - component: {fileID: 797721207}
   - component: {fileID: 797721206}
   - component: {fileID: 797721205}
   - component: {fileID: 797721204}
@@ -16669,24 +16673,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 955368023}
---- !u!114 &797721207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 797721200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa65106a3aad91a4cb57bc9af5f0b33f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  feetPos: {fileID: 1807020126}
-  ground_layer:
-    serializedVersion: 2
-    m_Bits: 256
-  aipath: {fileID: 797721203}
-  destination: {fileID: 797721206}
 --- !u!114 &797721208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17152,7 +17138,7 @@ MonoBehaviour:
   Nucleo_Naranja_actual: 0
   Nucleo_Rojo: {fileID: 1656458860}
   Nucleo_Rojo_actual: 0
-  contentH: {fileID: 2082490583}
+  humo: {fileID: 0}
 --- !u!1 &970739265
 GameObject:
   m_ObjectHideFlags: 0
@@ -18840,6 +18826,9 @@ MonoBehaviour:
   ground_layer:
     serializedVersion: 2
     m_Bits: 512
+  player_layer:
+    serializedVersion: 2
+    m_Bits: 0
   background_layer:
     serializedVersion: 2
     m_Bits: 256
@@ -18847,6 +18836,7 @@ MonoBehaviour:
   aipath: {fileID: 1181909233}
   destination: {fileID: 1181909235}
   web_start: {fileID: 1084522996}
+  player: {fileID: 0}
   swing_points:
   - {fileID: 1084522995}
   - {fileID: 828847385}

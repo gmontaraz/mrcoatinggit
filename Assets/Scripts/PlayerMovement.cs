@@ -110,8 +110,23 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("npc")&&dialog==false && Input.GetKeyDown(KeyCode.C))
         {
             dialog = true;
-            dialog_manager.SetActive(true);
+            Debug.Log("empezar dialogo");
+            if (round == 1)
+            {
+                dialog_manager.GetComponent<dialog>().i = 0;
+                dialog_manager.GetComponent<dialog>().end= 18;
+            }
+            else if (round % 4 == 0)
+            {
+                dialog_manager.GetComponent<dialog>().i = 0;
+            }
+            else
+            {
+                dialog_manager.GetComponent<dialog>().i = 19;
+                dialog_manager.GetComponent<dialog>().end = 21;
+            }
 
+            dialog_manager.SetActive(true);
         }
     }
     private void ManageJumps()

@@ -8,9 +8,11 @@ public class dialog : MonoBehaviour
     public int i;
     public string[] sentences;
     public float typingSpeed;
+    public int end;
 
     void Start()
     {
+        text.text = "Ignatius: ";
         StartCoroutine(Type());
     }
     IEnumerator Type()
@@ -24,10 +26,10 @@ public class dialog : MonoBehaviour
 
     public void NextSentence()
     {
-        if(i<sentences.Length - 1)
+        if(i<end)
         {
             i++;
-            text.text = "";
+            text.text = "Ignatius: ";
             StartCoroutine(Type());
         }
         else
@@ -39,7 +41,7 @@ public class dialog : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C)&&text.text==sentences[i])
+        if (Input.GetKeyDown(KeyCode.C)&&text.text == "Ignatius: "+sentences[i])
         {
             NextSentence();
         }

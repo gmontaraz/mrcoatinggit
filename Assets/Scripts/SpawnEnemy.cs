@@ -6,7 +6,7 @@ public class SpawnEnemy : MonoBehaviour
 {
     private void Start()
     {
-        InvokeRepeating("Spawn", 0f, 6f);
+        InvokeRepeating("Spawn", 2f, Mathf.RoundToInt(Random.Range(6,10)));
     }
     void Update()
     {
@@ -23,7 +23,7 @@ public class SpawnEnemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            text_s = "Pulsa C para reparar";
+            text_s = "C TO REPAIR";
             text.text = text_s;
             delete = true;
         }

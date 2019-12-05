@@ -115,8 +115,12 @@ public class PlayerHealth : MonoBehaviour
     }
     public void RespawnMedkit()
     {
-        medkit.SetActive(true);
-        medkit.GetComponent<medkit>().Spawn();
+        if (medkit != null)
+        {
+            medkit.SetActive(true);
+            medkit.GetComponent<medkit>().Spawn();
+        }
+        
     }
     public void disablepoison()
     {
