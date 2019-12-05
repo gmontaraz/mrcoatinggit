@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BrickHouse.unity
     guid: e34ebf486268a7c4db65b6803dd54404
+  - enabled: 1
+    path: Assets/Scenes/CockroachFixed.unity
+    guid: daea835aff4fa3b4d9503fd51bab4dbc
   m_configObjects: {}

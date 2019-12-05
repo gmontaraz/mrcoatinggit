@@ -81,7 +81,8 @@ public class PlayerMovement : MonoBehaviour
                 s_y = this.gameObject.transform.position.y;
                 
                 
-                SceneManager.LoadScene("StoneHouse");
+                //SceneManager.LoadScene("StoneHouse");
+                SceneManager.LoadScene("CockroachFixed");
                 FindObjectOfType<checkpoint>().house = true;
                 FindObjectOfType<checkpoint>().Spawn();
 
