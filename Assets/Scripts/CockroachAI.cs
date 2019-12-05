@@ -16,6 +16,8 @@ public class CockroachAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animator.SetBool("PathfindingEnabled", cucaracha.GetComponent<AIPath>().enabled);
+
         if (System.Math.Abs(player.transform.position.x - transform.position.x) <= 1.15 && System.Math.Abs(player.transform.position.y - transform.position.y) <= 1.15 && !golpeado)
         {
             golpeCucaracha();
@@ -46,5 +48,5 @@ public class CockroachAI : MonoBehaviour
     public GameObject cucaracha;
     public GameObject player;
     private bool golpeado;
-    //public PlayerHealth playerHealth;
+    public Animator animator;
 }
