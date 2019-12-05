@@ -30,7 +30,7 @@ public class FlyKiller : MonoBehaviour
             attack_speed = 0.2f;
             for (i = 0; i < enemies_inside.Length; i++)
             {
-                if (enemies_inside[i].collider.CompareTag("Enemy") || enemies_inside[i].collider.CompareTag("Spider"))
+                if (enemies_inside[i].collider.CompareTag("Enemy") || enemies_inside[i].collider.CompareTag("Spider") || enemies_inside[i].collider.CompareTag("Cockroach"))
                 {
                     cam_anim.SetTrigger("Shake");
                     Vector2 angle = enemies_inside[i].collider.gameObject.transform.position - transform.position;

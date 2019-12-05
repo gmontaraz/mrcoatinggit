@@ -17,6 +17,8 @@ TagManager:
   - stone_door
   - brick_door
   - npc
+  - palo
+  - Cockroach
   layers:
   - Default
   - TransparentFX

@@ -14810,8 +14810,8 @@ MonoBehaviour:
   v_aux: {x: 0, y: 0, z: 0}
   random_vector_x: 0
   random_vector_y: 0
-  point: {fileID: 0}
-  particles: {fileID: 0}
+  point: {fileID: 572513346}
+  particles: {fileID: 396381052}
 --- !u!4 &484329551
 Transform:
   m_ObjectHideFlags: 0
@@ -24611,9 +24611,10 @@ GameObject:
   - component: {fileID: 1285100452}
   - component: {fileID: 1285100451}
   - component: {fileID: 1285100450}
+  - component: {fileID: 1285100459}
   m_Layer: 12
   m_Name: Cucaracha
-  m_TagString: Enemy
+  m_TagString: Cockroach
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24631,9 +24632,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.040089607, y: -0.09793067}
+  m_Offset: {x: -0.07283723, y: -0.09793067}
   serializedVersion: 2
-  m_Radius: 0.62677646
+  m_Radius: 0.6595241
 --- !u!50 &1285100451
 Rigidbody2D:
   serializedVersion: 4
@@ -24801,6 +24802,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1285100459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285100449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8fd922548b46f8479d7a12926131c4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cucaracha: {fileID: 1285100449}
+  player: {fileID: 0}
 --- !u!1 &1306850746
 GameObject:
   m_ObjectHideFlags: 0

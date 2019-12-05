@@ -12,7 +12,6 @@ public class PlayerHealth : MonoBehaviour
     {
         
         actual_health = max_health;
-        golpeado = false;
     }
 
     // Update is called once per frame 
@@ -51,48 +50,35 @@ public class PlayerHealth : MonoBehaviour
             transform.position = new Vector3(transform.position.x, transform.position.y, 0);
         }
 
-        //TE COMENTO ESTO PORQUE DA FALLO HASTA QUE NO LO RESUELVAS, NECESITAS REFERENCIAR LA CUCARACHA DE LA FORMA QUE TE DIJE
-        /*
-        if (System.Math.Abs(transform.position.x - cucaracha.position.x) <= 1.15 && System.Math.Abs(transform.position.y - cucaracha.position.y) <= 1.15 && !golpeado)
+    }
+
+    public void RealizarDaño(int daño)
+    {
+        actual_health-= daño;
+        HandleBar();
+        if (actual_health <= 0)
         {
-            golpeCucaracha();
-            golpeado = true;
+            this.gameObject.SetActive(false);
+            restart_game();
         }
-        */
+        invincibilityCounter = invincibilityLength;
+        flash = false;
+        flashCounter = flashLength;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (invincibilityCounter <= 0)
         {
-            if (collision.gameObject.CompareTag("Enemy"))
+            if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Cockroach"))
             {
-                actual_health--;
-                HandleBar();
-                if (actual_health <= 0)
-                {                    
-                    this.gameObject.SetActive(false);
-                    restart_game();
-                }
-                invincibilityCounter = invincibilityLength;
-                flash = false;
-                flashCounter = flashLength;
+                RealizarDaño(2);
             }
             if (collision.gameObject.CompareTag("Spider"))
             {
-                actual_health--;
-                HandleBar();
+                RealizarDaño(2);
                 player.gameObject.GetComponent<PlayerMovement>().poison = true;
-                if (actual_health <= 0)
-                {
-                    this.gameObject.SetActive(false);
-                    restart_game();
-                }
                 Invoke("disablepoison", 5f);
-                invincibilityCounter = invincibilityLength;
-                flash = false;
-                
-                flashCounter = flashLength;
             }
         }
         if (collision.collider.CompareTag("medkit"))
@@ -136,27 +122,6 @@ public class PlayerHealth : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    void golpeCucaracha()
-    {
-        objetoCucaracha.GetComponent<AIPath>().enabled = false;
-        objetoCucaracha.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
-        actual_health = actual_health - max_health / 3;
-        HandleBar();
-        Invoke("activatePathfinding", 2f);
-        Invoke("golpeCucarachaCargado", 5f);
-    }
-
-    void activatePathfinding()
-    {
-        objetoCucaracha.GetComponent<AIPath>().enabled = true;
-        objetoCucaracha.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-    }
-
-    void golpeCucarachaCargado()
-    {
-        golpeado = false;
-    }
-
     public float max_health;
     public float actual_health;
     [SerializeField] private Text health_text;
@@ -169,9 +134,6 @@ public class PlayerHealth : MonoBehaviour
     private float flashCounter;
     public float flashLength = 0.1f;
     private bool flash;
-    public Transform cucaracha;
-    public GameObject objetoCucaracha;
-    private bool golpeado;
     public GameObject medkit;
     public GameObject low_life_sfx;
 }
