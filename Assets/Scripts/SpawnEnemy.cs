@@ -14,7 +14,7 @@ public class SpawnEnemy : MonoBehaviour
         {
             spawnSpawners.spawns_activated[num_spawn] = false;
             spawnSpawners.num_spawns--;
-            coreHealth.Core_Healed(2);
+            coreHealth.Core_Healed(10);
             Destroy(this.gameObject);
             FindObjectOfType<round_manager>().tap_hole();
         }

@@ -9,23 +9,11 @@ public class PlayerPoints : MonoBehaviour
     {
         actual_points = min_points;
         points_text.text = actual_points.ToString("D4");
-        InvokeRepeating("Efficiency_Points", 1f, 10f);
     }
-
     private void Update()
     {
-
+        points_text.text = actual_points.ToString("D4");
     }
-
-    public void Efficiency_Points()
-    {
-        if (in_level)
-        {
-            actual_points += Mathf.RoundToInt(efficiency.actual_efficiency);
-            points_text.text = actual_points.ToString("D4");
-        }        
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Point")

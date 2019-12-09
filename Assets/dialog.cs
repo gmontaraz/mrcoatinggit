@@ -10,13 +10,15 @@ public class dialog : MonoBehaviour
     public float typingSpeed;
     public int end;
     public float timer;
+    public bool finished;
 
-    public void Start()
+    public void StartConver()
     {
         timer = 0;
         text.text = "Ignatius: ";
         StartCoroutine(Type());
     }
+    
     IEnumerator Type()
     {
         foreach(char letter in sentences[i].ToCharArray())
@@ -36,6 +38,7 @@ public class dialog : MonoBehaviour
         }
         else
         {
+            finished = true;
             text.text = "";
             FindObjectOfType<PlayerMovement>().dialog = false;
             this.gameObject.SetActive(false);
@@ -50,9 +53,11 @@ public class dialog : MonoBehaviour
         
         if (Input.GetKey(KeyCode.X))
         {
+            
             timer += Time.deltaTime;
             if (timer > 0.5f)
             {
+                finished = true;
                 timer = 0;
                 text.text = "";
                 FindObjectOfType<PlayerMovement>().dialog = false;

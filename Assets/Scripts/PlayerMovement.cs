@@ -103,33 +103,42 @@ public class PlayerMovement : MonoBehaviour
                     weapon.SetActive(false);
                 }
                 round += 1;
+
                 SceneManager.LoadScene("Outdoor");
                 FindObjectOfType<checkpoint>().house = false;
                 FindObjectOfType<checkpoint>().Spawn();
+                dialog_manager.GetComponent<dialog>().finished = false;
             }
         }
         if (collision.gameObject.CompareTag("npc")&&dialog==false && Input.GetKeyDown(KeyCode.C))
         {
             dialog = true;
             Debug.Log("empezar dialogo");
-            if (round == 1)
+            if (round == 1 && !dialog_manager.GetComponent<dialog>().finished)
             {
+                
                 dialog_manager.GetComponent<dialog>().i = 0;
                 dialog_manager.GetComponent<dialog>().end= 18;
                 dialog_manager.SetActive(true);
+                dialog_manager.GetComponent<dialog>().StartConver();
             }
 
-            else
+            else if(!dialog_manager.GetComponent<dialog>().finished)
             {
 
-                dialog_manager.GetComponent<dialog>().i = 19;
-                dialog_manager.GetComponent<dialog>().end = 21;
-                dialog_manager.SetActive(true);
-                dialog_manager.GetComponent<dialog>().Start();
+                    dialog_manager.GetComponent<dialog>().i = 19;
+                    dialog_manager.GetComponent<dialog>().end = 21;
+                    dialog_manager.SetActive(true);
+                    dialog_manager.GetComponent<dialog>().StartConver();
+            }
+            else
+            {
+                shop.SetActive(true);
+                shop.GetComponent<shop_manager>().StartShop();
             }
 
-            
-           
+
+
         }
     }
     private void ManageJumps()
@@ -219,5 +228,6 @@ public class PlayerMovement : MonoBehaviour
     public int round=1;
     public bool dialog = false;
     public GameObject dialog_manager;
+    public GameObject shop;
     #endregion
 }

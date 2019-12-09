@@ -9,7 +9,7 @@ public class round_manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        holes_total = 2+FindObjectOfType<PlayerMovement>().round*2;
+        holes_total = FindObjectOfType<PlayerMovement>().round*2;
         holes_actual = 0;
         holes_text.text = holes_actual + "/" + holes_total;
     }
