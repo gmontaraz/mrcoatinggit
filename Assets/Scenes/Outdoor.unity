@@ -48295,6 +48295,11 @@ PrefabInstance:
       propertyPath: shop
       value: 
       objectReference: {fileID: 1116103423}
+    - target: {fileID: 2341093627587887026, guid: 6380a8b16cba2924f97d1b619cd957ec,
+        type: 3}
+      propertyPath: sounds
+      value: 
+      objectReference: {fileID: 1180701845}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6380a8b16cba2924f97d1b619cd957ec, type: 3}
 --- !u!4 &716753065 stripped
@@ -53785,8 +53790,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 106.95, y: -56.17}
-  m_SizeDelta: {x: 39.3, y: 15.45}
+  m_AnchoredPosition: {x: 110.64, y: -57.9}
+  m_SizeDelta: {x: 32.1, y: 11.57}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &958428437
 MonoBehaviour:
@@ -53807,13 +53812,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 600142f37bcd50c47af9d119b3fd3f2d, type: 3}
+    m_FontSize: 10
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 5
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -54403,7 +54408,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1116103424
 RectTransform:
   m_ObjectHideFlags: 0
@@ -54439,7 +54444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c257c0aa3f8c2418c3dca6f0684977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos_x: 7bffffff0000000085000000
+  pos_x: 65ffffff000000009b000000
   Selector: {fileID: 1977802106}
   items:
   - {fileID: 754432702}
@@ -54524,6 +54529,7 @@ GameObject:
   - component: {fileID: 1180701843}
   - component: {fileID: 1180701842}
   - component: {fileID: 1180701844}
+  - component: {fileID: 1180701845}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -54578,6 +54584,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pause_menu: {fileID: 270134566}
   Game_hud: {fileID: 1302734323}
+--- !u!114 &1180701845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180701841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f180d10a4b3de42a77e5e4d3727f0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - volume: 1
+    clip: {fileID: 8300000, guid: 8027fd09dd4de2e42b106727eeba439d, type: 3}
+    pitch: 1
+    name: Walk
+    loop: 0
+  - volume: 0.2
+    clip: {fileID: 8300000, guid: d9c889dbfd568d04c8af34ad66e0c7e0, type: 3}
+    pitch: 1
+    name: Town
+    loop: 1
+  - volume: 0.1
+    clip: {fileID: 8300000, guid: 936bda798ead5d044861a97f531ca2fe, type: 3}
+    pitch: 1
+    name: Jump
+    loop: 0
 --- !u!1 &1182701478
 GameObject:
   m_ObjectHideFlags: 0

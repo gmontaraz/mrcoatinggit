@@ -43,6 +43,10 @@ public class PlayerMovement : MonoBehaviour
         touchingHead = Physics2D.OverlapCircle(feetPos.position, 0.1f, ground);
         
     }
+    private void Walk()
+    {
+        
+    }
     private void Move()
     {
         moveDirection = Input.GetAxisRaw("Horizontal");
@@ -50,13 +54,31 @@ public class PlayerMovement : MonoBehaviour
        
         if (Input.GetKey(KeyCode.RightArrow))
         {
+            if (!walking && isGrounded)
+            {
+                walking = true;
+                sounds.RepeatedSound("Walk", 0.4f);
+
+            }
+
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
         else if(Input.GetKey(KeyCode.LeftArrow))
         {
+            if (!walking &&isGrounded)
+            {
+                walking = true;
+                sounds.RepeatedSound("Walk", 0.4f);
+
+            }
+            
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
-       
+        else if(!isGrounded || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow) || rb.velocity.x<=0.05)
+        {
+            walking = false;
+            sounds.StopRepeatedSound();
+        }
         rb.AddForce(vector * acceleration);
         Vector2 clampedvelocity = rb.velocity;
         clampedvelocity.x=Mathf.Clamp(rb.velocity.x, -playerVelocity, playerVelocity);
@@ -95,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-
+                sounds.Play("Town");
                 FindObjectOfType<checkpoint>().gameObject.transform.position = new Vector2(FindObjectOfType<PlayerMovement>().s_x, FindObjectOfType<PlayerMovement>().s_y);
 
                 foreach (GameObject weapon in FindObjectOfType<PlayerMovement>().weapons)
@@ -158,6 +180,9 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
         {
             animator.SetTrigger("jump");
+            walking = false;
+            sounds.StopRepeatedSound();
+            sounds.Play("Jump");
             rememberjump = remembertime;
         }
         
@@ -229,5 +254,7 @@ public class PlayerMovement : MonoBehaviour
     public bool dialog = false;
     public GameObject dialog_manager;
     public GameObject shop;
+    public Sound_manager sounds;
+    public bool walking;
     #endregion
 }
