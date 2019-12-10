@@ -55,6 +55,7 @@ public class PlayerHealth : MonoBehaviour
     public void RealizarDaño(int daño)
     {
         actual_health-= daño;
+        FindObjectOfType<Sound_manager>().Play("Hurt");
         HandleBar();
         if (actual_health <= 0)
         {

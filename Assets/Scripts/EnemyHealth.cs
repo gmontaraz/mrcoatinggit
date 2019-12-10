@@ -41,7 +41,12 @@ public class EnemyHealth : MonoBehaviour
             {
                 createPoint();
             }
+            FindObjectOfType<Sound_manager>().Play("EnemyDead");
             
+        }
+        else
+        {
+            FindObjectOfType<Sound_manager>().Play("EnemyHit");
         }
 
     }

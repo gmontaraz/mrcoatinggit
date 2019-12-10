@@ -41,7 +41,27 @@ public class PlayerMovement : MonoBehaviour
         
         isGrounded = Physics2D.OverlapCircle(feetPos.position, 0.1f, ground);
         touchingHead = Physics2D.OverlapCircle(feetPos.position, 0.1f, ground);
-        
+        if (Mathf.Abs(rb.velocity.x) > 0.1)
+        {
+            Debug.Log("Velocidad " + rb.velocity.x);
+            if (!walking && isGrounded)
+            {
+                walking = true;
+                sounds.RepeatedSound("Walk", 0.3f);
+
+            }
+            else if(!isGrounded)
+            {
+                walking = false;
+                sounds.StopRepeatedSound();
+            }
+        }
+        else
+        {
+            walking = false;
+            sounds.StopRepeatedSound();
+        }
+
     }
     private void Walk()
     {
@@ -54,30 +74,13 @@ public class PlayerMovement : MonoBehaviour
        
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            if (!walking && isGrounded)
-            {
-                walking = true;
-                sounds.RepeatedSound("Walk", 0.4f);
-
-            }
-
+           
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
         else if(Input.GetKey(KeyCode.LeftArrow))
         {
-            if (!walking &&isGrounded)
-            {
-                walking = true;
-                sounds.RepeatedSound("Walk", 0.4f);
 
-            }
-            
             transform.eulerAngles = new Vector3(0, 180, 0);
-        }
-        else if(!isGrounded || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow) || rb.velocity.x<=0.05)
-        {
-            walking = false;
-            sounds.StopRepeatedSound();
         }
         rb.AddForce(vector * acceleration);
         Vector2 clampedvelocity = rb.velocity;
@@ -100,9 +103,12 @@ public class PlayerMovement : MonoBehaviour
                 playerPoints.in_level = true;
                 Debug.Log("door");
                 s_x = this.gameObject.transform.position.x;
+                
                 s_y = this.gameObject.transform.position.y;
-                
-                
+                sounds.Stop("Town");
+                sounds.Stop("Rain");
+                sounds.Play("Main");
+
                 //SceneManager.LoadScene("StoneHouse");
                 SceneManager.LoadScene("CockroachFixed");
                 FindObjectOfType<checkpoint>().house = true;
@@ -118,6 +124,8 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 sounds.Play("Town");
+                sounds.Play("Rain");
+                sounds.Stop("Main");
                 FindObjectOfType<checkpoint>().gameObject.transform.position = new Vector2(FindObjectOfType<PlayerMovement>().s_x, FindObjectOfType<PlayerMovement>().s_y);
 
                 foreach (GameObject weapon in FindObjectOfType<PlayerMovement>().weapons)
@@ -181,13 +189,16 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetTrigger("jump");
             walking = false;
-            sounds.StopRepeatedSound();
-            sounds.Play("Jump");
+            
+            
             rememberjump = remembertime;
+           
         }
         
         if ((rememberjump>0) && (remembergrounded>0))
         {
+            sounds.Play("Jump");
+            walking = false;
             rememberjump = 0;
             remembergrounded = 0;
             timeJump = realtimeJump;

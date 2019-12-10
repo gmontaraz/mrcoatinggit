@@ -8,6 +8,7 @@ public class singleton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Application.targetFrameRate = 60;
         if (instance == null)
         {
             instance = this.gameObject;

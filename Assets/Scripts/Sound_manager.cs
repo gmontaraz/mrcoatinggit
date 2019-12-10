@@ -22,6 +22,7 @@ public class Sound_manager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Outdoor")
         {
             Play("Town");
+            Play("Rain");
         }
     }
     public  void Play(string name)
@@ -40,8 +41,8 @@ public class Sound_manager : MonoBehaviour
     }
     public void playrepeatedsound()
     {
-        footstep.source.pitch = UnityEngine.Random.Range(0.9f, 1f);
-        footstep.source.volume = UnityEngine.Random.Range(0.05f, 0.1f);
+        footstep.source.pitch = UnityEngine.Random.Range(0.8f, 1f);
+        footstep.source.volume = UnityEngine.Random.Range(0.2f, 0.3f);
         footstep.source.Play();
         
     }
