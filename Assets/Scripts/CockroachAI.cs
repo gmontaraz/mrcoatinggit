@@ -34,6 +34,8 @@ public class CockroachAI : MonoBehaviour
         if (player.GetComponent<PlayerMovement>().isGrounded)
         {
             player.GetComponent<PlayerHealth>().RealizarDaño(3);
+            GameObject stars = Instantiate(attack_particles, transform.position, transform.rotation);
+            stars.SetActive(true);
         }
         
         Invoke("activatePathfinding", 2f);
@@ -55,4 +57,5 @@ public class CockroachAI : MonoBehaviour
     public GameObject player;
     private bool golpeado;
     public Animator animator;
+    public GameObject attack_particles;
 }

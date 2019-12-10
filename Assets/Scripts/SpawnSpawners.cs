@@ -45,5 +45,6 @@ public class SpawnSpawners : MonoBehaviour
     public float num_spawns_aux;
     public float time_spawn;
     public int spider_count=0;
+    public bool cockroach_appeared = false;
     public int random_spawn;
 }

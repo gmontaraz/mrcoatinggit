@@ -57,6 +57,19 @@ public class SpawnEnemy : MonoBehaviour
             }
             
         }
+        else if (enemy.CompareTag("Cockroach"))
+        {
+            if (FindObjectOfType<SpawnSpawners>().cockroach_appeared == true)
+            {
+                Spawn();
+            }
+            else
+            {
+                FindObjectOfType<SpawnSpawners>().cockroach_appeared = true;
+                GameObject new_enemy = Instantiate(enemy, transform.position, transform.rotation);
+                new_enemy.SetActive(true);
+            }
+        }
         else
         {
             GameObject new_enemy = Instantiate(enemy, transform.position, transform.rotation);
