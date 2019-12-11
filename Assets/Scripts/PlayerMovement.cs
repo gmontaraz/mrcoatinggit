@@ -117,6 +117,52 @@ public class PlayerMovement : MonoBehaviour
                 weapons[Random.Range(0, weapons.Length)].SetActive(true);
             }
         }
+        if (collision.gameObject.CompareTag("brick_door"))
+        {
+
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+
+                playerPoints.in_level = true;
+                Debug.Log("door");
+                s_x = this.gameObject.transform.position.x;
+
+                s_y = this.gameObject.transform.position.y;
+                sounds.Stop("Town");
+                sounds.Stop("Rain");
+                sounds.Play("Main");
+
+                SceneManager.LoadScene("BrickHouse");
+                FindObjectOfType<checkpoint>().house = true;
+                FindObjectOfType<checkpoint>().Spawn();
+
+                Debug.Log(weapons.Length);
+                weapons[Random.Range(0, weapons.Length)].SetActive(true);
+            }
+        }
+        if (collision.gameObject.CompareTag("wood_door"))
+        {
+
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+
+                playerPoints.in_level = true;
+                Debug.Log("door");
+                s_x = this.gameObject.transform.position.x;
+
+                s_y = this.gameObject.transform.position.y;
+                sounds.Stop("Town");
+                sounds.Stop("Rain");
+                sounds.Play("Main");
+
+                SceneManager.LoadScene("WoodHouse");
+                FindObjectOfType<checkpoint>().house = true;
+                FindObjectOfType<checkpoint>().Spawn();
+
+                Debug.Log(weapons.Length);
+                weapons[Random.Range(0, weapons.Length)].SetActive(true);
+            }
+        }
         if (collision.gameObject.CompareTag("door"))
         {
 
