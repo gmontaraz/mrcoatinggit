@@ -14,16 +14,17 @@ public class SpawnSpawners : MonoBehaviour
        
         if (!FindObjectOfType<round_manager>().round_finished)
         {
-            if (num_spawns<4 && total<=FindObjectOfType<round_manager>().holes_total)
+           
+            if (num_spawns<4 && total<FindObjectOfType<round_manager>().holes_total)
             {
-                
+                Debug.Log("Entry Spawn");
                 random_spawn = Random.Range(0, 6);
                 if (spawns_activated[random_spawn])
                 {
                     Spawn();
                 }
                 else
-                {
+                {                    
                     FindObjectOfType<Sound_manager>().Play("EnemySpawn");
                     Debug.Log("Spawn");
                     total++;
@@ -50,4 +51,5 @@ public class SpawnSpawners : MonoBehaviour
     public int spider_count=0;
     public int total;
     public int random_spawn;
+    public bool cockroach_appeared = false;
 }

@@ -19,27 +19,35 @@ public class CockroachAI : MonoBehaviour
     {
         animator.SetBool("PathfindingEnabled", cucaracha.GetComponent<AIPath>().enabled);
 
-        if (System.Math.Abs(player.transform.position.x - transform.position.x) <= 1.15 && System.Math.Abs(player.transform.position.y - transform.position.y) <= 1.15 && !golpeado)
+        if (System.Math.Abs(player.transform.position.x - transform.position.x) <= 2 && System.Math.Abs(player.transform.position.y - transform.position.y) <= 2 && !golpeado)
         {
             golpeCucaracha();
             golpeado = true;
+            Invoke("activatePathfinding", 2f);
+            Invoke("golpeCucarachaCargado", 5f);
         }
     }
 
     void golpeCucaracha()
     {
-        cam_anim.SetTrigger("Shake");
+        
         cucaracha.GetComponent<AIPath>().enabled = false;
         cucaracha.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
-        if (player.GetComponent<PlayerMovement>().isGrounded)
+
+        Invoke("realizarDaño", 0.8f);
+        
+        
+    }
+    void realizarDaño()
+    {
+        if (player.GetComponent<PlayerMovement>().isGrounded && (System.Math.Abs(player.transform.position.x - transform.position.x) <= 2))
         {
             player.GetComponent<PlayerHealth>().RealizarDaño(3);
-            GameObject stars = Instantiate(attack_particles, transform.position, transform.rotation);
-            stars.SetActive(true);
         }
+        cam_anim.SetTrigger("Shake");
+        GameObject stars = Instantiate(attack_particles, new Vector2(transform.position.x, transform.position.y+0.1f), transform.rotation);
+        stars.SetActive(true);
         
-        Invoke("activatePathfinding", 2f);
-        Invoke("golpeCucarachaCargado", 5f);
     }
 
     void activatePathfinding()

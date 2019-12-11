@@ -24,6 +24,11 @@ public class Sound_manager : MonoBehaviour
             Play("Town");
             Play("Rain");
         }
+        else if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            Play("MenuSong");
+            Play("Rain");
+        }
     }
     public  void Play(string name)
     {

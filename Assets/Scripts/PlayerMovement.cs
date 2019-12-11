@@ -43,7 +43,6 @@ public class PlayerMovement : MonoBehaviour
         touchingHead = Physics2D.OverlapCircle(feetPos.position, 0.1f, ground);
         if (Mathf.Abs(rb.velocity.x) > 0.1)
         {
-            Debug.Log("Velocidad " + rb.velocity.x);
             if (!walking && isGrounded)
             {
                 walking = true;

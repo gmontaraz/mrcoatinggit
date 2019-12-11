@@ -82,9 +82,16 @@ public class PlayerHealth : MonoBehaviour
                 Invoke("disablepoison", 5f);
             }
         }
-        if (collision.collider.CompareTag("medkit"))
+        
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+        if (collision.CompareTag("medkit"))
         {
-            medkit = collision.gameObject;
+            Debug.Log("medkit");
+            medkit = collision.transform.parent.gameObject;
             medkit.SetActive(false);
             Invoke("RespawnMedkit", Random.Range(5, 20));
             if (actual_health + 4 <= 10)
@@ -97,9 +104,10 @@ public class PlayerHealth : MonoBehaviour
                 actual_health += 10 - actual_health;
                 HandleBar();
             }
-            
+
         }
     }
+    
     public void RespawnMedkit()
     {
         if (medkit != null)

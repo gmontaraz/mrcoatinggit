@@ -14,11 +14,15 @@ public class PlayerPoints : MonoBehaviour
     {
         points_text.text = actual_points.ToString("D4");
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Point")
         {
+            FindObjectOfType<Sound_manager>().Play("Coin");
             actual_points++;
+            
+            Destroy(collision.transform.parent.gameObject);
+            Debug.Log("medkit");
             points_text.text = actual_points.ToString("D4");
         }
     }
