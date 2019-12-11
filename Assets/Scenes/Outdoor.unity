@@ -48604,6 +48604,11 @@ PrefabInstance:
       propertyPath: points_text
       value: 
       objectReference: {fileID: 958428437}
+    - target: {fileID: 589009067564912862, guid: 6380a8b16cba2924f97d1b619cd957ec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 589009066330023665, guid: 6380a8b16cba2924f97d1b619cd957ec,
         type: 3}
       propertyPath: m_Mesh
@@ -48753,11 +48758,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 70.088005
-      objectReference: {fileID: 0}
-    - target: {fileID: 589009067564912862, guid: 6380a8b16cba2924f97d1b619cd957ec,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6380a8b16cba2924f97d1b619cd957ec, type: 3}
