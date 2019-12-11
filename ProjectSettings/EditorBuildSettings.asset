@@ -14,10 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StoneHouse.unity
     guid: 22b48d32d73b26c40a8e79e94ab69955
-  - enabled: 0
-    path: Assets/Scenes/BrickHouse.unity
-    guid: e34ebf486268a7c4db65b6803dd54404
   - enabled: 1
     path: Assets/Scenes/CockroachFixed.unity
     guid: daea835aff4fa3b4d9503fd51bab4dbc
+  - enabled: 1
+    path: Assets/Scenes/WoodHouse.unity
+    guid: 2e2f24c4b420d7146adb9cb37152ec16
+  - enabled: 1
+    path: Assets/Scenes/BrickHouse.unity
+    guid: 9763493c3ae08904f8a29bca2398c6f6
   m_configObjects: {}
