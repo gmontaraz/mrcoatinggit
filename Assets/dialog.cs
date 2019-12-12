@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class dialog : MonoBehaviour
 {
     public Text text;
@@ -11,11 +12,12 @@ public class dialog : MonoBehaviour
     public int end;
     public float timer;
     public bool finished;
-
+    public mission_manager mission_manager;
+    
     public void StartConver()
     {
         timer = 0;
-        text.text = "Ignatius: ";
+        text.text = "";
         StartCoroutine(Type());
     }
     
@@ -33,20 +35,28 @@ public class dialog : MonoBehaviour
         if(i<end)
         {
             i++;
-            text.text = "Ignatius: ";
+            text.text = "";
             StartCoroutine(Type());
         }
         else
         {
             finished = true;
             text.text = "";
-            FindObjectOfType<PlayerMovement>().dialog = false;
+            if (FindObjectOfType<PlayerMovement>().round < 5)
+            {
+                FindObjectOfType<mission_manager>().new_mission();
+            }
+            else
+            {
+                FindObjectOfType<PlayerHealth>().restart_game();
+            }
+            
             this.gameObject.SetActive(false);
         }
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C)&&text.text == "Ignatius: "+sentences[i])
+        if (Input.GetKeyDown(KeyCode.C)&&text.text == sentences[i])
         {
             NextSentence();
         }
@@ -55,12 +65,15 @@ public class dialog : MonoBehaviour
         {
             
             timer += Time.deltaTime;
-            if (timer > 0.5f)
+            if (timer > 0.2f && FindObjectOfType<PlayerMovement>().round < 2)
             {
                 finished = true;
                 timer = 0;
                 text.text = "";
-                FindObjectOfType<PlayerMovement>().dialog = false;
+                
+                
+               
+                FindObjectOfType<mission_manager>().new_mission();
                 this.gameObject.SetActive(false);
             }
             if (Input.GetKeyUp(KeyCode.X))

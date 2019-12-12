@@ -24,7 +24,8 @@ public class SpawnSpawners : MonoBehaviour
                     Spawn();
                 }
                 else
-                {                    
+                {
+                   
                     FindObjectOfType<Sound_manager>().Play("EnemySpawn");
                     Debug.Log("Spawn");
                     total++;

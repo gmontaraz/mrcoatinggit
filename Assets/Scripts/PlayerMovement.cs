@@ -198,13 +198,20 @@ public class PlayerMovement : MonoBehaviour
                 dialog_manager.GetComponent<dialog>().StartConver();
             }
 
-            else if(!dialog_manager.GetComponent<dialog>().finished)
+            else if(round<5 && !dialog_manager.GetComponent<dialog>().finished)
             {
 
                     dialog_manager.GetComponent<dialog>().i = 19;
                     dialog_manager.GetComponent<dialog>().end = 21;
                     dialog_manager.SetActive(true);
                     dialog_manager.GetComponent<dialog>().StartConver();
+            }
+            else if(round==5 && !dialog_manager.GetComponent<dialog>().finished)
+            {
+                dialog_manager.GetComponent<dialog>().i = 23;
+                dialog_manager.GetComponent<dialog>().end = 25;
+                dialog_manager.SetActive(true);
+                dialog_manager.GetComponent<dialog>().StartConver();
             }
             else
             {

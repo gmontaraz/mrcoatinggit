@@ -60,8 +60,8 @@ public class EnemyHealth : MonoBehaviour
         new_point.GetComponent<Rigidbody2D>().AddForce(v_aux * 80);
     }
     #region variables
-    public int actual_health;
-    public int max_health;
+    public float actual_health;
+    public float max_health;
     public int random_points;
     private int min_random_points = 5;
     private int max_random_points = 10;

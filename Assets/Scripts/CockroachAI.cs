@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using UnityEngine.UI;
 
 public class CockroachAI : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class CockroachAI : MonoBehaviour
             Invoke("activatePathfinding", 2f);
             Invoke("golpeCucarachaCargado", 5f);
         }
+        health_bar.fillAmount = health.actual_health / health.max_health;
     }
 
     void golpeCucaracha()
@@ -66,4 +68,6 @@ public class CockroachAI : MonoBehaviour
     private bool golpeado;
     public Animator animator;
     public GameObject attack_particles;
+    public EnemyHealth health;
+    public Image health_bar;
 }
