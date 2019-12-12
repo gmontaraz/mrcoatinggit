@@ -43,6 +43,16 @@ public class SpawnEnemy : MonoBehaviour
         Debug.Log(array.Length);
         int i_random = Random.Range(0, array.Length);
         enemy = array[i_random];
+
+        if ((float)FindObjectOfType<round_manager>().holes_actual % 6 == 0)
+        {
+            enemy = array[5]; // cockroach number
+        }
+        else if (enemy.CompareTag("Cockroach"))
+        {
+            Spawn();
+        }
+
         if (enemy.CompareTag("Spider"))
         {
             if (FindObjectOfType<SpawnSpawners>().spider_count>=4)
@@ -57,23 +67,23 @@ public class SpawnEnemy : MonoBehaviour
             }
             
         }
-        else if (enemy.CompareTag("Cockroach"))
-        {
-            if (FindObjectOfType<SpawnSpawners>().cockroach_appeared == true)
-            {
-                Spawn();
-            }
-            else if (Random.Range(0, 100) < 20)
-            {
-                FindObjectOfType<SpawnSpawners>().cockroach_appeared = true;
-                GameObject new_enemy = Instantiate(enemy, transform.position, transform.rotation);
-                new_enemy.SetActive(true);
-            }
-            else
-            {
-                Spawn();
-            }
-        }
+        //else if (enemy.CompareTag("Cockroach"))
+        //{
+        //    if (FindObjectOfType<SpawnSpawners>().cockroach_appeared == true)
+        //    {
+        //        Spawn();
+        //    }
+        //    else if (Random.Range(0, 100) < 20)
+        //    {
+        //        FindObjectOfType<SpawnSpawners>().cockroach_appeared = true;
+        //        GameObject new_enemy = Instantiate(enemy, transform.position, transform.rotation);
+        //        new_enemy.SetActive(true);
+        //    }
+        //    else
+        //    {
+        //        Spawn();
+        //    }
+        //}
         else
         {
             GameObject new_enemy = Instantiate(enemy, transform.position, transform.rotation);
