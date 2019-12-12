@@ -40,13 +40,18 @@ public class SpawnEnemy : MonoBehaviour
     }
     private void Spawn()
     {
+        Debug.Log("RESTO:" + 6 % 6);
         Debug.Log(array.Length);
         int i_random = Random.Range(0, array.Length);
         enemy = array[i_random];
-
-        if ((float)FindObjectOfType<round_manager>().holes_actual % 6 == 0)
+        if(!(FindObjectOfType<SpawnSpawners>().total % 6f == 0))
+        {
+            FindObjectOfType<SpawnSpawners>().cockroach_appeared = false;
+        }
+        if (FindObjectOfType<SpawnSpawners>().total %6f == 0 && FindObjectOfType<SpawnSpawners>().cockroach_appeared == false)
         {
             enemy = array[5]; // cockroach number
+            FindObjectOfType<SpawnSpawners>().cockroach_appeared = true;
         }
         else if (enemy.CompareTag("Cockroach"))
         {

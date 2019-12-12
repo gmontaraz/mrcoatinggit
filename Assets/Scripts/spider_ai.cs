@@ -48,8 +48,6 @@ public class spider_ai : MonoBehaviour
         if (!search_web) {
             
             player_ray = Physics2D.Raycast(this.transform.position, Vector2.down, 3f,player_layer);
-            Debug.Log(player_ray);
-            Debug.DrawRay(this.transform.position, Vector2.down * 3f);
             if (player_ray)
             {
                 Debug.Log("Spider looking for player");
