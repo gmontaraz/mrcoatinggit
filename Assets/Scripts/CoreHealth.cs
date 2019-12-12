@@ -50,6 +50,7 @@ public class CoreHealth : MonoBehaviour
         {
             if (Nucleo_Verde_actual == false)
             {
+                humo.startSpeed = 0;
                 Nucleo_Verde.SetActive(true);
                 Nucleo_Naranja.SetActive(false);
                 Nucleo_Rojo.SetActive(false);
