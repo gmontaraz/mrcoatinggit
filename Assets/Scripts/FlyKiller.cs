@@ -21,7 +21,7 @@ public class FlyKiller : MonoBehaviour
     {
 
         RaycastHit2D[] enemies_inside = Physics2D.CircleCastAll(transform.position, 1f,Vector2.zero);
-        if (Input.GetKeyDown(KeyCode.X) && attack_speed<=0 &&activated)
+        if (Input.GetKeyDown(KeyCode.A) && attack_speed<=0 &&activated)
         {
             cam_anim = GameObject.Find("Main Camera").GetComponent<Animator>();
             player_animator.SetTrigger("attack");

@@ -20,7 +20,7 @@ public class BulletSpawner : MonoBehaviour
     private void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.X)&&activated &&cadence<=0)
+        if (Input.GetKeyDown(KeyCode.A)&&activated &&cadence<=0)
         {
             cam_anim = GameObject.Find("Main Camera").GetComponent<Animator>();
             cam_anim.SetTrigger("Shake");

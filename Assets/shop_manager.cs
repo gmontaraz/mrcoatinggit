@@ -31,23 +31,10 @@ public class shop_manager : MonoBehaviour
         {
             Buy(i);
         }
-
-
         if (Input.GetKey(KeyCode.X))
-        {
-            timer += Time.deltaTime;
-            if (timer > 0.5f)
-            {
-                timer = 0;
-
-                FindObjectOfType<PlayerMovement>().dialog = false;
-                this.gameObject.SetActive(false);
-            }
-            if (Input.GetKeyUp(KeyCode.X))
-            {
-                timer = 0;
-            }
-
+        { 
+           FindObjectOfType<PlayerMovement>().dialog = false;
+           this.gameObject.SetActive(false);
         }
     }
     public void Buy(int i)

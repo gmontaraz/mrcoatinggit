@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             sprite.color = Color.white;
-            playerVelocity = 5;
+            playerVelocity = playerVelocityreal;
             particles.SetActive(false);
         }
         if(dialog)
@@ -237,7 +237,7 @@ public class PlayerMovement : MonoBehaviour
         {
             remembergrounded = remembertime;
         }
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetTrigger("jump");
             walking = false;
@@ -257,7 +257,7 @@ public class PlayerMovement : MonoBehaviour
             isJumping = true;
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
-        if(Input.GetKey(KeyCode.Z)&& isJumping)
+        if(Input.GetKey(KeyCode.Space)&& isJumping)
         {
             if (timeJump > 0)
             {
@@ -269,7 +269,7 @@ public class PlayerMovement : MonoBehaviour
                 isJumping = false;
             }
         }
-        else if (Input.GetKeyUp(KeyCode.Z)||touchingHead){
+        else if (Input.GetKeyUp(KeyCode.Space)||touchingHead){
             timeJump = 0;
             isJumping = false;
 
@@ -282,6 +282,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     [Header("Floats")]
     [SerializeField] private float playerVelocity;
+    [SerializeField] private float playerVelocityreal;
     [SerializeField] private float attackSpeed;
     [SerializeField] private float remembertime;
     [SerializeField] private float horizontalDamping;

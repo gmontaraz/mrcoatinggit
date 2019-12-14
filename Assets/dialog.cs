@@ -56,12 +56,20 @@ public class dialog : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C)&&text.text == sentences[i])
+        if (Input.GetKeyDown(KeyCode.Space)&&text.text == sentences[i])
         {
             NextSentence();
         }
+        else if (Input.GetKey(KeyCode.Space))
+        {
+            typingSpeed = 0f;
+        }
+        else if (Input.GetKeyUp(KeyCode.Space))
+        {
+            typingSpeed = 0.02f;
+        }
         
-        if (Input.GetKey(KeyCode.X))
+        if (Input.GetKey(KeyCode.A))
         {
             
             timer += Time.deltaTime;

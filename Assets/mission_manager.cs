@@ -13,11 +13,11 @@ public class mission_manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.C)&&mission_show)
+        if (Input.GetKey(KeyCode.Space)&&mission_show)
         {
 
             timer += Time.deltaTime;
-            if (timer > 0.2f)
+            if (timer > 0.3f)
             {
                 timer = 0;
                 FindObjectOfType<PlayerMovement>().dialog = false;
