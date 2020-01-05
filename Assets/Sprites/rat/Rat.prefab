@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5614474216256039852}
   - component: {fileID: 5614474216256039849}
   - component: {fileID: 5614474216256039851}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: cuerpo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_SpriteMesh: {fileID: 11400000, guid: 7f5367dfa6734a54a92feeb30fc70d56, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_SortingLayerID: 0
   m_SortingOrder: 4
   m_BoneTransforms:
@@ -70,7 +70,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -115,7 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5614474216667518396}
   - component: {fileID: 5614474216667518395}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: tail1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.1201595
+  m_Length: 1.1201591
   m_ChildTransform: {fileID: 5614474217463521609}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &5614474216667597558
@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 5614474216667597557}
   - component: {fileID: 5614474216667597554}
   - component: {fileID: 5614474216667597556}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: cabeza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_SpriteMesh: {fileID: 11400000, guid: f1674d4f0289fb648ade470d4f5afdc0, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_SortingLayerID: 0
   m_SortingOrder: 5
   m_BoneTransforms:
@@ -222,7 +222,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 5614474216739454498}
   - component: {fileID: 5614474216739454511}
   - component: {fileID: 5614474216739454497}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: mandibula
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_SpriteMesh: {fileID: 11400000, guid: 925f5e43a2d01c14fb17c5df141e5263, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_SortingLayerID: 0
   m_SortingOrder: 6
   m_BoneTransforms:
@@ -325,7 +325,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -368,7 +368,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5614474216759425956}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -401,7 +401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5614474216769626101}
   - component: {fileID: 5614474216769626100}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: der_front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,15 +446,15 @@ MonoBehaviour:
     m_SolverPoses:
     - m_BoneTransform: {fileID: 5614474217786628105}
       solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 0.6410555, w: 0.76749456}
+      solverRotation: {x: 0, y: 0, z: 0.6256796, w: 0.78008014}
       defaultLocalRotation: {x: 0, y: 0, z: 0.5919786, w: 0.80595374}
     - m_BoneTransform: {fileID: 5614474217959503325}
       solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 0.34809434, w: 0.9374595}
+      solverRotation: {x: 0, y: 0, z: 0.29385144, w: 0.9558511}
       defaultLocalRotation: {x: 0, y: 0, z: 0.33796275, w: 0.94115955}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: 0.114374876, y: -1.4000227, z: -0.42216235}
+    targetPosition: {x: 5.053094, y: 0.23503357, z: 0}
     flip: 0
 --- !u!1 &5614474216872630123
 GameObject:
@@ -466,7 +466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5614474216872630122}
   - component: {fileID: 5614474216872630121}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: tail3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -501,7 +501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.92409104
+  m_Length: 0.9240903
   m_ChildTransform: {fileID: 5614474217391865763}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &5614474216941068867
@@ -515,7 +515,7 @@ GameObject:
   - component: {fileID: 5614474216941068866}
   - component: {fileID: 5614474216941068879}
   - component: {fileID: 5614474216941068865}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: izq_prev
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -551,7 +551,7 @@ MonoBehaviour:
   m_SpriteMesh: {fileID: 11400000, guid: c2deef4aa80c230479a05b7767b70fc3, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_BoneTransforms:
@@ -573,7 +573,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -618,7 +618,7 @@ GameObject:
   - component: {fileID: 5614474216984879930}
   - component: {fileID: 5614474216984879879}
   - component: {fileID: 5614474216984879929}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: der_front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -654,7 +654,7 @@ MonoBehaviour:
   m_SpriteMesh: {fileID: 11400000, guid: bde1538e16dfa794a8f81c876904503f, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_SortingLayerID: 0
   m_SortingOrder: 5
   m_BoneTransforms:
@@ -677,7 +677,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -723,7 +723,7 @@ GameObject:
   - component: {fileID: 5614474217004634831}
   - component: {fileID: 5614474217004634828}
   - component: {fileID: 5614474217004634830}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: der_prev
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -759,7 +759,7 @@ MonoBehaviour:
   m_SpriteMesh: {fileID: 11400000, guid: bde1538e16dfa794a8f81c876904503f, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_BoneTransforms:
@@ -782,7 +782,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -827,7 +827,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5614474217111143431}
   - component: {fileID: 5614474217111143430}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: izq_prev
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -873,7 +873,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5614474217273426397}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -906,7 +906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5614474217329234153}
   - component: {fileID: 5614474217329234152}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -943,7 +943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.69946975
+  m_Length: 0.69946855
   m_ChildTransform: {fileID: 5614474217912768465}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &5614474217376879619
@@ -956,7 +956,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5614474217376879618}
   - component: {fileID: 5614474217376879617}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: mandibula
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1003,7 +1003,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5614474217391865763}
   - component: {fileID: 5614474217391865762}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: tail4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1050,7 +1050,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5614474217463521609}
   - component: {fileID: 5614474217463521608}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: tail2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1085,7 +1085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.87694937
+  m_Length: 0.8769491
   m_ChildTransform: {fileID: 5614474216872630122}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &5614474217684489321
@@ -1098,7 +1098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5614474217684489320}
   - component: {fileID: 5614474217684489335}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1136,7 +1136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 2.3475537
+  m_Length: 2.3475525
   m_ChildTransform: {fileID: 5614474217329234153}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &5614474217708214034
@@ -1149,7 +1149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5614474217708214033}
   - component: {fileID: 5614474217708214032}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: der_prev1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1163,7 +1163,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5614474217708214034}
-  m_LocalRotation: {x: 0, y: 0, z: 0.321817, w: 0.9468019}
+  m_LocalRotation: {x: 0, y: 0, z: 0.3218175, w: 0.9468017}
   m_LocalPosition: {x: 0.97, y: -0.000000059604645, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1196,7 +1196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5614474217786628105}
   - component: {fileID: 5614474217786628104}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: der_front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1210,7 +1210,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5614474217786628106}
-  m_LocalRotation: {x: 0, y: 0, z: 0.6256799, w: 0.7800799}
+  m_LocalRotation: {x: 0, y: 0, z: 0.6256796, w: 0.78008014}
   m_LocalPosition: {x: -0.4039049, y: -0.01153779, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1231,7 +1231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.97000027
+  m_Length: 0.97
   m_ChildTransform: {fileID: 5614474217959503325}
   m_AttachedIK: {fileID: 5614474216769626100}
 --- !u!1 &5614474217794130552
@@ -1244,7 +1244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5614474217794130503}
   - component: {fileID: 5614474217794130502}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Rat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1260,7 +1260,7 @@ Transform:
   m_GameObject: {fileID: 5614474217794130552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.155625, y: 0.66997725, z: -0.42216235}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.109507956, y: 0.109507956, z: 0.109507956}
   m_Children:
   - {fileID: 5614474216667597557}
   - {fileID: 5614474216739454498}
@@ -1284,7 +1284,7 @@ Animator:
   m_GameObject: {fileID: 5614474217794130552}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bea5ed75a20180f4894cdcf6ce6e8af5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 22465e07f2bfa904bb1d9d653d886f30, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1303,7 +1303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5614474217912768465}
   - component: {fileID: 5614474217912768464}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: cabeza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1351,7 +1351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5614474217959503325}
   - component: {fileID: 5614474217959503324}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: der_front1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1365,7 +1365,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5614474217959503326}
-  m_LocalRotation: {x: 0, y: 0, z: 0.2938512, w: 0.9558512}
+  m_LocalRotation: {x: 0, y: 0, z: 0.29385146, w: 0.95585114}
   m_LocalPosition: {x: 0.97, y: -0.000000059604645, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1398,7 +1398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5614474217983304377}
   - component: {fileID: 5614474217983304376}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: der_prev
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1412,7 +1412,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5614474217983304378}
-  m_LocalRotation: {x: 0, y: 0, z: 0.58796847, w: 0.80888385}
+  m_LocalRotation: {x: 0, y: 0, z: 0.58796823, w: 0.808884}
   m_LocalPosition: {x: 0.30999994, y: -0.01153779, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1433,7 +1433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.97000015
+  m_Length: 0.96999997
   m_ChildTransform: {fileID: 5614474217708214033}
   m_AttachedIK: {fileID: 5614474218002594851}
 --- !u!1 &5614474218002594853
@@ -1446,7 +1446,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5614474218002594852}
   - component: {fileID: 5614474218002594851}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: der_prev
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1491,15 +1491,15 @@ MonoBehaviour:
     m_SolverPoses:
     - m_BoneTransform: {fileID: 5614474217983304377}
       solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 0.65059847, w: 0.7594219}
+      solverRotation: {x: 0, y: 0, z: 0.58796823, w: 0.808884}
       defaultLocalRotation: {x: -0, y: -0, z: 0.591978, w: 0.80595416}
     - m_BoneTransform: {fileID: 5614474217708214033}
       solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 0.27686208, w: 0.96090966}
+      solverRotation: {x: 0, y: 0, z: 0.3218175, w: 0.9468017}
       defaultLocalRotation: {x: 0, y: 0, z: 0.33796275, w: 0.94115955}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: -0.73562515, y: -1.4100227, z: -0.42216235}
+    targetPosition: {x: 4.886803, y: 0.2330772, z: 0}
     flip: 0
 --- !u!1 &5614474218057449894
 GameObject:
@@ -1511,7 +1511,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5614474218057449893}
   - component: {fileID: 5614474218057449892}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: izq_front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1558,7 +1558,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5614474218079199413}
   - component: {fileID: 5614474218079199412}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1593,7 +1593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.1716536
+  m_Length: 1.1716539
   m_ChildTransform: {fileID: 5614474216667518396}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &5614474218104745332
@@ -1607,7 +1607,7 @@ GameObject:
   - component: {fileID: 5614474218104745331}
   - component: {fileID: 5614474218104745328}
   - component: {fileID: 5614474218104745330}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: izq_front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1643,7 +1643,7 @@ MonoBehaviour:
   m_SpriteMesh: {fileID: 11400000, guid: c2deef4aa80c230479a05b7767b70fc3, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_SortingLayerID: 0
   m_SortingOrder: 5
   m_BoneTransforms:
@@ -1665,7 +1665,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1710,7 +1710,7 @@ GameObject:
   - component: {fileID: 5614474218178788307}
   - component: {fileID: 5614474218178788304}
   - component: {fileID: 5614474218178788306}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: cola
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1746,7 +1746,7 @@ MonoBehaviour:
   m_SpriteMesh: {fileID: 11400000, guid: 526b710112371cd41b965f237fcda8bd, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_BoneTransforms:
@@ -1772,7 +1772,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

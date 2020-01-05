@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -889,7 +889,7 @@ PrefabInstance:
     - target: {fileID: 8111761537037526605, guid: 89552a921971d7545989da1b66a84666,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.26100585
+      value: 0.261006
       objectReference: {fileID: 0}
     - target: {fileID: 8111761537037526605, guid: 89552a921971d7545989da1b66a84666,
         type: 3}
@@ -929,12 +929,12 @@ PrefabInstance:
     - target: {fileID: 8111761537414000238, guid: 89552a921971d7545989da1b66a84666,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.1352528
+      value: -0.13525258
       objectReference: {fileID: 0}
     - target: {fileID: 8111761537414000238, guid: 89552a921971d7545989da1b66a84666,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9908111
+      value: 0.99081117
       objectReference: {fileID: 0}
     - target: {fileID: 8111761537414000238, guid: 89552a921971d7545989da1b66a84666,
         type: 3}
@@ -48205,7 +48205,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 599425166}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 737580d6e3c4898419b450b21f754efc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -48814,7 +48814,12 @@ PrefabInstance:
     - target: {fileID: 2341093627587887026, guid: 6380a8b16cba2924f97d1b619cd957ec,
         type: 3}
       propertyPath: horizontalDamping
-      value: 0.2
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2341093627587887026, guid: 6380a8b16cba2924f97d1b619cd957ec,
+        type: 3}
+      propertyPath: acceleration
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2341093627587886990, guid: 6380a8b16cba2924f97d1b619cd957ec,
         type: 3}
@@ -48989,7 +48994,7 @@ PrefabInstance:
     - target: {fileID: 2341093627587887027, guid: 6380a8b16cba2924f97d1b619cd957ec,
         type: 3}
       propertyPath: m_GravityScale
-      value: 4
+      value: 3.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6380a8b16cba2924f97d1b619cd957ec, type: 3}

@@ -10,34 +10,22 @@ public class SpawnEnemy : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C) && delete)
-        {
-            spawnSpawners.spawns_activated[num_spawn] = false;
-            spawnSpawners.num_spawns--;
-            coreHealth.Core_Healed(10);
-            Destroy(this.gameObject);
-            FindObjectOfType<round_manager>().tap_hole();
-        }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            text_s = "";
-            text.text = text_s;
-            delete = true;
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                spawnSpawners.spawns_activated[num_spawn] = false;
+                spawnSpawners.num_spawns--;
+                coreHealth.Core_Healed(10);
+                Destroy(this.gameObject);
+                FindObjectOfType<round_manager>().tap_hole();
+            }
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            text_s = "";
-            text.text = text_s;
-            delete = false;
-        }
 
-    }
     private void Spawn()
     {
         Debug.Log("RESTO:" + 6 % 6);
@@ -72,6 +60,7 @@ public class SpawnEnemy : MonoBehaviour
             }
             
         }
+        
         //else if (enemy.CompareTag("Cockroach"))
         //{
         //    if (FindObjectOfType<SpawnSpawners>().cockroach_appeared == true)
@@ -91,8 +80,17 @@ public class SpawnEnemy : MonoBehaviour
         //}
         else
         {
-            GameObject new_enemy = Instantiate(enemy, transform.position, transform.rotation);
-            new_enemy.SetActive(true);
+            if ((enemy == array[6] || enemy == array[7] )&& Random.Range(0,100)>(30+(2*FindObjectOfType<round_manager>().holes_total)))
+            {
+                Spawn();
+            }
+            else
+            {
+                GameObject new_enemy = Instantiate(enemy, transform.position, transform.rotation);
+                new_enemy.transform.localScale = enemy.transform.localScale;
+                new_enemy.SetActive(true);
+            }
+            
         }
         
        
