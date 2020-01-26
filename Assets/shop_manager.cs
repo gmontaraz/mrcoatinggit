@@ -27,11 +27,11 @@ public class shop_manager : MonoBehaviour
             i++;
         }
         Selector.localPosition = new Vector2(pos_x[i], 57);
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Buy(i);
         }
-        if (Input.GetKey(KeyCode.X))
+        if (Input.GetKey(KeyCode.A))
         { 
            FindObjectOfType<PlayerMovement>().dialog = false;
            this.gameObject.SetActive(false);
@@ -47,6 +47,14 @@ public class shop_manager : MonoBehaviour
             {
                 case "Repair":
                     FindObjectOfType<Efficiency>().Suma_Efficiency(50);
+                    break;
+                case "HP":
+                    FindObjectOfType<PlayerHealth>().max_health += 5;
+                    FindObjectOfType<PlayerHealth>().actual_health = FindObjectOfType<PlayerHealth>().max_health;
+                    FindObjectOfType<PlayerHealth>().HandleBar();
+                    break;
+                case "Damage":
+                    FindObjectOfType<PlayerHealth>().base_dmg += 1;
                     break;
             }
         }

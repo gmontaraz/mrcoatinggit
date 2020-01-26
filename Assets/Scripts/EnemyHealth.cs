@@ -19,7 +19,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            attacked(1);
+            attacked(1+ FindObjectOfType<PlayerHealth>().base_dmg);
             collision.gameObject.SetActive(false);
         }
     }

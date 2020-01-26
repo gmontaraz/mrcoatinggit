@@ -185,7 +185,7 @@ public class PlayerMovement : MonoBehaviour
                 dialog_manager.GetComponent<dialog>().finished = false;
             }
         }
-        if (collision.gameObject.CompareTag("npc")&&dialog==false && Input.GetKeyDown(KeyCode.C))
+        if (collision.gameObject.CompareTag("npc")&&dialog==false && Input.GetKeyDown(KeyCode.D))
         {
             dialog = true;
             Debug.Log("empezar dialogo");

@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     {
         
         actual_health = max_health;
+        base_dmg = 0;
     }
 
     // Update is called once per frame 
@@ -122,7 +123,7 @@ public class PlayerHealth : MonoBehaviour
         player.gameObject.GetComponent<PlayerMovement>().poison = false;
     }
 
-    private void HandleBar(){
+    public void HandleBar(){
         content.fillAmount = actual_health / max_health;
     }
     public void restart_game()
@@ -145,4 +146,5 @@ public class PlayerHealth : MonoBehaviour
     private bool flash;
     public GameObject medkit;
     public GameObject low_life_sfx;
+    public int base_dmg;
 }
