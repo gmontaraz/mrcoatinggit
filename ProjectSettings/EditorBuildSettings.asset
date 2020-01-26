@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Outdoor.unity
     guid: 2c651388ceaa6224da2d3079f8710c36
   - enabled: 1
-    path: Assets/Scenes/StoneHouse.unity
-    guid: 22b48d32d73b26c40a8e79e94ab69955
-  - enabled: 1
     path: Assets/Scenes/CockroachFixed.unity
     guid: daea835aff4fa3b4d9503fd51bab4dbc
   - enabled: 1
@@ -23,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WoodHouse.unity
     guid: 75cb806493399a646a827b1385d70eb0
+  - enabled: 1
+    path: Assets/Scenes/TutorialHouse.unity
+    guid: 4f45d236366805943a15e3c2fb0588c7
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 02caf67fa7c2e5b49b13518111ef2cfc
   m_configObjects: {}

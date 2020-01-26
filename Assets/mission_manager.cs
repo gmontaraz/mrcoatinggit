@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class mission_manager : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class mission_manager : MonoBehaviour
                 timer = 0;
                 FindObjectOfType<PlayerMovement>().dialog = false;
                 this.gameObject.SetActive(false);
+                text_warning.SetActive(true);
+                text_warning.GetComponent<Text>().text = "FIND THE HOUSE";
             }
             if (Input.GetKeyUp(KeyCode.X))
             {
@@ -41,4 +44,5 @@ public class mission_manager : MonoBehaviour
     public GameObject[] sheet;
     public bool mission_show=false;
     private float timer = 0;
+    public GameObject text_warning;
 }

@@ -20,6 +20,8 @@ TagManager:
   - palo
   - Cockroach
   - wood_door
+  - tutorial_Door
+  - exit_tutorial
   layers:
   - Default
   - TransparentFX

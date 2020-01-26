@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -115,6 +116,8 @@ public class PlayerMovement : MonoBehaviour
 
                 Debug.Log(weapons.Length);
                 weapons[Random.Range(0, weapons.Length)].SetActive(true);
+              
+                text_warning.GetComponent<Text>().text = "TAP ALL THE HOLES";
             }
         }
         if (collision.gameObject.CompareTag("brick_door"))
@@ -138,6 +141,8 @@ public class PlayerMovement : MonoBehaviour
 
                 Debug.Log(weapons.Length);
                 weapons[Random.Range(0, weapons.Length)].SetActive(true);
+          
+                text_warning.GetComponent<Text>().text = "TAP ALL THE HOLES";
             }
         }
         if (collision.gameObject.CompareTag("wood_door"))
@@ -161,6 +166,33 @@ public class PlayerMovement : MonoBehaviour
 
                 Debug.Log(weapons.Length);
                 weapons[Random.Range(0, weapons.Length)].SetActive(true);
+          
+                text_warning.GetComponent<Text>().text = "TAP ALL THE HOLES";
+            }
+        }
+        if (collision.gameObject.CompareTag("tutorial_Door"))
+        {
+
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+
+                playerPoints.in_level = true;
+                Debug.Log("door");
+                s_x = this.gameObject.transform.position.x;
+
+                s_y = this.gameObject.transform.position.y;
+                sounds.Stop("Town");
+                sounds.Stop("Rain");
+                sounds.Play("Main");
+
+                SceneManager.LoadScene("TutorialHouse");
+                FindObjectOfType<checkpoint>().house = true;
+                FindObjectOfType<checkpoint>().Spawn();
+
+                Debug.Log(weapons.Length);
+                weapons[Random.Range(0, weapons.Length)].SetActive(true);
+
+                text_warning.GetComponent<Text>().text = "TAP ALL THE HOLES & KILL ENEMIES WITH KEY A";
             }
         }
         if (collision.gameObject.CompareTag("door"))
@@ -183,10 +215,21 @@ public class PlayerMovement : MonoBehaviour
                 FindObjectOfType<checkpoint>().house = false;
                 FindObjectOfType<checkpoint>().Spawn();
                 dialog_manager.GetComponent<dialog>().finished = false;
+                
+                text_warning.GetComponent<Text>().text = "TALK WITH THE MERCHANT";
+            }
+        }
+        if (collision.gameObject.CompareTag("exit_tutorial"))
+        {
+
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                FindObjectOfType<PlayerHealth>().restart_game();
             }
         }
         if (collision.gameObject.CompareTag("npc")&&dialog==false && Input.GetKeyDown(KeyCode.D))
         {
+            text_warning.GetComponent<Text>().text = "";
             dialog = true;
             Debug.Log("empezar dialogo");
             if (round == 1 && !dialog_manager.GetComponent<dialog>().finished)
@@ -321,4 +364,5 @@ public class PlayerMovement : MonoBehaviour
     public Sound_manager sounds;
     public bool walking;
     #endregion
+    public GameObject text_warning;
 }
