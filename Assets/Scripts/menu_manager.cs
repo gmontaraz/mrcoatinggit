@@ -17,6 +17,7 @@ public class menu_manager : MonoBehaviour
     }
     public void Continue()
     {
+        Debug.Log("Continue");
         Time.timeScale = 1;
         
         Pause_menu.SetActive(false);
@@ -24,6 +25,7 @@ public class menu_manager : MonoBehaviour
     }
     public void Exit()
     {
+        Debug.Log("Exit");
         Time.timeScale = 1;
 
         Pause_menu.SetActive(false);

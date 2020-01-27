@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -27760,6 +27760,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 979341650, guid: 06ffb860f4a5ed8479d40fdac1e72b36, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 086d169896a5c2d40b0c696096b21cf5,
+        type: 3}
+    - target: {fileID: 1160526637, guid: 06ffb860f4a5ed8479d40fdac1e72b36, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 41b2568a8cbd6e94687bce6ef5cca105,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06ffb860f4a5ed8479d40fdac1e72b36, type: 3}
 --- !u!224 &249141346 stripped
@@ -48667,21 +48677,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2341093627587886984, guid: 6380a8b16cba2924f97d1b619cd957ec,
-        type: 3}
-      propertyPath: contentP
-      value: 
-      objectReference: {fileID: 249141347}
-    - target: {fileID: 2341093627587886984, guid: 6380a8b16cba2924f97d1b619cd957ec,
-        type: 3}
-      propertyPath: max_efficiency
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2341093627587886984, guid: 6380a8b16cba2924f97d1b619cd957ec,
-        type: 3}
-      propertyPath: start_efficiency
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 2341093627587886988, guid: 6380a8b16cba2924f97d1b619cd957ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -48736,6 +48731,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2341093627587886984, guid: 6380a8b16cba2924f97d1b619cd957ec,
+        type: 3}
+      propertyPath: contentP
+      value: 
+      objectReference: {fileID: 249141347}
+    - target: {fileID: 2341093627587886984, guid: 6380a8b16cba2924f97d1b619cd957ec,
+        type: 3}
+      propertyPath: max_efficiency
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2341093627587886984, guid: 6380a8b16cba2924f97d1b619cd957ec,
+        type: 3}
+      propertyPath: start_efficiency
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2341093627587887026, guid: 6380a8b16cba2924f97d1b619cd957ec,
         type: 3}
@@ -55362,7 +55372,7 @@ MonoBehaviour:
   - volume: 0.2
     clip: {fileID: 8300000, guid: d9c889dbfd568d04c8af34ad66e0c7e0, type: 3}
     pitch: 1
-    name: Town
+    name: m_Town
     loop: 1
   - volume: 0.1
     clip: {fileID: 8300000, guid: 936bda798ead5d044861a97f531ca2fe, type: 3}
@@ -55382,7 +55392,7 @@ MonoBehaviour:
   - volume: 0.1
     clip: {fileID: 8300000, guid: 5852ab237511b664f9e8976a6441685d, type: 3}
     pitch: 1
-    name: Main
+    name: m_Main
     loop: 1
   - volume: 0.1
     clip: {fileID: 8300000, guid: 12f77ba3130d48d4daea4542067db674, type: 3}
@@ -55404,6 +55414,8 @@ MonoBehaviour:
     pitch: 1
     name: EnemyHit
     loop: 0
+  music_volume: 0
+  fx_volume: 0
 --- !u!1 &1182701478
 GameObject:
   m_ObjectHideFlags: 0
