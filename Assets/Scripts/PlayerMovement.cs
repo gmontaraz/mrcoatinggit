@@ -105,9 +105,9 @@ public class PlayerMovement : MonoBehaviour
                 s_x = this.gameObject.transform.position.x;
                 
                 s_y = this.gameObject.transform.position.y;
-                sounds.Stop("Town");
+                sounds.Stop("m_Town");
                 sounds.Stop("Rain");
-                sounds.Play("Main");
+                sounds.Play("m_Main");
 
                 //SceneManager.LoadScene("StoneHouse");
                 SceneManager.LoadScene("CockroachFixed");
@@ -131,9 +131,9 @@ public class PlayerMovement : MonoBehaviour
                 s_x = this.gameObject.transform.position.x;
 
                 s_y = this.gameObject.transform.position.y;
-                sounds.Stop("Town");
+                sounds.Stop("m_Town");
                 sounds.Stop("Rain");
-                sounds.Play("Main");
+                sounds.Play("m_Main");
 
                 SceneManager.LoadScene("BrickHouse");
                 FindObjectOfType<checkpoint>().house = true;
@@ -156,9 +156,9 @@ public class PlayerMovement : MonoBehaviour
                 s_x = this.gameObject.transform.position.x;
 
                 s_y = this.gameObject.transform.position.y;
-                sounds.Stop("Town");
+                sounds.Stop("m_Town");
                 sounds.Stop("Rain");
-                sounds.Play("Main");
+                sounds.Play("m_Main");
 
                 SceneManager.LoadScene("WoodHouse");
                 FindObjectOfType<checkpoint>().house = true;
@@ -181,9 +181,9 @@ public class PlayerMovement : MonoBehaviour
                 s_x = this.gameObject.transform.position.x;
 
                 s_y = this.gameObject.transform.position.y;
-                sounds.Stop("Town");
+                sounds.Stop("m_Town");
                 sounds.Stop("Rain");
-                sounds.Play("Main");
+                sounds.Play("m_Main");
 
                 SceneManager.LoadScene("TutorialHouse");
                 FindObjectOfType<checkpoint>().house = true;
@@ -200,9 +200,9 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                sounds.Play("Town");
+                sounds.Play("m_Town");
                 sounds.Play("Rain");
-                sounds.Stop("Main");
+                sounds.Stop("m_Main");
                 FindObjectOfType<checkpoint>().gameObject.transform.position = new Vector2(FindObjectOfType<PlayerMovement>().s_x, FindObjectOfType<PlayerMovement>().s_y);
 
                 foreach (GameObject weapon in FindObjectOfType<PlayerMovement>().weapons)
