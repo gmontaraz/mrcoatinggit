@@ -13,11 +13,13 @@ public class PlayerHealth : MonoBehaviour
         
         actual_health = max_health;
         base_dmg = 0;
+        hp_text.text = actual_health.ToString();
     }
 
     // Update is called once per frame 
     void Update()
     {
+        dmg_text.text = (base_dmg + 1).ToString();
         if(invincibilityCounter > 0)
         {
             invincibilityCounter -= Time.deltaTime;
@@ -125,6 +127,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void HandleBar(){
         content.fillAmount = actual_health / max_health;
+        hp_text.text = actual_health.ToString();
     }
     public void restart_game()
     {
@@ -138,6 +141,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float fillAmount;
     [SerializeField] private Image content;
     public GameObject player;
+    public Text hp_text;
     public float invincibilityLength;
     private float invincibilityCounter;
     public SpriteRenderer playerRenderer;
@@ -147,4 +151,5 @@ public class PlayerHealth : MonoBehaviour
     public GameObject medkit;
     public GameObject low_life_sfx;
     public int base_dmg;
+    public Text dmg_text;
 }

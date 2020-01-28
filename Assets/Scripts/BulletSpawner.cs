@@ -7,6 +7,7 @@ public class BulletSpawner : MonoBehaviour
     // Start is called before the first frame update
 
     private Animator cam_anim;
+    public Animator player_anim;
     private void Start()
     {
         ActivateWeapon();
@@ -24,6 +25,7 @@ public class BulletSpawner : MonoBehaviour
         {
             cam_anim = GameObject.Find("Main Camera").GetComponent<Animator>();
             cam_anim.SetTrigger("Shake");
+            player_anim.SetTrigger("lanzar");
             Spawn();
             cadence = 0.2f;
         }

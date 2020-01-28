@@ -7,7 +7,7 @@ public class EnemyHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        actual_health = max_health;
+        actual_health = max_health+ FindObjectOfType<PlayerMovement>().round/2;
     }
 
     // Update is called once per frame
@@ -63,8 +63,8 @@ public class EnemyHealth : MonoBehaviour
     public float actual_health;
     public float max_health;
     public int random_points;
-    private int min_random_points = 5;
-    private int max_random_points = 10;
+    public int min_random_points = 5;
+    public int max_random_points = 10;
     public Vector3 v_aux;
     public float random_vector_x;
     public float random_vector_y;

@@ -10,6 +10,7 @@ public class mission_manager : MonoBehaviour
     {
         mission_show = false;
         timer = 0;
+        text_warning = GameObject.Find("warning"); 
     }
     // Update is called once per frame
     void Update()
@@ -23,8 +24,20 @@ public class mission_manager : MonoBehaviour
                 timer = 0;
                 FindObjectOfType<PlayerMovement>().dialog = false;
                 this.gameObject.SetActive(false);
-                text_warning.SetActive(true);
-                text_warning.GetComponent<Text>().text = "FIND THE HOUSE";
+                
+                if (actual_mission == 0)
+                {
+                    text_warning.GetComponent<Text>().text = "FIND THE STONE HOUSE";
+                }
+                else if (actual_mission == 1)
+                {
+                    text_warning.GetComponent<Text>().text = "FIND THE BRICK HOUSE";
+                }
+                else
+                {
+                    text_warning.GetComponent<Text>().text = "FIND THE WOOD HOUSE";
+                }
+
             }
             if (Input.GetKeyUp(KeyCode.X))
             {
@@ -36,6 +49,7 @@ public class mission_manager : MonoBehaviour
     {
         mission_show = true;
         int random_i = Random.Range(0, doors.Length);
+        actual_mission = random_i;
         Debug.Log(random_i);
         doors[random_i].SetActive(true);
         sheet[random_i].SetActive(true);
@@ -43,6 +57,7 @@ public class mission_manager : MonoBehaviour
     public GameObject[] doors;
     public GameObject[] sheet;
     public bool mission_show=false;
+    public int actual_mission;
     private float timer = 0;
     public GameObject text_warning;
 }

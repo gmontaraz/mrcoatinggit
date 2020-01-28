@@ -27,11 +27,11 @@ public class shop_manager : MonoBehaviour
             i++;
         }
         Selector.localPosition = new Vector2(pos_x[i], 57);
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             Buy(i);
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.Space))
         { 
            FindObjectOfType<PlayerMovement>().dialog = false;
            this.gameObject.SetActive(false);

@@ -46,12 +46,14 @@ public class dialog : MonoBehaviour
             {
                 FindObjectOfType<mission_manager>().new_mission();
             }
+            /*
             else
             {
                 FindObjectOfType<PlayerHealth>().restart_game();
             }
-            
+             */
             this.gameObject.SetActive(false);
+           
         }
     }
     private void Update()
