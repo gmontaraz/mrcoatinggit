@@ -36372,7 +36372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actual_health: 0
-  max_health: 10
+  max_health: 25
   random_points: 0
   min_random_points: 5
   max_random_points: 10
