@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        last_mission = -1;
         actual_health = max_health;
         base_dmg = 0;
         hp_text.text = actual_health.ToString();
@@ -151,5 +151,7 @@ public class PlayerHealth : MonoBehaviour
     public GameObject medkit;
     public GameObject low_life_sfx;
     public int base_dmg;
+    
     public Text dmg_text;
+    public int last_mission;
 }

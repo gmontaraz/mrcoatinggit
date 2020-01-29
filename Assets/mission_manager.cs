@@ -47,17 +47,26 @@ public class mission_manager : MonoBehaviour
     }
     public void new_mission()
     {
-        mission_show = true;
         int random_i = Random.Range(0, doors.Length);
-        actual_mission = random_i;
-        Debug.Log(random_i);
-        doors[random_i].SetActive(true);
-        sheet[random_i].SetActive(true);
+        if (random_i != FindObjectOfType<PlayerHealth>().last_mission)
+        {
+            mission_show = true;
+            actual_mission = random_i;
+            Debug.Log(random_i);
+            doors[random_i].SetActive(true);
+            sheet[random_i].SetActive(true);
+            FindObjectOfType<PlayerHealth>().last_mission = random_i;
+        }
+        else
+        {
+            new_mission();
+        }
     }
     public GameObject[] doors;
     public GameObject[] sheet;
     public bool mission_show=false;
     public int actual_mission;
     private float timer = 0;
+    
     public GameObject text_warning;
 }

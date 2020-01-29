@@ -8,12 +8,21 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         actual_health = max_health+ FindObjectOfType<PlayerMovement>().round;
+        poisoned = false;
     }
 
-    // Update is called once per frame
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void Update()
     {
-        
+        if (poisoned)
+        {
+            InvokeRepeating("Poison", 0.3f, 0f);
+            poisoned = false;
+        }
+        else
+        {
+            Invoke("CancelPoison", 1f);
+        }
+ 
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -59,6 +68,14 @@ public class EnemyHealth : MonoBehaviour
         new_point.SetActive(true);
         new_point.GetComponent<Rigidbody2D>().AddForce(v_aux * 80);
     }
+    public void Poison(GameObject enemy)
+    {
+        actual_health -= 0.1f + (FindObjectOfType<PlayerHealth>().base_dmg / 10);
+    }
+    public void CancelPoison()
+    {
+        CancelInvoke();
+    }
     #region variables
     public float actual_health;
     public float max_health;
@@ -70,5 +87,6 @@ public class EnemyHealth : MonoBehaviour
     public float random_vector_y;
     public GameObject point;
     public GameObject particles;
+    public bool poisoned;
     #endregion
 }
