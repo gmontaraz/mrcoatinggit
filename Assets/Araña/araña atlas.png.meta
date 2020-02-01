@@ -1,0 +1,319 @@
+fileFormatVersion: 2
+guid: d2d6eef196322ab49bb0f25a4720f63b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1457784287278500248
+    second: "ara\xF1a atlas_0"
+  - first:
+      213: 6357984143384622941
+    second: "ara\xF1a atlas_1"
+  - first:
+      213: -2516828578899657457
+    second: "ara\xF1a atlas_2"
+  - first:
+      213: -7607777133466152819
+    second: "ara\xF1a atlas_3"
+  - first:
+      213: 8847725095754744303
+    second: "ara\xF1a atlas_4"
+  - first:
+      213: -6276355286322942363
+    second: "ara\xF1a atlas_5"
+  - first:
+      213: -847830656641971536
+    second: "ara\xF1a atlas_6"
+  - first:
+      213: -8251468481646898692
+    second: "ara\xF1a atlas_7"
+  - first:
+      213: 8937633238561982796
+    second: "ara\xF1a atlas_8"
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "ara\xF1a atlas_0"
+      rect:
+        serializedVersion: 2
+        x: 86.11719
+        y: 1105.9954
+        width: 264.29688
+        height: 352.48047
+      alignment: 9
+      pivot: {x: 0.49710315, y: 0.4982681}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce64f0767cf38f44bda3c59fe3e25eb
+      internalID: 1457784287278500248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ara\xF1a atlas_1"
+      rect:
+        serializedVersion: 2
+        x: 1730.115
+        y: 1105.3071
+        width: 265.32227
+        height: 354.53125
+      alignment: 9
+      pivot: {x: 0.4989593, y: 0.4973271}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bb65297c8e066547a38c4d0ae7289f6
+      internalID: 6357984143384622941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ara\xF1a atlas_2"
+      rect:
+        serializedVersion: 2
+        x: 70.222664
+        y: 744.1743
+        width: 224.30667
+        height: 312.49023
+      alignment: 9
+      pivot: {x: 0.4983237, y: 0.49893904}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3a66940d25abb24b9c9255af5a35e30
+      internalID: -2516828578899657457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ara\xF1a atlas_3"
+      rect:
+        serializedVersion: 2
+        x: 840.2918
+        y: 731.7411
+        width: 315.56647
+        height: 318.64258
+      alignment: 9
+      pivot: {x: 0.20505407, y: 0.45770597}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb83e85d2a956c4ebf51b7520147c8a
+      internalID: -7607777133466152819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ara\xF1a atlas_4"
+      rect:
+        serializedVersion: 2
+        x: 1771.0995
+        y: 744.1743
+        width: 223.28125
+        height: 312.49023
+      alignment: 9
+      pivot: {x: 0.50116336, y: 0.49893904}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd0d56fac4422948b2fa81d9d7ce4e8
+      internalID: 8847725095754744303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ara\xF1a atlas_5"
+      rect:
+        serializedVersion: 2
+        x: 65.81151
+        y: 468.9253
+        width: 157.65625
+        height: 225.33203
+      alignment: 9
+      pivot: {x: 0.49911433, y: 0.4998467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb75e10450c1ad64e9e3af7548c61b60
+      internalID: -6276355286322942363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ara\xF1a atlas_6"
+      rect:
+        serializedVersion: 2
+        x: 1759.8662
+        y: 468.9253
+        width: 157.65625
+        height: 225.33203
+      alignment: 9
+      pivot: {x: 0.49876657, y: 0.4998467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bccc5d105103af48ae434fb1e705567
+      internalID: -847830656641971536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ara\xF1a atlas_7"
+      rect:
+        serializedVersion: 2
+        x: 80.48145
+        y: 257.1398
+        width: 109.4629
+        height: 149.45312
+      alignment: 9
+      pivot: {x: 0.49348727, y: 0.49776527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff924fab0ee7d1479c69ff39f0aadba
+      internalID: -8251468481646898692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ara\xF1a atlas_8"
+      rect:
+        serializedVersion: 2
+        x: 1807.2109
+        y: 257.1398
+        width: 109.46289
+        height: 149.45312
+      alignment: 9
+      pivot: {x: 0.49595863, y: 0.49776527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 510f107b5eff87e4b901347f16a33cc4
+      internalID: 8937633238561982796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 637087999747318403
+  assetBundleName: 
+  assetBundleVariant: 

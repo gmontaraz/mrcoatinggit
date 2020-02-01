@@ -114,8 +114,7 @@ public class PlayerMovement : MonoBehaviour
                 FindObjectOfType<checkpoint>().house = true;
                 FindObjectOfType<checkpoint>().Spawn();
 
-                Debug.Log(weapons.Length);
-                weapons[Random.Range(0, weapons.Length)].SetActive(true);
+                RandomWeapon();
               
                 text_warning.GetComponent<Text>().text = "TAP ALL THE HOLES";
             }
@@ -139,8 +138,7 @@ public class PlayerMovement : MonoBehaviour
                 FindObjectOfType<checkpoint>().house = true;
                 FindObjectOfType<checkpoint>().Spawn();
 
-                Debug.Log(weapons.Length);
-                weapons[Random.Range(0, weapons.Length)].SetActive(true);
+                RandomWeapon();
           
                 text_warning.GetComponent<Text>().text = "TAP ALL THE HOLES";
             }
@@ -164,9 +162,7 @@ public class PlayerMovement : MonoBehaviour
                 FindObjectOfType<checkpoint>().house = true;
                 FindObjectOfType<checkpoint>().Spawn();
 
-                Debug.Log(weapons.Length);
-                weapons[Random.Range(0, weapons.Length)].SetActive(true);
-          
+                RandomWeapon();
                 text_warning.GetComponent<Text>().text = "TAP ALL THE HOLES";
             }
         }
@@ -189,8 +185,7 @@ public class PlayerMovement : MonoBehaviour
                 FindObjectOfType<checkpoint>().house = true;
                 FindObjectOfType<checkpoint>().Spawn();
 
-                Debug.Log(weapons.Length);
-                weapons[Random.Range(0, weapons.Length)].SetActive(true);
+                RandomWeapon();
 
                 text_warning.GetComponent<Text>().text = "TAP ALL THE HOLES & KILL ENEMIES WITH KEY A";
             }
@@ -224,41 +219,45 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                FindObjectOfType<PlayerHealth>().restart_game();
+                FindObjectOfType<PlayerHealth>().finish_tutorial();
             }
         }
         if (collision.gameObject.CompareTag("npc")&&dialog==false && Input.GetKeyDown(KeyCode.D))
         {
-            text_warning.GetComponent<Text>().text = "";
+            
             dialog = true;
             Debug.Log("empezar dialogo");
             if (round == 1 && !dialog_manager.GetComponent<dialog>().finished)
             {
-                
+                text_warning.GetComponent<Text>().text = "";
                 dialog_manager.GetComponent<dialog>().i = 0;
                 dialog_manager.GetComponent<dialog>().end= 18;
                 dialog_manager.SetActive(true);
                 dialog_manager.GetComponent<dialog>().StartConver();
             }
 
-            else if(round<5 && !dialog_manager.GetComponent<dialog>().finished)
+            else if(!dialog_manager.GetComponent<dialog>().finished)
             {
-
+                    text_warning.GetComponent<Text>().text = "";
                     dialog_manager.GetComponent<dialog>().i = 19;
                     dialog_manager.GetComponent<dialog>().end = 21;
                     dialog_manager.SetActive(true);
                     dialog_manager.GetComponent<dialog>().StartConver();
             }
+            /*
             else if(round==5 && !dialog_manager.GetComponent<dialog>().finished)
             {
+                text_warning.GetComponent<Text>().text = "";
                 dialog_manager.GetComponent<dialog>().i = 23;
                 dialog_manager.GetComponent<dialog>().end = 25;
                 dialog_manager.SetActive(true);
                 dialog_manager.GetComponent<dialog>().StartConver();
             }
+            */
             else
             {
-                shop.SetActive(true);
+                shop.SetActive(true); 
+                text_warning.SetActive(false);
                 shop.GetComponent<shop_manager>().StartShop();
             }
 
@@ -318,7 +317,21 @@ public class PlayerMovement : MonoBehaviour
 
         }
     }
+    private void RandomWeapon()
+    {
+        Debug.Log(weapons.Length);
+        int random_i = Random.Range(0, weapons.Length);
+        if (random_i !=last_weapon)
+        {
+            weapons[random_i].SetActive(true);
+            last_weapon = random_i;
+        }
+        else
+        {
+            RandomWeapon();
+        }
 
+    }
     #region variables
     public float s_x;
     public float s_y;
@@ -365,4 +378,5 @@ public class PlayerMovement : MonoBehaviour
     public bool walking;
     #endregion
     public GameObject text_warning;
+    private int last_weapon;
 }

@@ -9,15 +9,37 @@ public class insecticide_controller : MonoBehaviour
     void Start()
     {
         particles.Stop();
+        position = new Vector2(this.transform.position.x + 1.2f, this.transform.position.y);
     }
 
     // Update is called once per frame
     void Update()
     {
-       
-        RaycastHit2D[] enemies_inside = Physics2D.CircleCastAll(transform.position, 1f, Vector2.zero);
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            offset = +1.2f;
+        }
+        else if(Input.GetKey(KeyCode.LeftArrow))
+        {
+            offset = -1.2f;
+        }
+        position = new Vector2(this.transform.position.x + offset, this.transform.position.y);
+        RaycastHit2D[] enemies_inside = Physics2D.CircleCastAll(position, 1.2f, Vector2.zero);
+
+        //RaycastHit2D[] enemies_inside = Physics2D.BoxCastAll(new Vector2(this.transform.position.x + 0.4f, this.transform.position.y),new Vector2(0.8f, 0.4f),0,Vector2.zero);
+
         if (Input.GetKeyDown(KeyCode.A))
         {
+            FindObjectOfType<Sound_manager>().Play("WhiteNoise");
+        }
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            FindObjectOfType<Sound_manager>().Stop("WhiteNoise");
+        }
+        
+        if (Input.GetKey(KeyCode.A))
+        {
+            
             cam_anim = GameObject.Find("Main Camera").GetComponent<Animator>();
     
             particles.Play();
@@ -27,6 +49,7 @@ public class insecticide_controller : MonoBehaviour
             {
                 if (enemies_inside[i].collider.CompareTag("Enemy") || enemies_inside[i].collider.CompareTag("Spider") || enemies_inside[i].collider.CompareTag("Cockroach"))
                 {
+                    /*
                     cam_anim.SetTrigger("Shake");
                     Vector2 angle = enemies_inside[i].collider.gameObject.transform.position - transform.position;
                     angle = angle.normalized;
@@ -43,11 +66,10 @@ public class insecticide_controller : MonoBehaviour
                     {
                         StartCoroutine(MyFunction(enemies_inside[i].collider.gameObject, 0.1f));
                     }
+                    */
 
-                    if (enemies_inside[i].collider.gameObject.GetComponent<EnemyHealth>().poisoned != true)
-                    {
-                        enemies_inside[i].collider.gameObject.GetComponent<EnemyHealth>().poisoned = true;
-                    }
+     
+                    enemies_inside[i].collider.gameObject.GetComponent<EnemyHealth>().startPoison();
                 }
 
             }
@@ -55,6 +77,7 @@ public class insecticide_controller : MonoBehaviour
         else
         {
             particles.Stop();
+            
         }
         IEnumerator MyFunction(GameObject enemy, float delayTime)
         {
@@ -69,8 +92,11 @@ public class insecticide_controller : MonoBehaviour
     }
     public void Poison(GameObject enemy)
     {
-        enemy.GetComponent<EnemyHealth>().actual_health -= 0.5f + (FindObjectOfType<PlayerHealth>().base_dmg / 2);
+        enemy.GetComponent<EnemyHealth>().actual_health -= 0.4f + (FindObjectOfType<PlayerHealth>().base_dmg / 5);
     }
     public ParticleSystem particles;
     private Animator cam_anim;
+    public Collider2D box;
+    public Vector2 position;
+    private float offset;
 }

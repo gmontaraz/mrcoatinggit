@@ -11,18 +11,13 @@ public class EnemyHealth : MonoBehaviour
         poisoned = false;
     }
 
-    private void Update()
+    public void startPoison()
     {
-        if (poisoned)
-        {
-            InvokeRepeating("Poison", 0.3f, 0f);
-            poisoned = false;
+        if (poisoned == false) {
+            InvokeRepeating("Poison", 0f, 0.1f);
+            poisoned = true;
         }
-        else
-        {
-            Invoke("CancelPoison", 1f);
-        }
- 
+        Invoke("CancelPoison", 2f);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -32,7 +27,7 @@ public class EnemyHealth : MonoBehaviour
             collision.gameObject.SetActive(false);
         }
     }
-    public void attacked(int daño)
+    public void attacked(float daño)
     {
         actual_health-=daño;
         GameObject blood = Instantiate(particles, transform.position, transform.rotation);
@@ -68,12 +63,13 @@ public class EnemyHealth : MonoBehaviour
         new_point.SetActive(true);
         new_point.GetComponent<Rigidbody2D>().AddForce(v_aux * 80);
     }
-    public void Poison(GameObject enemy)
+    public void Poison()
     {
-        actual_health -= 0.1f + (FindObjectOfType<PlayerHealth>().base_dmg / 10);
+        attacked(0.5f + (FindObjectOfType<PlayerHealth>().base_dmg/ 5));
     }
     public void CancelPoison()
     {
+        poisoned = false;
         CancelInvoke();
     }
     #region variables

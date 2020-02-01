@@ -10,7 +10,8 @@ public class mission_manager : MonoBehaviour
     {
         mission_show = false;
         timer = 0;
-        text_warning = GameObject.Find("warning"); 
+        text_warning = GameObject.Find("warning");
+        ultima_frase = ".";
     }
     // Update is called once per frame
     void Update()
@@ -27,14 +28,17 @@ public class mission_manager : MonoBehaviour
                 
                 if (actual_mission == 0)
                 {
+                    ultima_frase = "FIND THE STONE HOUSE";
                     text_warning.GetComponent<Text>().text = "FIND THE STONE HOUSE";
                 }
                 else if (actual_mission == 1)
                 {
+                    ultima_frase = "FIND THE BRICK HOUSE";
                     text_warning.GetComponent<Text>().text = "FIND THE BRICK HOUSE";
                 }
                 else
                 {
+                    ultima_frase = "FIND THE WOOD HOUSE";
                     text_warning.GetComponent<Text>().text = "FIND THE WOOD HOUSE";
                 }
 
@@ -67,6 +71,7 @@ public class mission_manager : MonoBehaviour
     public bool mission_show=false;
     public int actual_mission;
     private float timer = 0;
+    public string ultima_frase;
     
     public GameObject text_warning;
 }

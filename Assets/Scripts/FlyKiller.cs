@@ -48,7 +48,7 @@ public class FlyKiller : MonoBehaviour
                     {
                         StartCoroutine(MyFunction(enemies_inside[i].collider.gameObject, 0.1f));
                     }
-                    enemies_inside[i].collider.gameObject.GetComponent<EnemyHealth>().attacked(1+FindObjectOfType<PlayerHealth>().base_dmg);
+                    enemies_inside[i].collider.gameObject.GetComponent<EnemyHealth>().attacked(2+FindObjectOfType<PlayerHealth>().base_dmg);
                 }
 
             }

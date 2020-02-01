@@ -32,9 +32,10 @@ public class shop_manager : MonoBehaviour
             Buy(i);
         }
         if (Input.GetKey(KeyCode.Space))
-        { 
-           FindObjectOfType<PlayerMovement>().dialog = false;
-           this.gameObject.SetActive(false);
+        {
+            text_warning.SetActive(true);
+            FindObjectOfType<PlayerMovement>().dialog = false;
+            this.gameObject.SetActive(false);
         }
     }
     public void Buy(int i)
@@ -64,4 +65,5 @@ public class shop_manager : MonoBehaviour
     public RectTransform Selector;
     public Item[] items;
     private float timer;
+    public GameObject text_warning;
 }

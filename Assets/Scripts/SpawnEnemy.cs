@@ -80,7 +80,7 @@ public class SpawnEnemy : MonoBehaviour
         //}
         else
         {
-            if ((enemy == array[6] || enemy == array[7] )&& Random.Range(0,100)>(30+(2*FindObjectOfType<round_manager>().holes_total)))
+            if ((enemy == array[6] || enemy == array[7] )&& Random.Range(0f,100f)>20f)
             {
                 Spawn();
             }

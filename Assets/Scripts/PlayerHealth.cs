@@ -62,6 +62,8 @@ public class PlayerHealth : MonoBehaviour
         HandleBar();
         if (actual_health <= 0)
         {
+            PlayerPrefs.SetInt("record", FindObjectOfType<PlayerMovement>().round);
+            PlayerPrefs.Save();
             this.gameObject.SetActive(false);
             restart_game();
         }
@@ -131,7 +133,16 @@ public class PlayerHealth : MonoBehaviour
     }
     public void restart_game()
     {
+       
         Destroy(FindObjectOfType<singleton>().gameObject);
+        
+        SceneManager.LoadScene("Game Over");
+    }
+    public void finish_tutorial()
+    {
+
+        Destroy(FindObjectOfType<singleton>().gameObject);
+
         SceneManager.LoadScene("MainMenu");
     }
 

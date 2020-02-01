@@ -75,7 +75,7 @@ public class dialog : MonoBehaviour
         {
             
             timer += Time.deltaTime;
-            if (timer > 0.2f && FindObjectOfType<PlayerMovement>().round < 2)
+            if (timer > 0.2f )
             {
                 finished = true;
                 timer = 0;
