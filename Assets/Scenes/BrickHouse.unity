@@ -214,8 +214,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -81.89, y: -39.026}
-  m_SizeDelta: {x: 78.76, y: 37.73}
+  m_AnchoredPosition: {x: -102.51, y: -38.734}
+  m_SizeDelta: {x: 120, y: 37.73}
   m_Pivot: {x: 0.50000006, y: 0.5}
 --- !u!114 &27240942
 MonoBehaviour:
@@ -242,7 +242,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 2
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -25516,10 +25516,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actual_health: 0
-  max_health: 25
+  max_health: 20
   random_points: 0
-  min_random_points: 5
-  max_random_points: 10
+  min_random_points: 50
+  max_random_points: 50
   v_aux: {x: 0, y: 0, z: 0}
   random_vector_x: 0
   random_vector_y: 0

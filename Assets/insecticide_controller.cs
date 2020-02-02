@@ -92,7 +92,7 @@ public class insecticide_controller : MonoBehaviour
     }
     public void Poison(GameObject enemy)
     {
-        enemy.GetComponent<EnemyHealth>().actual_health -= 0.4f + (FindObjectOfType<PlayerHealth>().base_dmg / 5);
+        enemy.GetComponent<EnemyHealth>().actual_health -= 0.4f + (FindObjectOfType<PlayerHealth>().base_dmg / 4);
     }
     public ParticleSystem particles;
     private Animator cam_anim;

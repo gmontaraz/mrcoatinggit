@@ -812,7 +812,7 @@ PrefabInstance:
     - target: {fileID: 8111761537037526605, guid: 89552a921971d7545989da1b66a84666,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.26100585
+      value: 0.261006
       objectReference: {fileID: 0}
     - target: {fileID: 8111761537037526605, guid: 89552a921971d7545989da1b66a84666,
         type: 3}
@@ -852,12 +852,12 @@ PrefabInstance:
     - target: {fileID: 8111761537414000238, guid: 89552a921971d7545989da1b66a84666,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.1352528
+      value: -0.13525258
       objectReference: {fileID: 0}
     - target: {fileID: 8111761537414000238, guid: 89552a921971d7545989da1b66a84666,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9908111
+      value: 0.99081117
       objectReference: {fileID: 0}
     - target: {fileID: 8111761537414000238, guid: 89552a921971d7545989da1b66a84666,
         type: 3}
@@ -27888,7 +27888,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1160526636, guid: 06ffb860f4a5ed8479d40fdac1e72b36, type: 3}
       propertyPath: Cost
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 155230270, guid: 06ffb860f4a5ed8479d40fdac1e72b36, type: 3}
       propertyPath: m_Text
@@ -27900,7 +27900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 729603304, guid: 06ffb860f4a5ed8479d40fdac1e72b36, type: 3}
       propertyPath: m_Text
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 841111926, guid: 06ffb860f4a5ed8479d40fdac1e72b36, type: 3}
       propertyPath: m_FontData.m_Alignment
@@ -48214,6 +48214,83 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &565438063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565438064}
+  - component: {fileID: 565438066}
+  - component: {fileID: 565438065}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &565438064
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565438063}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 249141346}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -320.76, y: 88.840004}
+  m_SizeDelta: {x: 105, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &565438065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565438063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.995283, b: 0.995283, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 600142f37bcd50c47af9d119b3fd3f2d, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: ROUND 1
+--- !u!222 &565438066
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565438063}
+  m_CullTransparentMesh: 0
 --- !u!1 &571101641
 GameObject:
   m_ObjectHideFlags: 0
@@ -48980,6 +49057,11 @@ PrefabInstance:
       propertyPath: text_warning
       value: 
       objectReference: {fileID: 206306620}
+    - target: {fileID: 2341093627587887026, guid: 6380a8b16cba2924f97d1b619cd957ec,
+        type: 3}
+      propertyPath: round_text
+      value: 
+      objectReference: {fileID: 565438065}
     - target: {fileID: 2341093627587886990, guid: 6380a8b16cba2924f97d1b619cd957ec,
         type: 3}
       propertyPath: health_text

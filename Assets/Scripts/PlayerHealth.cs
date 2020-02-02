@@ -99,14 +99,14 @@ public class PlayerHealth : MonoBehaviour
             medkit = collision.transform.parent.gameObject;
             medkit.SetActive(false);
             Invoke("RespawnMedkit", Random.Range(5, 20));
-            if (actual_health + 4 <= 10)
+            if (actual_health + 4 <= max_health)
             {
                 actual_health += 4;
                 HandleBar();
             }
             else
             {
-                actual_health += 10 - actual_health;
+                actual_health += max_health - actual_health;
                 HandleBar();
             }
 

@@ -20,9 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WoodHouse.unity
     guid: 75cb806493399a646a827b1385d70eb0
-  - enabled: 0
-    path: 
-    guid: 4f45d236366805943a15e3c2fb0588c7
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 02caf67fa7c2e5b49b13518111ef2cfc

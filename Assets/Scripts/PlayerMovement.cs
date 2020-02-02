@@ -205,6 +205,7 @@ public class PlayerMovement : MonoBehaviour
                     weapon.SetActive(false);
                 }
                 round += 1;
+                round_text.text = "ROUND " + round;
 
                 SceneManager.LoadScene("Outdoor");
                 FindObjectOfType<checkpoint>().house = false;
@@ -379,4 +380,5 @@ public class PlayerMovement : MonoBehaviour
     #endregion
     public GameObject text_warning;
     private int last_weapon;
+    public Text round_text;
 }
